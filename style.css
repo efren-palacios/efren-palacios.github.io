@@ -1,0 +1,55 @@
+body {
+  background: #495159;
+}
+
+.logo {
+  font: 84px "Arial Narrow", sans-serif;
+  color: #fefefe;
+  text-transform: uppercase;
+  letter-spacing: -4px;
+}
+
+.main {
+  color: #a1e8cc;
+}
+
+.secondary {
+  color: #c5decd;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  font: 12px "Arial Narrow", sans-serif;
+  text-transform: uppercase;
+  justify-content: space-around;
+  border-top: 1px solid #a1e8cc;
+  width: 33.3%;
+}
+
+li {
+  text-align: center;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  padding: 10px 5px;
+  width: 100%;
+}
+
+a:hover {
+  background-color: #a1e8cc;
+  color: #495159;
+  -webkit-transition: background-color 0.5s linear;
+  -moz-transition: background-color 0.5s linear;
+  -o-transition: background-color 0.5s linear;
+  transition: background-color 0.5s linear;
+}
