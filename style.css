@@ -21,6 +21,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 2.5em 0;
 }
 
 ul {
@@ -52,4 +53,21 @@ a:hover {
   -moz-transition: background-color 0.5s linear;
   -o-transition: background-color 0.5s linear;
   transition: background-color 0.5s linear;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    font: 3em "Arial Narrow", sans-serif;
+    color: #fefefe;
+    text-transform: uppercase;
+    letter-spacing: -4px;
+  }
+  ul {
+    display: flex;
+    font: 12px "Arial Narrow", sans-serif;
+    text-transform: uppercase;
+    justify-content: space-around;
+    border-top: 1px solid #a1e8cc;
+    width: 90%;
+  }
 }
