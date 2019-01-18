@@ -166,6 +166,9 @@ header {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   background-image: url("http://www.echofox.gg/images/landing/games.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .menu {
