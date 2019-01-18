@@ -602,4 +602,20 @@ strong {
   .blog-social a {
     padding: 1em 2em;
   }
+  .blog-title > h1 {
+    font-size: 24px;
+  }
+  .matches-subtitle {
+    line-height: 10px;
+    font-size: 16px;
+  }
+  .matches-box {
+    width: 90vw;
+    flex-direction: column;
+    padding: 1em 0 0.5em 0;
+  }
+  .blog-social a {
+    margin-left: 1px;
+    padding: 0.5em 0.8em;
+  }
 }
