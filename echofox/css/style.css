@@ -19,13 +19,15 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-a, a:active {
+a,
+a:active {
   text-decoration: none;
   color: inherit;
 }
 
 a:hover {
-  transition: background 250ms ease,color 250ms ease,border-color 250ms ease,opacity 250ms ease;
+  transition: background 250ms ease, color 250ms ease, border-color 250ms ease,
+    opacity 250ms ease;
 }
 
 body {
@@ -38,13 +40,13 @@ nav {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  width: 100%;
   height: 93px;
   color: white;
   border-bottom: 7px solid #273566;
 }
 
-.social, .menu {
+.social,
+.menu {
   display: flex;
 }
 
@@ -55,9 +57,10 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 100%;
+  width: 40vw;
 }
 
 .social a {
@@ -93,7 +96,7 @@ header {
 
 .hero {
   color: rgba(255, 255, 255, 0.8);
-  font-family: 'Anton', sans-serif;
+  font-family: "Anton", sans-serif;
   text-transform: uppercase;
   text-align: center;
   display: flex;
@@ -159,11 +162,10 @@ header {
 
 .games {
   align-self: stretch;
-  height: 106px;
+  height: 107px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   background-image: url("http://www.echofox.gg/images/landing/games.png");
-  background-size: cover;
 }
 
 .menu {
@@ -176,8 +178,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 0.5em;
   height: 100%;
+  width: 100%;
 }
 
 .menu a:hover {
@@ -201,7 +204,7 @@ header {
 }
 
 .articles {
-  max-width: 1080px;
+  max-width: 90vw;
   margin: 0 auto;
   display: flex;
 }
@@ -217,23 +220,31 @@ header {
   height: 350px;
   box-sizing: border-box;
   margin: 20px 10px 0 10px;
-  font-family: 'Open Sans', sans-serif;
-  text-shadow: 1px 1px 2px black;
+  font-family: "Open Sans", sans-serif;
+  text-shadow: 2px 2px 2px black;
   flex-direction: column;
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
+.article-title {
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+.article-cover:hover {
+  background-color: rgba(255, 147, 74, 0.1);
+  transition: all 250ms ease-in-out;
+}
 .article-cover {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background: linear-gradient(transparent, rgba(105, 49, 249, 0.2));
   display: flex;
   padding: 10px 15px;
   box-sizing: border-box;
   flex-wrap: wrap;
   flex-direction: row;
   align-content: flex-end;
-  background: rgba(0, 0, 0, 0.6);
+  transition: all 250ms ease;
 }
 
 .article-topic {
@@ -266,11 +277,126 @@ header {
   letter-spacing: -1px;
 }
 
-.author, .article-stats {
+.author,
+.article-stats {
   color: white;
   font-size: 12px;
   font-family: sans-serif;
   padding: 1rem 0;
+}
+
+p,
+span,
+strong {
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+
+.matches {
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 38px;
+  margin: 2em auto;
+  color: white;
+  width: 100%;
+  text-align: center;
+  line-height: 30px;
+}
+
+.matches-subtitle {
+  color: rgba(122, 122, 122, 0.5);
+  text-transform: none;
+  font-size: 18px;
+}
+
+.matchlist {
+  display: flex;
+  flex-direction: column;
+}
+
+.matches-box {
+  background-color: rgba(29, 28, 32, 0.67);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.18);
+  padding: 18px;
+  color: #fff;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  width: 50vw;
+  margin: 1em auto;
+  justify-content: space-around;
+}
+
+.match-divider {
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.matches-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.matches-date,
+.match-view {
+  color: #727b84;
+  letter-spacing: 2px;
+  margin: 2px 0;
+  font-size: 10px;
+}
+
+.match-view {
+  color: #e2732b;
+}
+
+.match-view i {
+  font-size: 28px;
+  font-style: normal;
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  vertical-align: bottom;
+}
+
+.matches-details {
+  display: flex;
+  justify-content: center;
+}
+
+.matches-team {
+  width: 315px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0.5em 0;
+}
+
+.matches-team > a {
+  align-self: center;
+}
+
+.team-name {
+  font-size: 22px;
+  font-weight: 500;
+  color: #59636b;
+  display: flex;
+}
+
+.matches-team a > img {
+  max-height: 90px;
+  max-width: 90px;
+}
+
+.matches-vs {
+  color: #fff;
+  margin-bottom: 26px;
+  letter-spacing: 2px;
+  font-size: 32px;
+  font-weight: 900;
 }
 
 .main {
@@ -339,14 +465,14 @@ header {
 }
 
 .blog-title h1 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   font-size: 38px;
 }
 
 .author-container {
   background-color: #1a1a1a;
-  heigh: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
@@ -370,7 +496,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  font-size: .8em;
+  font-size: 0.8em;
   color: #646464;
   background-color: rgba(50, 50, 50, 0.2);
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
@@ -398,11 +524,11 @@ header {
 }
 
 .author-post {
-  padding: .9em;
+  padding: 0.9em;
   color: #969696;
-  font-family: "Open Sans",sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.7;
-  letter-spacing: .015em;
+  letter-spacing: 0.015em;
   word-wrap: break-word;
   margin: 10px;
 }
@@ -416,6 +542,24 @@ header {
   border-radius: 4px;
 }
 
+.footer {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+}
+
+.footer-section {
+  width: 120px;
+  width: 100%;
+  text-align: center;
+  margin: 1em 0;
+}
+
+.footer p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+}
+
 @media only screen and (max-width: 600px) {
   .dtm {
     flex-direction: column;
@@ -423,14 +567,15 @@ header {
 
   .articles {
     width: auto;
-    margin: 0;
+    margin: 0 auto;
   }
 
   .news {
     width: auto;
   }
 
-  .navbar, .social {
+  .navbar,
+  .social {
     display: none;
   }
 
