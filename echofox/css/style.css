@@ -741,12 +741,20 @@ strong {
     font-size: 16px;
   }
   .matches-box {
-    width: 90vw;
+    width: 95vw;
     flex-direction: column;
     padding: 1em 0 0.5em 0;
   }
   .blog-social a {
     margin-left: 1px;
     padding: 0.5em 0.8em;
+  }
+  .blg {
+    width: 95vw;
+  }
+  .match-divider {
+    border-right: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1em;
   }
 }
