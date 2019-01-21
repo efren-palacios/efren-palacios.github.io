@@ -183,12 +183,22 @@ header {
   align-items: center;
   padding: 0 0.5em;
   height: 100%;
-  width: 100%;
+  width: 100vw;
+  background-position: 100% 0;
+  background-size: 205% 100%;
+  transition: all 0.25s ease-in;
+  background-image: linear-gradient(
+    to left,
+    transparent,
+    transparent 50%,
+    #d6661d 50%,
+    #d6661d
+  );
 }
 
 .menu a:hover {
-  color: #f0f0f0;
-  background-color: #d6661d;
+  color: #fff;
+  background-position: 0 0;
 }
 
 .social a:hover,
