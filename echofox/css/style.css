@@ -48,6 +48,7 @@ nav {
 .social,
 .menu {
   display: flex;
+  margin: 0 auto;
 }
 
 .navbar {
@@ -64,13 +65,20 @@ nav {
 }
 
 .social a {
-  margin: 0 10px;
+  padding: 1em 1.5em;
+  border-radius: 4px;
+  width: 100%;
+  display: inline-block;
+}
+
+.mobilesocial a {
+  text-align: center;
 }
 
 .logo {
   display: flex;
   height: auto;
-  margin-left: 20%;
+  margin: 0 auto;
 }
 
 header {
@@ -204,7 +212,8 @@ header {
 .social a:hover,
 .mobilesocial a:hover,
 .hamburger-menu > ul > li > a:hover {
-  color: #934614;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .newscontainer {
@@ -460,7 +469,7 @@ strong {
   line-height: 51px;
   padding: 0 8px;
   font-size: 18px;
-  background: rgba(39, 53, 102, 0.6);
+  background: rgba(39, 53, 102, 1);
   border-left: 5px solid rgba(226, 115, 43, 0.7);
   font-weight: 700;
   position: absolute;
@@ -468,8 +477,12 @@ strong {
   margin: 15px;
   font-family: "Helvetica", sans-serif;
   letter-spacing: 1px;
-  text-shadow: 1px 1px 2px black;
   font-variant: small-caps;
+  box-shadow: inset 0px 0px 5px rgba(10, 10, 10, 0.8);
+}
+
+.blog-label > h1 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
 }
 
 .blog-title {
@@ -703,6 +716,11 @@ strong {
   .navbar,
   .social {
     display: none;
+  }
+
+  .hamburger-menu > ul > li > a:hover,
+  .sidebar a:hover {
+    color: #e2732b;
   }
 
   .hamburger {
