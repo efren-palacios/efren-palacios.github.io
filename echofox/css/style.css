@@ -697,6 +697,20 @@ strong {
   max-width: 89.1vw;
 }
 
+@media only screen and (max-width: 1180px) {
+  .navbar,
+  .social {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+
+  .sidebar {
+    display: block;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .dtm {
     flex-direction: column;
