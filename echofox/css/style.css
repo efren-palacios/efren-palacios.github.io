@@ -569,13 +569,14 @@ strong {
 }
 .hamburger {
   z-index: 100;
-  position: absolute;
+  position: fixed;
   top: 40px;
   left: 30px;
   cursor: pointer;
   width: 25px;
   height: 25px;
   display: none;
+  transition: 0.25s;
 }
 .hamburger-item {
   background-color: #fff;
