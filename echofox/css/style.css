@@ -568,7 +568,7 @@ strong {
   height: 100%;
 }
 .hamburger {
-  z-index: 3;
+  z-index: 100;
   position: absolute;
   top: 40px;
   left: 30px;
