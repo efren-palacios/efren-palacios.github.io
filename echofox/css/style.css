@@ -48,6 +48,7 @@ a:hover {
 
 body {
   background-color: #0a0a0a;
+  font-family: "Open Sans", sans-serif;
 }
 
 nav {
@@ -652,6 +653,111 @@ strong {
 .blg {
   max-width: 89.1vw;
 }
+.shop-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #ddd;
+  display: flex;
+  justify-content: space-evenly;
+}
+.products-container {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+.products-img {
+  width: 500px;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.5);
+  margin: 1em 0;
+}
+.products-text {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.products-container > p {
+  margin: 1em 0;
+}
+.products-title {
+  font-size: 24px;
+}
+.products-button {
+  display: block;
+  padding: 1em 2em;
+  color: white;
+  border-radius: 5px;
+  background-color: black;
+  font-family: "Open Sans", sans-serif;
+  width: 150px;
+  text-align: center;
+}
+.product-info {
+  width: 550px;
+}
+.products-features > li {
+  margin: 0 0 1em 25px;
+  padding: 0;
+}
+.products-features {
+  list-style: disc inside;
+}
+.products-price {
+  font-size: 18px;
+  font-weight: bold;
+}
+.products-header {
+  margin-top: 100px;
+}
+.discount {
+  text-decoration: line-through;
+}
+select {
+  /* for Firefox */
+  -moz-appearance: none; /* for Chrome */
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background: black;
+  background-image: none;
+}
+/* For IE10 */
+select::-ms-expand {
+  display: none;
+}
+.products-select {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0 0 0 1em;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+}
+.select {
+  position: relative;
+  display: block;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: black;
+  overflow: hidden;
+  border-radius: 0.25em;
+  color: white;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 1em;
+  background: #333;
+  pointer-events: none;
+}
 @media only screen and (max-width: 1180px) {
   .navbar,
   .social {
@@ -662,6 +768,24 @@ strong {
   }
   .sidebar {
     display: block;
+  }
+  .shop-container {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .products-img {
+    width: 100%;
+  }
+  .product-info {
+    width: 90%;
+  }
+  .products-button {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .products-header {
+    margin-top: 0;
   }
 }
 @media only screen and (max-width: 600px) {
