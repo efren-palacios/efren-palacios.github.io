@@ -886,6 +886,9 @@ select::-ms-expand {
     max-width: 100%;
     margin: 1em auto;
   }
+  .comment-title {
+    margin: 1em auto;
+  }
 }
 @media only screen and (max-width: 600px) {
   .dtm {
