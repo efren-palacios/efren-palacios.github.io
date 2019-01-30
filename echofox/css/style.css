@@ -545,6 +545,61 @@ strong {
   color: #e2732b;
   border-radius: 4px;
 }
+.comment-box {
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
+  min-height: 500px;
+}
+.text-field,
+.text-input {
+  resize: none;
+  width: 100%;
+  color: white;
+  margin: 10px 0;
+  transition: 0.5s;
+  padding: 1em;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.7;
+  letter-spacing: 0.015em;
+  background-color: rgba(29, 28, 32, 0.67);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.18);
+}
+.text-field:focus,
+.text-input:focus {
+  outline: none;
+  border-color: #e2732b;
+}
+.form-field {
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+}
+.text-input:nth-child(2) {
+  margin-left: 10px;
+}
+.form-button {
+  padding: 1em 1.5em;
+  border-radius: 5px;
+  background-color: #e2732b;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+}
+.form-button:hover {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #e2732b;
+  color: #e2732b;
+}
+.comment-title {
+  font-size: 28px;
+  letter-spacing: 1.5px;
+  margin: 1em 0;
+  color: #ddd;
+}
 .footer {
   background-color: rgba(255, 255, 255, 0.05);
   color: rgba(255, 255, 255, 0.5);
