@@ -573,7 +573,6 @@ strong {
 }
 .form-field {
   min-width: 100%;
-  min-height: 100%;
   display: flex;
 }
 .text-input:nth-child(2) {
