@@ -657,7 +657,7 @@ strong {
 .sidebar {
   position: fixed;
   top: 0;
-  left: -500px;
+  left: -1500px;
   width: 100%;
   height: 100%;
   background-color: #e2732b;
