@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+* {
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+  text-decoration: none;
+
+  /*
+	For those who enjoy CSS3 color & background transitions everywhere.
+	This will save space and ease the stress on selecting what's needed
+	for :hover and :active properties.
+	*/
+
+  -webkit-transition: background-color 250ms ease-in-out,
+    color 250ms ease-in-out;
+  -moz-transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+  -o-transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+  -ms-transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption,
+th,
+td {
+  font-weight: normal;
+  text-align: left;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+}
+blockquote,
+q {
+  quotes: "" "";
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+h group,
+menu,
+nav,
+section {
+  display: block;
+}
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+
+body {
+  font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 12px;
+  line-height: 24px;
+  min-width: 960px;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 56px;
+}
+h2 {
+  font-size: 30px;
+  line-height: 38px;
+}
+h3 {
+  font-size: 22px;
+  line-height: 30px;
+}
+h4 {
+  font-size: 20px;
+  line-height: 28px;
+}
+h5 {
+  font-size: 18px;
+  line-height: 26px;
+}
+h6 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  cursor: default;
+}
+.clear {
+  clear: both;
+}
+a {
+  color: #f05;
+}
+
+body {
+  background: #ddd;
+}
+
+section {
+  display: flex;
+}
+
+.bg-black {
+  background-color: #22292f;
+}
+
+.navbar {
+  padding: 0.75em 0;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo {
+  width: 33.3%;
+  font-weight: 100;
+  text-align: center;
+  font-size: 1.25rem;
+  color: white;
+}
+
+.blue {
+  color: #72a0d9;
+}
+
+@media only screen and (max-width: 1180px) {
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar {
+    justify-content: center;
+  }
+}
