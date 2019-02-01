@@ -155,7 +155,7 @@ section {
   .logo {
     display: flex;
     justify-content: space-between;
-    margin: 0 0 0 1.5em;
+    margin: 0 0 0 1em;
     align-items: center;
     width: 100%;
   }
@@ -169,7 +169,7 @@ section {
 
   .search-bar,
   .search-button {
-    padding: 0.5rem 0.75rem;
+    padding: 0.5rem 1.2rem;
     color: #fff;
   }
 
@@ -283,6 +283,7 @@ section {
   }
   .rank-emblem > img {
     -webkit-filter: drop-shadow(5px 5px 25px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(5px 5px 25px rgba(0, 0, 0, 0.5));
   }
   .rank-division {
     font-size: 24px;
