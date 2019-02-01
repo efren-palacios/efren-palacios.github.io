@@ -312,4 +312,70 @@ section {
     display: flex;
     justify-content: space-evenly;
   }
+  .match-card {
+    border-left: 10px solid #ff4e50;
+    background-color: #45192b;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  }
+  .match-summary {
+    background-color: #45192b;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .match-ending {
+    font-weight: bold;
+    color: #ff4e50;
+  }
+  .match-champ {
+    width: 2rem;
+    border-radius: 50%;
+  }
+  .match-champ-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .match-champ-stats > img {
+    margin-right: 0.5rem;
+  }
+  .match-role {
+    width: 2rem;
+  }
+  .match-score {
+    display: flex;
+    flex-direction: column;
+  }
+  .match-summoners {
+    display: flex;
+    flex-direction: column;
+  }
+  .match-summoner-icon {
+    width: 2rem;
+    margin: 1px 0;
+  }
+  .match-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .match-items > img {
+    height: 3rem;
+    align-items: center;
+    align-content: center;
+  }
+  .match-slots {
+    display: flex;
+    justify-content: space-around;
+  }
+  .match-item-last {
+    width: 100%;
+  }
+  .divider {
+  }
 }
