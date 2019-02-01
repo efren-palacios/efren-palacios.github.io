@@ -123,6 +123,7 @@ body {
 
 section {
   display: flex;
+  flex-direction: column;
 }
 
 .bg-black {
@@ -195,6 +196,7 @@ section {
     background-position-y: 510px;
     opacity: 0.9;
     width: 100%;
+    background-color: black;
   }
   .profile {
     display: flex;
@@ -216,6 +218,7 @@ section {
     top: 0;
     left: 0;
     z-index: -1;
+    opacity: 0.75;
   }
   .summoner-name {
     text-shadow: 1px 1px 2px black;
@@ -252,5 +255,60 @@ section {
   }
   .online-status {
     background-color: #38c172;
+  }
+  .rank-container {
+    background-color: #ddd;
+    color: #ddd;
+    display: flex;
+    flex-direction: column;
+  }
+  .rank-summary {
+    padding: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    background-color: #22292f;
+  }
+  .rank-stats {
+    background-color: #3d4852;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    padding: 1em 0;
+  }
+  .rank-data {
+    display: flex;
+    justify-content: space-between;
+  }
+  .rank-emblem > img {
+    -webkit-filter: drop-shadow(5px 5px 25px rgba(0, 0, 0, 0.5));
+  }
+  .rank-division {
+    font-size: 24px;
+    color: #6abbff;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px black;
+  }
+  .rank-lp {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.5em;
+    text-shadow: 1px 1px 3px black;
+  }
+  .darken {
+    color: rgba(255, 255, 255, 0.25);
+  }
+  .text-green {
+    color: #38c172;
+  }
+  .rank-champ {
+    display: flex;
+    justify-content: space-around;
+  }
+  .summoner-verification {
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
   }
 }
