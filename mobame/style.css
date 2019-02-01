@@ -127,13 +127,12 @@ section {
 
 .bg-black {
   background-color: #22292f;
+  width: auto;
 }
 
 .navbar {
   padding: 0.75em 0;
   display: flex;
-  margin: 0 auto;
-  width: 100%;
 }
 
 .logo {
@@ -149,30 +148,28 @@ section {
 }
 
 @media only screen and (max-width: 600px) {
-  .logo {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-    margin: 0.5em 1em;
+  body {
+    min-width: 0;
   }
-  .navbar {
-    justify-content: center;
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 0 1.5em;
+    align-items: center;
+    width: 100%;
   }
   .search-bar {
     background-color: #3d4852;
     border-top-left-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
-    width: 150px;
     font-size: 12px;
+    height: 20px;
   }
 
   .search-bar,
   .search-button {
     padding: 0.5rem 0.75rem;
     color: #fff;
-    height: auto;
   }
 
   .search-button {
@@ -181,10 +178,12 @@ section {
     border-bottom-right-radius: 0.25rem;
     cursor: pointer;
     font-size: 12px;
+    height: auto;
   }
 
   .form-container {
     margin: 0 1.25rem;
+    width: 100%;
   }
 
   .form-flex {
