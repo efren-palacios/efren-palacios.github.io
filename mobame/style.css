@@ -152,10 +152,42 @@ section {
   .logo {
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-items: center;
+    align-content: center;
+    margin: 0.5em 1em;
   }
   .navbar {
     justify-content: center;
+  }
+  .search-bar {
+    background-color: #3d4852;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    width: 150px;
+    font-size: 12px;
+  }
+
+  .search-bar,
+  .search-button {
+    padding: 0.5rem 0.75rem;
+    color: #fff;
+    height: auto;
+  }
+
+  .search-button {
+    background-color: #2779bd;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  .form-container {
+    margin: 0 1.25rem;
+  }
+
+  .form-flex {
+    display: flex;
   }
 }
