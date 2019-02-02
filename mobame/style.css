@@ -313,12 +313,10 @@ section {
     justify-content: space-evenly;
   }
   .match-card {
-    border-left: 10px solid #ff4e50;
+    border-left: 4px solid #ff4e50;
     background-color: #45192b;
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 5px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
   }
   .match-summary {
     background-color: #45192b;
@@ -345,7 +343,7 @@ section {
     margin-right: 0.5rem;
   }
   .match-role {
-    width: 2rem;
+    width: 1.5rem;
   }
   .match-score {
     display: flex;
@@ -363,19 +361,29 @@ section {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+    width: 125px;
   }
   .match-items > img {
-    height: 3rem;
+    height: 1.8rem;
     align-items: center;
     align-content: center;
+    margin: 0 2px;
   }
   .match-slots {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
   }
-  .match-item-last {
-    width: 100%;
+  .match-menu {
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.125rem;
+    margin: 0 0 0 auto;
   }
-  .divider {
+  .match-menu > i {
+    padding: 1em;
   }
 }
