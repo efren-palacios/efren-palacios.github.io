@@ -33,10 +33,10 @@
 
 .bg {
   background-image: url("./img/bg.png");
-  background-position: center bottom;
-  background-size: 35%;
+  background-size: 25%;
   background-repeat: repeat-x;
-  position: relative;
+  background-position: 0px 0px;
+  animation: slide 60s linear infinite;
 }
 
 .darken {
@@ -71,6 +71,13 @@ main {
     display: none;
   }
   .bg {
-    background-size: cover;
+    background-size: 60%;
+    animation: slide 60s linear infinite;
+  }
+}
+
+@keyframes slide {
+  100% {
+    background-position: -1000px 0px;
   }
 }
