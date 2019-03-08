@@ -66,6 +66,14 @@ main {
   position: relative;
 }
 
+.card {
+  min-height: 100%;
+}
+
+.columns:last-child {
+  margin-bottom: 0.75rem;
+}
+
 @media (max-width: 1024px) {
   .desktop {
     display: none;
