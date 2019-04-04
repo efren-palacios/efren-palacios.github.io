@@ -36,7 +36,6 @@
   background-size: 25%;
   background-repeat: repeat-x;
   background-position: 0px 0px;
-  animation: slide 60s linear infinite;
 }
 
 .darken {
@@ -80,12 +79,5 @@ main {
   }
   .bg {
     background-size: 60%;
-    animation: slide 60s linear infinite;
-  }
-}
-
-@keyframes slide {
-  100% {
-    background-position: -1000px 0px;
   }
 }
