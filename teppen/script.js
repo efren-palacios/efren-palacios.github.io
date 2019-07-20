@@ -86,7 +86,13 @@ var app = new Vue({
       this.pieChart.update();
       this.barChart.update();
       $("#chart-cover").show();
-      return this.deck.push(card);
+      this.deck.push(card);
+      return this.deck.sort((a, b) => {
+        if (a.attributes.Color > b.attributes.Color) return -1;
+        if (a.attributes.Color < b.attributes.Color) return 1;
+        if (a.attributes.MP > b.attributes.MP) return 1;
+        if (a.attributes.Color > b.attributes.MP) return -1;
+      });
     },
     showCard: function(e, card) {
       if (e.shiftKey) {
