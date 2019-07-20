@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TEPPEN Deck Builder - By Effy</title>
+    <link rel="shortcut icon" href="favicon.ico" type="img/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css'>
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+    <div id="app">
+        <img class="logo" src="logo-outline.png" alt="">
+        <div class="ui inverted segment container">
+
+            <div v-show="showModal" class="modal-mask" @click="showModal = !showModal">
+                <div class="tooltip">
+                    <img :src="modal.image" alt="">
+                    <div class="tooltip-column">
+                        <h1 class="tooltip-title">{{modal.name}}</h1>
+                        <div class="tooltip-data">
+                            <div v-for="(value,name) in modal.attributes">
+                                <div class="tooltip-split">
+                                    <div v-if="name !== 'Color' ">{{name}}</div>
+                                    <div v-if="name !== 'Color' ">{{value}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <p class="tooltip">*Use Shift+Click to remove a card</p>
+            <div class="ui search inverted transparent icon input">
+                <input v-model="card" class="prompt" type="text" placeholder="Search...">
+                <i class="search icon"></i>
+
+            </div>
+            <button @click="addCard()" class="ui bdivider inverted secondary button">Add To Deck</button>
+            <div class="ui inverted segment">
+                <p class="alert">{{alert}}</p>
+                <div class="cards">
+                    <div v-for="card of deck">
+                        <h1 class="card-name">{{card.name}}</h1>
+                        <img :class="{'red': card.attributes.Color == 'Red', 'green': card.attributes.Color == 'Green', 'purple': card.attributes.Color == 'Purple', 'black': card.attributes.Color == 'Black'}" @click="showCard(event, card);" class="card" :src="card.image" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="chart-cover" class="ui inverted segment container">
+
+            <div class="deck-stats"><img src="soul.png" class="soul-icon" alt=""> Soul Cost: {{souls.toLocaleString()}} | Common MP Cost: {{mp}}
+            </div>
+
+            <div class="chart-container">
+                <p>Color Distribution</p>
+                <canvas id="myChart"></canvas>
+            </div>
+            <canvas id="myBar"></canvas>
+        </div>
+        <div class="container"><p>This site has no affiliation with Capcom or GungHo</p>App created by <a href="https://www.patreon.com/effy_dev" target="_blank">Effy</a> | TEPPEN ©GungHo Online Entertainment, Inc. All Rights Reserved. ©CAPCOM CO., LTD. ALL RIGHTS RESERVED.</div>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js'></script>
+
+        <script src="./script.js"></script>
+
+</body>
+
+</html>
