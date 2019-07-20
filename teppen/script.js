@@ -58,9 +58,7 @@ var app = new Vue({
   methods: {
     addCard: async function() {
       this.alert = "";
-      let cards = await axios(
-        "https://duel-generator-database.s3-us-west-1.amazonaws.com/db.json"
-      );
+      let cards = await axios("./db.json");
       let card = cards.data.find(c => c.name == this.card);
       if (!card) {
         return (this.alert = "Card not Found!");
