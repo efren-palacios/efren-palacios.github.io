@@ -118,9 +118,7 @@ var app = new Vue({
   },
   mounted: async function() {
     try {
-      let cards = await axios.get(
-        "https://duel-generator-database.s3-us-west-1.amazonaws.com/db.json"
-      );
+      let cards = await axios.get("./db.json");
       for (card of cards.data) {
         this.content.push({
           title: card.name,

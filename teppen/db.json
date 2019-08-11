@@ -4258,5 +4258,235 @@
       "Effects": "Destroys a unit with 1 Attack or less. If your Hero's Life is 15 or less, destroys a unit with 2 Attack or less instead.",
       "Color": "Black"
     }
+  },
+  {
+    "name": "Rocket Launcher",
+    "id": "RokectLauncher",
+    "image": "https://teppenthegame.com/_materials/img/update/2019/v110/0808/rocketlauncher.png",
+    "attributes": {
+      "Color": "Red",
+      "Effects": "Deals 10 Pierce Damage to a random enemy unit",
+      "Rarity": "Epic",
+      "MP": "3"
+    }
+  },
+  {
+    "name": "Claire Redfield",
+    "id": "JILL005",
+    "image": "https://teppenthegame.com/_materials/img/cards/basic/2019/hero009/jill005.png",
+    "attributes": {
+      "No.": "JILL 005",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Epic",
+      "MP": "3",
+      "Attack": "3",
+      "HP": "1",
+      "Effects": "When played: If your Explore count is 3 or higher, deals 6 damage to enemy unit in front.Explore count: 0",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Jill Valentine",
+    "id": "JILL008",
+    "image": "https://teppenthegame.com/_materials/img/cards/basic/2019/hero009/jill008.png",
+    "attributes": {
+      "No.": "JILL 008",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Epic",
+      "MP": "5",
+      "Attack": "2",
+      "HP": "8",
+      "Effects": "Victory: Explore for Handgun.",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Teostra",
+    "id": "JILL006",
+    "image": "https://teppenthegame.com/_materials/img/cards/basic/2019/hero009/jill006.png",
+    "attributes": {
+      "No.": "JILL 006",
+      "Type": "Unit",
+      "Tribe": "Monster",
+      "Rarity": "Rare",
+      "MP": "5",
+      "Attack": "2",
+      "HP": "6",
+      "Effects": "＜Flight＞",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Carlos Oliveira",
+    "id": "JILL007",
+    "image": "https://teppenthegame.com/_materials/img/cards/basic/2019/hero009/jill007.png",
+    "attributes": {
+      "No.": "JILL 007",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Rare",
+      "MP": "4",
+      "Attack": "1",
+      "HP": "9",
+      "Effects": "＜Combo＞",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Mikhail Victor",
+    "id": "JILL001",
+    "image": "https://teppenthegame.com/_materials/img/cards/basic/2019/hero009/jill001.png",
+    "attributes": {
+      "No.": "JILL 001",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Common",
+      "MP": "3",
+      "Attack": "1",
+      "HP": "5",
+      "Effects": "When played: Explore for Ammo.",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Signas",
+    "id": "JILL002",
+    "image": "https://teppenthegame.com/_materials/img/cards/basic/2019/hero009/jill002.png",
+    "attributes": {
+      "No.": "JILL 002",
+      "Type": "Unit",
+      "Tribe": "Machine",
+      "Rarity": "Common",
+      "MP": "3",
+      "Attack": "3",
+      "HP": "3",
+      "Effects": "",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Guile",
+    "id": "JILL003",
+    "image": "https://teppenthegame.com/_materials/img/cards/basic/2019/hero009/jill003.png",
+    "attributes": {
+      "No.": "JILL 003",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Common",
+      "MP": "3",
+      "Attack": "1",
+      "HP": "6",
+      "Effects": "＜Combo＞",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Demitri Maximoff",
+    "id": "JILL004",
+    "image": "https://teppenthegame.com/_materials/img/cards/basic/2019/hero009/jill004.png",
+    "attributes": {
+      "No.": "JILL 004",
+      "Type": "Unit",
+      "Tribe": "Demon",
+      "Rarity": "Common",
+      "MP": "6",
+      "Attack": "3",
+      "HP": "8",
+      "Effects": "",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Brought to Light",
+    "id": "JILL013",
+    "image": "https://teppenthegame.com/_materials/img/cards/basic/2019/hero009/jill013.png",
+    "attributes": {
+      "No.": "JILL 013",
+      "Type": "Action",
+      "Rarity": "Epic",
+      "MP": "1",
+      "Effects": "One friendly unit with Explore performs a Explore.",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Spread Shot",
+    "id": "JILL010",
+    "image": "https://teppenthegame.com/_materials/img/cards/basic/2019/hero009/jill010.png",
+    "attributes": {
+      "No.": "JILL 010",
+      "Type": "Action",
+      "Rarity": "Rare",
+      "MP": "2",
+      "Effects": "Deals 3 damage split among enemy units.",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "A Noble Death",
+    "id": "JILL009",
+    "image": "https://teppenthegame.com/_materials/img/cards/basic/2019/hero009/jill009.png",
+    "attributes": {
+      "No.": "JILL 009",
+      "Type": "Action",
+      "Rarity": "Common",
+      "MP": "1",
+      "Effects": "Deals 3 damage to a friendly unit and 4 damage to a random enemy unit.",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Limited Ammo",
+    "id": "JILL011",
+    "image": "https://teppenthegame.com/_materials/img/cards/basic/2019/hero009/jill011.png",
+    "attributes": {
+      "No.": "JILL 011",
+      "Type": "Action",
+      "Rarity": "Common",
+      "MP": "4",
+      "Effects": "Gives +3 Attack to a friendly unit. (Effective for 1 attacks)",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Exploding Barrel",
+    "id": "JILL012",
+    "image": "https://teppenthegame.com/_materials/img/cards/basic/2019/hero009/jill012.png",
+    "attributes": {
+      "No.": "JILL 012",
+      "Type": "Action",
+      "Rarity": "Common",
+      "MP": "2",
+      "Effects": "Deals 1 damage to all enemy units.",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Handgun",
+    "id": "T008",
+    "image": "https://teppenthegame.com/_materials/img/update/2019/jill/pickup-1/T008.png",
+    "attributes": {
+      "No.": "T008",
+      "Type": "Action",
+      "Rarity": "Epic",
+      "MP": "1",
+      "Effects": "Deals 4 damage to an enemy unit.",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Ammo",
+    "id": "T007",
+    "image": "https://teppenthegame.com/_materials/img/update/2019/jill/pickup-1/T007.png",
+    "attributes": {
+      "No.": "T007",
+      "Type": "Action",
+      "Rarity": "Common",
+      "MP": "1",
+      "Effects": "Gives +2 Attack to a friendly unit.",
+      "Color": "Red"
+    }
   }
 ]
