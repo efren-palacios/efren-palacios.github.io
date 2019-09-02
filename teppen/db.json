@@ -4488,5 +4488,1525 @@
       "Effects": "Gives +2 Attack to a friendly unit.",
       "Color": "Red"
     }
+  },
+  {
+    "name": "Nash",
+    "id": "DON012SCT",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/secret/don012_sct.png",
+    "attributes": {
+      "No.": "DON 012",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Epic",
+      "MP": "4",
+      "Attack": "1",
+      "HP": "5",
+      "Effects": "＜Combo＞When played: If your Explore count is 3 or higher, gains +2/+4.Explore count:0",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Alia 2",
+    "id": "DON038SCT",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/secret/don038_sct.png",
+    "attributes": {
+      "No.": "DON 038",
+      "Type": "Unit",
+      "Tribe": "Machine",
+      "Rarity": "Epic",
+      "MP": "4",
+      "Attack": "2",
+      "HP": "1",
+      "Effects": "＜Shield＞Death: Explore for Chimera Ride Armor. Obtained card gets MP cost -2.",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Albert Wesker 2",
+    "id": "DON090SCT",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/secret/don090_sct.png",
+    "attributes": {
+      "No.": "DON 090",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Epic",
+      "MP": "5",
+      "Attack": "0",
+      "HP": "3",
+      "Effects": "When played: Gains +1/+1 for each time ＜Revenge＞ has activated.Revenge count: 0",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "Jill, Seeker of Truth",
+    "id": "DON016",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don016.png",
+    "attributes": {
+      "No.": "DON 016",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Legendary",
+      "MP": "5",
+      "Attack": "2",
+      "HP": "9",
+      "Effects": "When exploring: Gains the following abilities in order shown below.First time: ＜Veil＞Second time:＜Combo＞Third time: +4 Attack(No additional effects after third time.)",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Teostra, Infernal King",
+    "id": "DON017",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don017.png",
+    "attributes": {
+      "No.": "DON 017",
+      "Type": "Unit",
+      "Tribe": "Monster",
+      "Rarity": "Legendary",
+      "MP": "7",
+      "Attack": "3",
+      "HP": "7",
+      "Effects": "＜Agility＞Victory: Explore for Super Nova.",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Nash 2",
+    "id": "DON012",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don012.png",
+    "attributes": {
+      "No.": "DON 012",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Epic",
+      "MP": "4",
+      "Attack": "1",
+      "HP": "5",
+      "Effects": "＜Combo＞When played: If your Explore count is 3 or higher, gains +2/+4.Explore count:0",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Kirin",
+    "id": "DON013",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don013.png",
+    "attributes": {
+      "No.": "DON 013",
+      "Type": "Unit",
+      "Tribe": "Monster",
+      "Rarity": "Epic",
+      "MP": "6",
+      "Attack": "3",
+      "HP": "4",
+      "Effects": "When another unit appears on the field: Deals 2 damage to a random enemy unit.",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Claire Redfield 3",
+    "id": "DON014",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don014.png",
+    "attributes": {
+      "No.": "DON 014",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Epic",
+      "MP": "4",
+      "Attack": "2",
+      "HP": "7",
+      "Effects": "When exploring: Gain +1 MP.",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Demitri Maximoff 2",
+    "id": "DON015",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don015.png",
+    "attributes": {
+      "No.": "DON 015",
+      "Type": "Unit",
+      "Tribe": "Demon",
+      "Rarity": "Epic",
+      "MP": "5",
+      "Attack": "1",
+      "HP": "5",
+      "Effects": "＜Rush＞When played: Gains +1 Attack for each time you used Explore.Victory: Gains +2 HP.Explore count: 0",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Guile 2",
+    "id": "DON001",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don001.png",
+    "attributes": {
+      "No.": "DON 001",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Rare",
+      "MP": "4",
+      "Attack": "2",
+      "HP": "5",
+      "Effects": "Death: Explore for Detonation.",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Carlos Oliveira 2",
+    "id": "DON008",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don008.png",
+    "attributes": {
+      "No.": "DON 008",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Rare",
+      "MP": "4",
+      "Attack": "3",
+      "HP": "5",
+      "Effects": "When played: Explore for Shield.",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Agnaktor",
+    "id": "DON009",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don009.png",
+    "attributes": {
+      "No.": "DON 009",
+      "Type": "Unit",
+      "Tribe": "Monster",
+      "Rarity": "Rare",
+      "MP": "4",
+      "Attack": "3",
+      "HP": "3",
+      "Effects": "When played: Deals 3 damage to a random enemy unit.",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Seregios",
+    "id": "DON010",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don010.png",
+    "attributes": {
+      "No.": "DON 010",
+      "Type": "Unit",
+      "Tribe": "Monster",
+      "Rarity": "Rare",
+      "MP": "4",
+      "Attack": "1",
+      "HP": "6",
+      "Effects": "＜Flight＞＜Combo＞",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Burn Rooster",
+    "id": "DON011",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don011.png",
+    "attributes": {
+      "No.": "DON 011",
+      "Type": "Unit",
+      "Tribe": "Machine",
+      "Rarity": "Rare",
+      "MP": "5",
+      "Attack": "1",
+      "HP": "7",
+      "Effects": "Victory: Gains +2 HP.Taking damage (self): Gains +1 Attack.",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Velocidrome 2",
+    "id": "DON002",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don002.png",
+    "attributes": {
+      "No.": "DON 002",
+      "Type": "Unit",
+      "Tribe": "Monster",
+      "Rarity": "Common",
+      "MP": "4",
+      "Attack": "3",
+      "HP": "8",
+      "Effects": "Cannot block enemy unit attacks.",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Maki",
+    "id": "DON003",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don003.png",
+    "attributes": {
+      "No.": "DON 003",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Common",
+      "MP": "3",
+      "Attack": "1",
+      "HP": "7",
+      "Effects": "＜Combo＞",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Metal Wing",
+    "id": "DON004",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don004.png",
+    "attributes": {
+      "No.": "DON 004",
+      "Type": "Unit",
+      "Tribe": "Machine",
+      "Rarity": "Common",
+      "MP": "5",
+      "Attack": "1",
+      "HP": "7",
+      "Effects": "Gains +4 attack damage.",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Slash Beast",
+    "id": "DON005",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don005.png",
+    "attributes": {
+      "No.": "DON 005",
+      "Type": "Unit",
+      "Tribe": "Machine",
+      "Rarity": "Common",
+      "MP": "5",
+      "Attack": "4",
+      "HP": "4",
+      "Effects": "＜Combo＞",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Zeku",
+    "id": "DON007",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don007.png",
+    "attributes": {
+      "No.": "DON 007",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Common",
+      "MP": "5",
+      "Attack": "2",
+      "HP": "10",
+      "Effects": "When played: Explore for Combo.",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "State of Nothingness",
+    "id": "DON025",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don025.png",
+    "attributes": {
+      "No.": "DON 025",
+      "Type": "Action",
+      "Rarity": "Legendary",
+      "MP": "2",
+      "Effects": "Gives a friendly unit +1 Attack for each time you used an Action Card during this battle.Count: 0",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Bushinryu Awakening",
+    "id": "DON023",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don023.png",
+    "attributes": {
+      "No.": "DON 023",
+      "Type": "Action",
+      "Rarity": "Epic",
+      "MP": "1",
+      "Effects": "A friendly unit with Explore performs a Explore. Obtained card gets MP cost -1.",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Unbreakable Bond",
+    "id": "DON024",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don024.png",
+    "attributes": {
+      "No.": "DON 024",
+      "Type": "Action",
+      "Rarity": "Epic",
+      "MP": "4",
+      "Effects": "Grants \"Attacking: Gains +1 Attack.\" to all friendly units.",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Bladescale Storm",
+    "id": "DON021",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don021.png",
+    "attributes": {
+      "No.": "DON 021",
+      "Type": "Action",
+      "Rarity": "Rare",
+      "MP": "4",
+      "Effects": "Deals 3 damage to a random enemy unit.If your Explore count is 3 or higher, deals 4 damage to all enemy units instead.Explore count: 0",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Unleashed",
+    "id": "DON022",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don022.png",
+    "attributes": {
+      "No.": "DON 022",
+      "Type": "Action",
+      "Rarity": "Rare",
+      "MP": "3",
+      "Effects": "Gives +2 Attack to a friendly unit.If your Explore count is 3 or higher, also gives ＜Flight＞.Explore count: 0",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Vengeance",
+    "id": "DON018",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don018.png",
+    "attributes": {
+      "No.": "DON 018",
+      "Type": "Action",
+      "Rarity": "Common",
+      "MP": "3",
+      "Effects": "Deals 2 damage to an enemy unit.If your Explore count is 1 or higher, deals 5 damage to an enemy unit instead.Explore count: 0",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Lightning Bolt",
+    "id": "DON019",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don019.png",
+    "attributes": {
+      "No.": "DON 019",
+      "Type": "Action",
+      "Rarity": "Common",
+      "MP": "2",
+      "Effects": "Deals 2 damage to an enemy unit.Puts one card from your deck with the same name into the EX Pocket.",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "Cower",
+    "id": "DON020",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/red/don020.png",
+    "attributes": {
+      "No.": "DON 020",
+      "Type": "Action",
+      "Rarity": "Common",
+      "MP": "2",
+      "Effects": "Prevents one enemy unit from countering.",
+      "Color": "Red"
+    }
+  },
+  {
+    "name": "General, Reploid Leader",
+    "id": "DON041",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don041.png",
+    "attributes": {
+      "No.": "DON 041",
+      "Type": "Unit",
+      "Tribe": "Machine",
+      "Rarity": "Legendary",
+      "MP": "7",
+      "Attack": "3",
+      "HP": "5",
+      "Effects": "＜Spillover＞Victory: Explore for Repliforce.",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Kushala Daora, The Storm",
+    "id": "DON042",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don042.png",
+    "attributes": {
+      "No.": "DON 042",
+      "Type": "Unit",
+      "Tribe": "Monster",
+      "Rarity": "Legendary",
+      "MP": "6",
+      "Attack": "2",
+      "HP": "6",
+      "Effects": "＜Flight＞When on the field: Reduces damage taken of 3 or less to 1.After dealing damage to enemy Hero: Returns a random enemy unit with 5 HP or less to the deck.",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Dee-Ay",
+    "id": "DON036",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don036.png",
+    "attributes": {
+      "No.": "DON 036",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Epic",
+      "MP": "5",
+      "Attack": "3",
+      "HP": "5",
+      "Effects": "When exploring: Gains +1/+2.",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Alia 3",
+    "id": "DON038",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don038.png",
+    "attributes": {
+      "No.": "DON 038",
+      "Type": "Unit",
+      "Tribe": "Machine",
+      "Rarity": "Epic",
+      "MP": "4",
+      "Attack": "2",
+      "HP": "1",
+      "Effects": "＜Shield＞Death: Explore for Chimera Ride Armor. Obtained card gets MP cost -2.",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Sherry Birkin 2",
+    "id": "DON039",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don039.png",
+    "attributes": {
+      "No.": "DON 039",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Epic",
+      "MP": "6",
+      "Attack": "2",
+      "HP": "6",
+      "Effects": "When played: If your Explore count is 3 or higher, gives all friendly units +1/+2.Explore count: 0",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Angelo Credo",
+    "id": "DON040",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don040.png",
+    "attributes": {
+      "No.": "DON 040",
+      "Type": "Unit",
+      "Tribe": "Demon",
+      "Rarity": "Epic",
+      "MP": "9",
+      "Attack": "3",
+      "HP": "10",
+      "Effects": "＜Flight＞",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Kulu-Ya-Ku",
+    "id": "DON028",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don028.png",
+    "attributes": {
+      "No.": "DON 028",
+      "Type": "Unit",
+      "Tribe": "Monster",
+      "Rarity": "Rare",
+      "MP": "4",
+      "Attack": "2",
+      "HP": "5",
+      "Effects": "When played: Explore for Agility.",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Rufus",
+    "id": "DON032",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don032.png",
+    "attributes": {
+      "No.": "DON 032",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Rare",
+      "MP": "5",
+      "Attack": "3",
+      "HP": "6",
+      "Effects": "When played: Explore for Shield.",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Willow",
+    "id": "DON033",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don033.png",
+    "attributes": {
+      "No.": "DON 033",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Rare",
+      "MP": "6",
+      "Attack": "2",
+      "HP": "7",
+      "Effects": "When played: Explore for Spillover.Victory: Gains +1/+2.",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Layer",
+    "id": "DON034",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don034.png",
+    "attributes": {
+      "No.": "DON 034",
+      "Type": "Unit",
+      "Tribe": "Machine",
+      "Rarity": "Rare",
+      "MP": "4",
+      "Attack": "1",
+      "HP": "5",
+      "Effects": "＜Shield＞＜MP Boost: 30＞When played: Deals 3 damage to a random enemy unit with ＜Flight＞.",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Blanka 2",
+    "id": "DON037",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don037.png",
+    "attributes": {
+      "No.": "DON 037",
+      "Type": "Unit",
+      "Tribe": "Demi-Human",
+      "Rarity": "Rare",
+      "MP": "6",
+      "Attack": "1",
+      "HP": "7",
+      "Effects": "When played: Deals 6 damage to a random enemy unit with ＜Flight＞.Counter damage +4.",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "T. Hawk",
+    "id": "DON026",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don026.png",
+    "attributes": {
+      "No.": "DON 026",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Common",
+      "MP": "3",
+      "Attack": "2",
+      "HP": "5",
+      "Effects": "＜Spillover＞",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Harley",
+    "id": "DON027",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don027.png",
+    "attributes": {
+      "No.": "DON 027",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Common",
+      "MP": "5",
+      "Attack": "2",
+      "HP": "6",
+      "Effects": "When played: If your Explore count is 1 or higher, gives +5 HP to a random friendly unit other than self.Explore count: 0",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Shona",
+    "id": "DON029",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don029.png",
+    "attributes": {
+      "No.": "DON 029",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Common",
+      "MP": "3",
+      "Attack": "2",
+      "HP": "5",
+      "Effects": "When played: Explore for Herculean Strength.",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Party Girl",
+    "id": "DON030",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don030.png",
+    "attributes": {
+      "No.": "DON 030",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Common",
+      "MP": "3",
+      "Attack": "2",
+      "HP": "5",
+      "Effects": "When played: Deals 2 damage to a random enemy unit with ＜Flight＞.",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Tweed",
+    "id": "DON031",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don031.png",
+    "attributes": {
+      "No.": "DON 031",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Common",
+      "MP": "5",
+      "Attack": "3",
+      "HP": "5",
+      "Effects": "Death: Explore for Spillover.",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Armor Soldier",
+    "id": "DON035",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don035.png",
+    "attributes": {
+      "No.": "DON 035",
+      "Type": "Unit",
+      "Tribe": "Machine",
+      "Rarity": "Common",
+      "MP": "6",
+      "Attack": "2",
+      "HP": "9",
+      "Effects": "When played: Explore for Chimera Ride Armor.",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "A-Trans",
+    "id": "DON050",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don050.png",
+    "attributes": {
+      "No.": "DON 050",
+      "Type": "Action",
+      "Rarity": "Legendary",
+      "MP": "1",
+      "Effects": "Copies the cards in your EX Pocket and returns them to the top of your deck in random order.",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Unbreakable Bond 2",
+    "id": "DON047",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don047.png",
+    "attributes": {
+      "No.": "DON 047",
+      "Type": "Action",
+      "Rarity": "Epic",
+      "MP": "5",
+      "Effects": "Copies a friendly green unit and places it on the field.",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Ascension Ceremony",
+    "id": "DON049",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don049.png",
+    "attributes": {
+      "No.": "DON 049",
+      "Type": "Action",
+      "Rarity": "Epic",
+      "MP": "6",
+      "Effects": "Gives 3/6 to a friendly unit.If you have three friendly units, changes all friendly units to 3/6 and gives them ＜Flight＞ instead.",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Outnumbered",
+    "id": "DON043",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don043.png",
+    "attributes": {
+      "No.": "DON 043",
+      "Type": "Action",
+      "Rarity": "Rare",
+      "MP": "3",
+      "Effects": "Gives a friendly unit +3 HP.If you have three friendly units, also gives +2/+2.",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Loyal to the Cause",
+    "id": "DON046",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don046.png",
+    "attributes": {
+      "No.": "DON 046",
+      "Type": "Action",
+      "Rarity": "Rare",
+      "MP": "4",
+      "Effects": "Gives +7 HP to a friendly unit.If you have three friendly units, this card returns to the EX Pocket.",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Defensive Formation",
+    "id": "DON044",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don044.png",
+    "attributes": {
+      "No.": "DON 044",
+      "Type": "Action",
+      "Rarity": "Common",
+      "MP": "3",
+      "Effects": "Gives ＜Shield＞ to your Hero.If you have three units, also gives ＜Shield＞ to all friendly units.",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Besieged",
+    "id": "DON045",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don045.png",
+    "attributes": {
+      "No.": "DON 045",
+      "Type": "Action",
+      "Rarity": "Common",
+      "MP": "1",
+      "Effects": "Gives \"Reduces damage taken of 3 or less to 1\" to a friendly unit.",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Auto-Heal",
+    "id": "DON048",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/green/don048.png",
+    "attributes": {
+      "No.": "DON 048",
+      "Type": "Action",
+      "Rarity": "Common",
+      "MP": "2",
+      "Effects": "Gives \"Gain +1 HP every 5 seconds\" to a friendly unit.",
+      "Color": "Green"
+    }
+  },
+  {
+    "name": "Hunk, The Grim Reaper",
+    "id": "DON066",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don066.png",
+    "attributes": {
+      "No.": "DON 066",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Legendary",
+      "MP": "4",
+      "Attack": "2",
+      "HP": "2",
+      "Effects": "＜Shield＞When a friendly purple unit dies: Gains +1/+1 and ＜Shield＞.",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "Juri, Purple Spider",
+    "id": "DON067",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don067.png",
+    "attributes": {
+      "No.": "DON 067",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Legendary",
+      "MP": "5",
+      "Attack": "2",
+      "HP": "8",
+      "Effects": "After dealing damage to enemy Hero: Explore for Feng Shui Engine.",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "Lupo",
+    "id": "DON060",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don060.png",
+    "attributes": {
+      "No.": "DON 060",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Epic",
+      "MP": "4",
+      "Attack": "1",
+      "HP": "4",
+      "Effects": "When played: Gains +2/+4 if there is a purple unit in your hand or EX Pocket with an MP cost of 4.",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "Tigrex 2",
+    "id": "DON062",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don062.png",
+    "attributes": {
+      "No.": "DON 062",
+      "Type": "Unit",
+      "Tribe": "Monster",
+      "Rarity": "Epic",
+      "MP": "7",
+      "Attack": "4",
+      "HP": "7",
+      "Effects": "＜Rush＞＜Agility＞＜Spillover＞Resonate: Inflicts Seal on self.",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "Vector",
+    "id": "DON063",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don063.png",
+    "attributes": {
+      "No.": "DON 063",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Epic",
+      "MP": "4",
+      "Attack": "1",
+      "HP": "5",
+      "Effects": "When played: If there is a friendly purple unit other than self with an MP cost of 4 present, gains +1/+3.While on the field: This unit's attacks cannot be blocked.",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "Trish 2",
+    "id": "DON064",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don064.png",
+    "attributes": {
+      "No.": "DON 064",
+      "Type": "Unit",
+      "Tribe": "Demon",
+      "Rarity": "Epic",
+      "MP": "4",
+      "Attack": "1",
+      "HP": "6",
+      "Effects": "Resonate: +1/+1",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "Beltway",
+    "id": "DON052",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don052.png",
+    "attributes": {
+      "No.": "DON 052",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Rare",
+      "MP": "4",
+      "Attack": "2",
+      "HP": "5",
+      "Effects": "When played: If a friendly purple unit other than self with an MP cost of 4 is present, returns one random enemy unit with an MP cost of 4 or less to the EX Pocket.",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "Four Eyes",
+    "id": "DON053",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don053.png",
+    "attributes": {
+      "No.": "DON 053",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Rare",
+      "MP": "4",
+      "Attack": "2",
+      "HP": "1",
+      "Effects": "When played: If a friendly purple unit other than self with an MP cost of 4 is present, seizes control of a random enemy unit with 4 HP or fewer.",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "Hell Vanguard",
+    "id": "DON057",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don057.png",
+    "attributes": {
+      "No.": "DON 057",
+      "Type": "Unit",
+      "Tribe": "Demon",
+      "Rarity": "Rare",
+      "MP": "5",
+      "Attack": "2",
+      "HP": "6",
+      "Effects": "＜Flight＞Death: Returns self to the EX Pocket.",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "Sting Chameleon",
+    "id": "DON059",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don059.png",
+    "attributes": {
+      "No.": "DON 059",
+      "Type": "Unit",
+      "Tribe": "Machine",
+      "Rarity": "Rare",
+      "MP": "5",
+      "Attack": "2",
+      "HP": "9",
+      "Effects": "When played: Explore for Stealth.",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "Menat",
+    "id": "DON051",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don051.png",
+    "attributes": {
+      "No.": "DON 051",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Common",
+      "MP": "3",
+      "Attack": "1",
+      "HP": "9",
+      "Effects": "After dealing damage to enemy Hero: Explore for Weakness.",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "Ada Wong 3",
+    "id": "DON054",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don054.png",
+    "attributes": {
+      "No.": "DON 054",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Common",
+      "MP": "3",
+      "Attack": "2",
+      "HP": "5",
+      "Effects": "When played: Explore for Stealth.",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "Spectre",
+    "id": "DON055",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don055.png",
+    "attributes": {
+      "No.": "DON 055",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Common",
+      "MP": "4",
+      "Attack": "2",
+      "HP": "4",
+      "Effects": "When played: Gives +1/+1 to a purple unit in your hand or EX Pocket with an MP cost of 4.",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "Mei-Ling",
+    "id": "DON056",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don056.png",
+    "attributes": {
+      "No.": "DON 056",
+      "Type": "Unit",
+      "Tribe": "Demon",
+      "Rarity": "Common",
+      "MP": "4",
+      "Attack": "2",
+      "HP": "4",
+      "Effects": "Death: Explore for Weakness.",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "Kolin 2",
+    "id": "DON058",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don058.png",
+    "attributes": {
+      "No.": "DON 058",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Common",
+      "MP": "3",
+      "Attack": "2",
+      "HP": "5",
+      "Effects": "When opponent uses Explore: Draws a card and puts it in the EX Pocket.",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "Bertha",
+    "id": "DON061",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don061.png",
+    "attributes": {
+      "No.": "DON 061",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Common",
+      "MP": "4",
+      "Attack": "2",
+      "HP": "6",
+      "Effects": "Resonate: If there is a friendly purple unit other than self with an MP cost of 4 present, gives all friendly units other than self +2 HP.",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "Monstrous Virus",
+    "id": "DON075",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don075.png",
+    "attributes": {
+      "No.": "DON 075",
+      "Type": "Action",
+      "Rarity": "Legendary",
+      "MP": "2",
+      "Effects": "Gives your purple-element Hero \"Immune to damage: 30 seconds\" and \"Immune to Life sacrifice effects: 30 seconds\".After 30 seconds, you lose the battle.",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "A Splendid Buffet",
+    "id": "DON070",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don070.png",
+    "attributes": {
+      "No.": "DON 070",
+      "Type": "Action",
+      "Rarity": "Epic",
+      "MP": "2",
+      "Effects": "Deals X + 2 damage to an enemy unit, where X is the number of cards in both players' EX Pockets. Your Hero gains Life equal to the damage dealt.",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "New-Generation Reploids",
+    "id": "DON074",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don074.png",
+    "attributes": {
+      "No.": "DON 074",
+      "Type": "Action",
+      "Rarity": "Epic",
+      "MP": "1",
+      "Effects": "Selects one card from all of the cards obtained with Explore during this battle and put it in the EX Pocket.",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "Sacrificial Pawn",
+    "id": "DON069",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don069.png",
+    "attributes": {
+      "No.": "DON 069",
+      "Type": "Action",
+      "Rarity": "Rare",
+      "MP": "2",
+      "Effects": "Gives +1/+1 to a friendly unit.Adds one Bioweapon Capsule to the opponent's EX Pocket.",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "Pitfall Trap",
+    "id": "DON072",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don072.png",
+    "attributes": {
+      "No.": "DON 072",
+      "Type": "Action",
+      "Rarity": "Rare",
+      "MP": "2",
+      "Effects": "If your Explore count is 3 or higher, inflict Halt on an enemy unit for 16 seconds.Explore count: 0",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "Reconnaissance",
+    "id": "DON068",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don068.png",
+    "attributes": {
+      "No.": "DON 068",
+      "Type": "Action",
+      "Rarity": "Common",
+      "MP": "4",
+      "Effects": "If your Explore count is 1 or higher, negates an Action Card with an MP cost of 5 or less.Explore count: 0",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "Supreme Senjutsu",
+    "id": "DON071",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don071.png",
+    "attributes": {
+      "No.": "DON 071",
+      "Type": "Action",
+      "Rarity": "Common",
+      "MP": "7",
+      "Effects": "Negates an Action Card with an MP cost of 6 or less.When added to hand or EX Pocket: If your Explore count is 3 or higher, gains MP cost -4.Explore Count: 0",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "Deadly Traps",
+    "id": "DON073",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/purple/don073.png",
+    "attributes": {
+      "No.": "DON 073",
+      "Type": "Action",
+      "Rarity": "Common",
+      "MP": "1",
+      "Effects": "Returns an enemy unit with 1 or less Attack to the EX Pocket.",
+      "Color": "Purple"
+    }
+  },
+  {
+    "name": "Nemesis-T Type",
+    "id": "DON091",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don091.png",
+    "attributes": {
+      "No.": "DON 091",
+      "Type": "Unit",
+      "Tribe": "Creature",
+      "Rarity": "Legendary",
+      "MP": "5",
+      "Attack": "1",
+      "HP": "8",
+      "Effects": "When played: Gains +1/+1 for each time this card has been placed on the field during this battle.Death: Returns self to the EX Pocket.Count: 0",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "Jedah, High Noble",
+    "id": "DON092",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don092.png",
+    "attributes": {
+      "No.": "DON 092",
+      "Type": "Unit",
+      "Tribe": "Demon",
+      "Rarity": "Legendary",
+      "MP": "7",
+      "Attack": "3",
+      "HP": "6",
+      "Effects": "Victory: Explore for Salvation of Souls.",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "Bazelgeuse",
+    "id": "DON087",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don087.png",
+    "attributes": {
+      "No.": "DON 087",
+      "Type": "Unit",
+      "Tribe": "Monster",
+      "Rarity": "Epic",
+      "MP": "8",
+      "Attack": "3",
+      "HP": "7",
+      "Effects": "＜Flight＞When placed on the field: If your Explore count is 3 or higher, destroys one random enemy unit with an MP cost of 5 of less.Explore count: 0",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "Vile MK-II",
+    "id": "DON088",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don088.png",
+    "attributes": {
+      "No.": "DON 088",
+      "Type": "Unit",
+      "Tribe": "Machine",
+      "Rarity": "Epic",
+      "MP": "4",
+      "Attack": "2",
+      "HP": "5",
+      "Effects": "Death: Explore for Corrosion.",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "Tyrant (T-103)",
+    "id": "DON089",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don089.png",
+    "attributes": {
+      "No.": "DON 089",
+      "Type": "Unit",
+      "Tribe": "Creature",
+      "Rarity": "Epic",
+      "MP": "6",
+      "Attack": "2",
+      "HP": "5",
+      "Effects": "＜Slow＞Death: Places a Super Tyrant (T-103) in the same board slot.",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "Albert Wesker 3",
+    "id": "DON090",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don090.png",
+    "attributes": {
+      "No.": "DON 090",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Epic",
+      "MP": "5",
+      "Attack": "0",
+      "HP": "3",
+      "Effects": "When played: Gains +1/+1 for each time ＜Revenge＞ has activated.Revenge count: 0",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "G-Adult",
+    "id": "DON079",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don079.png",
+    "attributes": {
+      "No.": "DON 079",
+      "Type": "Unit",
+      "Tribe": "Creature",
+      "Rarity": "Rare",
+      "MP": "5",
+      "Attack": "1",
+      "HP": "9",
+      "Effects": "Taking damage (self): Place one G-Young on the field.",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "Vega",
+    "id": "DON082",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don082.png",
+    "attributes": {
+      "No.": "DON 082",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Rare",
+      "MP": "5",
+      "Attack": "2",
+      "HP": "8",
+      "Effects": "When played: Explore for Cruelty.",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "William Birkin: G1",
+    "id": "DON083",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don083.png",
+    "attributes": {
+      "No.": "DON 083",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Rare",
+      "MP": "5",
+      "Attack": "3",
+      "HP": "6",
+      "Effects": "Death: Explore for Corrosion.",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "Agnus",
+    "id": "DON084",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don084.png",
+    "attributes": {
+      "No.": "DON 084",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Rare",
+      "MP": "4",
+      "Attack": "2",
+      "HP": "5",
+      "Effects": "When played: Gives \"＜Revenge＞: Gains +1/+3.\" to a random friendly unit other than self.",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "High Max",
+    "id": "DON086",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don086.png",
+    "attributes": {
+      "No.": "DON 086",
+      "Type": "Unit",
+      "Tribe": "Machine",
+      "Rarity": "Rare",
+      "MP": "5",
+      "Attack": "2",
+      "HP": "5",
+      "Effects": "＜Flight＞＜Revenge＞: Gains +2/+2.",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "Abigail",
+    "id": "DON076",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don076.png",
+    "attributes": {
+      "No.": "DON 076",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Common",
+      "MP": "4",
+      "Attack": "1",
+      "HP": "3",
+      "Effects": "When played Gains +1 Attack whenever ＜Revenge＞ activates.Revenge count: 0",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "Burn Dinorex",
+    "id": "DON077",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don077.png",
+    "attributes": {
+      "No.": "DON 077",
+      "Type": "Unit",
+      "Tribe": "Machine",
+      "Rarity": "Common",
+      "MP": "3",
+      "Attack": "2",
+      "HP": "4",
+      "Effects": "When played: When your Hero's Life is at 10 or lower, gains +2/+4.",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "Anjanath 2",
+    "id": "DON078",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don078.png",
+    "attributes": {
+      "No.": "DON 078",
+      "Type": "Unit",
+      "Tribe": "Monster",
+      "Rarity": "Common",
+      "MP": "4",
+      "Attack": "2",
+      "HP": "6",
+      "Effects": "When played: Explore for Cruelty.",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "Licker",
+    "id": "DON080",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don080.png",
+    "attributes": {
+      "No.": "DON 080",
+      "Type": "Unit",
+      "Tribe": "Creature",
+      "Rarity": "Common",
+      "MP": "3",
+      "Attack": "2",
+      "HP": "4",
+      "Effects": "When played: Gives +2/+2 and \"Destroyed after one attack\" to a random friendly unit other than self.",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "Sliding Worm",
+    "id": "DON081",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don081.png",
+    "attributes": {
+      "No.": "DON 081",
+      "Type": "Unit",
+      "Tribe": "Creature",
+      "Rarity": "Common",
+      "MP": "6",
+      "Attack": "2",
+      "HP": "4",
+      "Effects": "Victory: Sends self to the Graveyard and places a Giant Infected Worm in the board slot previously occupied.",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "Nicholai Ginovaef",
+    "id": "DON085",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don085.png",
+    "attributes": {
+      "No.": "DON 085",
+      "Type": "Unit",
+      "Tribe": "Human",
+      "Rarity": "Common",
+      "MP": "4",
+      "Attack": "2",
+      "HP": "9",
+      "Effects": "When played: Sends a random card from your hand or EX Pocket to the Graveyard.",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "Living Death",
+    "id": "DON100",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don100.png",
+    "attributes": {
+      "No.": "DON 100",
+      "Type": "Action",
+      "Rarity": "Legendary",
+      "MP": "8",
+      "Effects": "Removes all units from play.You and your opponent move three units in your respective Graveyards to the field.",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "Diseased Souls",
+    "id": "DON098",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don098.png",
+    "attributes": {
+      "No.": "DON 098",
+      "Type": "Action",
+      "Rarity": "Epic",
+      "MP": "5",
+      "Effects": "Destroys a unit and puts a Infected in the same board slot.Doesn't arrive if slot is filled",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "Rebirth",
+    "id": "DON099",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don099.png",
+    "attributes": {
+      "No.": "DON 099",
+      "Type": "Action",
+      "Rarity": "Epic",
+      "MP": "3",
+      "Effects": "Gives a random unit in your Graveyard -1/-1 and places it on the field.",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "Fated Conclusion",
+    "id": "DON096",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don096.png",
+    "attributes": {
+      "No.": "DON 096",
+      "Type": "Action",
+      "Rarity": "Rare",
+      "MP": "5",
+      "Effects": "Destroys an enemy unit with an MP cost of 3 or less.If your Explore count is 1 or higher, destroys an enemy unit with an MP cost of 6 or less instead.Explore count: 0",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "Scavenger",
+    "id": "DON097",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don097.png",
+    "attributes": {
+      "No.": "DON 097",
+      "Type": "Action",
+      "Rarity": "Rare",
+      "MP": "6",
+      "Effects": "Deals X damage to an enemy unit, where X is the number of cards in your Graveyard. Your Hero gains Life equal the original HP of the defeated enemy unit. (Original HP: The value shown on the card before any adjustments.)No. cards in Graveyard: 0",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "The Ultimate Price",
+    "id": "DON093",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don093.png",
+    "attributes": {
+      "No.": "DON 093",
+      "Type": "Action",
+      "Rarity": "Common",
+      "MP": "5",
+      "Effects": "Sacrifice 5 Life.Destroys one unit.If your Life is 15 or lower, removes 5 cards in your deck from play instead of sacrificing 5 Life.",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "Double-Edged Sword",
+    "id": "DON094",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don094.png",
+    "attributes": {
+      "No.": "DON 094",
+      "Type": "Action",
+      "Rarity": "Common",
+      "MP": "3",
+      "Effects": "Gives a friendly unit +4 Attack.Additionally, gives that unit \"Death: Deals damage to your Hero equal to Attack.\"",
+      "Color": "Black"
+    }
+  },
+  {
+    "name": "Hatred Reborn",
+    "id": "DON095",
+    "image": "https://teppenthegame.com/_materials/img/cards/packs/2019/don/black/don095.png",
+    "attributes": {
+      "No.": "DON 095",
+      "Type": "Action",
+      "Rarity": "Common",
+      "MP": "2",
+      "Effects": "Places a random unit in your Graveyard with an MP cost of 3 or less on the field.",
+      "Color": "Black"
+    }
   }
 ]
