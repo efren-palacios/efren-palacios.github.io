@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Team Liquid</title>
+    <script
+      src="https://kit.fontawesome.com/148a8bbbe5.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gray-200">
+    <nav class="flex items-center justify-between flex-wrap tl p-6">
+      <div class="flex items-center flex-shrink-0 text-white mr-6">
+        <img
+          class="w-48"
+          src="https://www.teamliquid.com/lcs/images/tllogo.png"
+          alt=""
+        />
+      </div>
+      <div class="block lg:hidden">
+        <button
+          class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-black hover:border-blue"
+        >
+          <svg
+            class="fill-current h-3 w-3"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+      <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div class="text-sm lg:flex-grow">
+          <a
+            href="#responsive-header"
+            class="block mt-4 lg:inline-block lg:mt-0 font-semibold text-lg text-white hover:text-blue-200 mr-10 ml-10"
+          >
+            News
+          </a>
+          <a
+            href="#responsive-header"
+            class="block mt-4 lg:inline-block lg:mt-0 font-semibold text-lg text-white hover:text-blue-200 mr-10"
+          >
+            Players
+          </a>
+          <a
+            href="#responsive-header"
+            class="block mt-4 lg:inline-block lg:mt-0 font-semibold text-lg text-white hover:text-blue-200 mr-10"
+          >
+            Partners
+          </a>
+          <a
+            href="#responsive-header"
+            class="block mt-4 lg:inline-block lg:mt-0 font-semibold text-lg text-white hover:text-blue-200 mr-10"
+          >
+            Store
+          </a>
+          <a
+            href="#responsive-header"
+            class="block mt-4 lg:inline-block lg:mt-0 font-semibold text-lg text-white hover:text-blue-200 mr-10"
+          >
+            About Us
+          </a>
+          <a
+            href="#responsive-header"
+            class="block mt-4 lg:inline-block lg:mt-0 font-semibold text-lg text-white hover:text-blue-200 mr-10"
+          >
+            Careers
+          </a>
+          <a
+            href="#responsive-header"
+            class="block mt-4 lg:inline-block lg:mt-0 font-semibold text-lg text-white hover:text-blue-200"
+          >
+            Partners
+          </a>
+        </div>
+        <div class="flex">
+          <div>
+            <a href="#social"
+              ><i
+                style="transition: all 200ms"
+                class="fab fa-vk text-2xl text-gray-200 mr-10 hover:text-blue-200"
+              ></i
+            ></a>
+            <a href="#social"
+              ><i
+                style="transition: all 200ms"
+                class="fab fa-facebook-square text-2xl text-gray-200 mr-10 hover:text-blue-200"
+              ></i
+            ></a>
+            <a href="#social"
+              ><i
+                style="transition: all 200ms"
+                class="fab fa-instagram text-2xl text-gray-200 mr-10 hover:text-blue-200"
+              ></i
+            ></a>
+            <a href="#social"
+              ><i
+                style="transition: all 200ms"
+                class="fab fa-twitter text-2xl text-gray-200 mr-10 hover:text-blue-200"
+              ></i
+            ></a>
+            <a href="#social"
+              ><i
+                style="transition: all 200ms"
+                class="fab fa-youtube text-2xl text-gray-200 mr-10 hover:text-blue-200"
+              ></i
+            ></a>
+          </div>
+
+          <a
+            style="transition: all 400ms"
+            href="#"
+            class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-black hover:bg-white mt-4 lg:mt-0"
+            >Login</a
+          >
+        </div>
+      </div>
+    </nav>
+    <!-- End of Navigation -->
+    <!-- Start of Hero -->
+    <div class="flex">
+      <a
+        href="#article"
+        class="flex items-end flex-grow "
+        style="background: linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0,0,0, .5)
+        ), url('https://www.teamliquid.com/staff/OmniEulogy/Dota2/SAPLOLFP.png') no-repeat; background-size: cover; height:700px; 
+        "
+      >
+        <div
+          style="background-color: rgba(0,0,0,0.7); width:100%"
+          class="text-2xl font-bold py-8 px-4 text-white"
+        >
+          <span
+            class="border-solid border-l-4 pl-5 border-blue-900 inline-block"
+            >Team Liquid's TI Drafts: Analyzing Comfort Heroes</span
+          >
+        </div>
+      </a>
+
+      <div class="flex flex-col w-2/5">
+        <a
+          href="#article"
+          class="flex items-end flex-grow"
+          style="background: linear-gradient(
+            rgba(0, 0, 0, 0.5), 
+            rgba(0,0,0,0.5)
+          ), url('https://www.teamliquid.com/staff/OmniEulogy/Fortnite/StretchFPHeader.jpg') no-repeat; background-size: cover; "
+        >
+          <div
+            style="background-color: rgba(0,0,0,0.7); width:100%"
+            class="text-2xl font-bold py-8 px-4 text-white "
+          >
+            <span
+              class="border-solid border-l-4 pl-5 border-blue-900 inline-block"
+              >Beating him is a bit of a Stretch
+            </span>
+          </div>
+        </a>
+        <a
+          href="#article"
+          class="flex items-end flex-grow"
+          style="background: linear-gradient(
+            rgba(0, 0, 0, 0.5) , 
+            rgba(0,0,0, 0.5) 
+          ), url('https://www.teamliquid.com/staff/lichter/TLpro/dota2/new/articleheader.jpg') no-repeat; background-size: cover;"
+        >
+          <div
+            style="background-color: rgba(0,0,0,0.7); width:100%"
+            class="text-2xl font-bold py-8 px-4 text-white"
+          >
+            <span
+              class="border-solid border-l-4 pl-5 border-blue-900 inline-block"
+            >
+              Team Liquid Returns to Dota 2: Welcome miCKe, qojqva, Boxi, Taiga
+              and iNSaNiA
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- End of Hero -->
+    <!-- Start of Brands -->
+    <div class="tl text-center flex justify-around items-center p-4">
+      <a href="#brand"><img class="w-24" src="/brands/monster.png" alt=""/></a>
+      <a href="#brand"><img class="w-24" src="/brands/sap.png" alt=""/></a>
+      <a href="#brand"><img class="w-24" src="/brands/honda.png" alt=""/></a>
+      <a href="#brand"><img class="w-24" src="/brands/twitch.png" alt=""/></a>
+      <a href="#brand"
+        ><img class="w-24" src="/brands/jerseymike.png" alt=""
+      /></a>
+      <a href="#brand"><img class="w-24" src="/brands/hyperx.png" alt=""/></a>
+      <a href="#brand"><img class="w-24" src="/brands/maxnomic.png" alt=""/></a>
+      <a href="#brand"><img class="w-24" src="/brands/huya.png" alt=""/></a>
+    </div>
+    <!-- End of Brands -->
+    <!-- Start of Shop Alert -->
+    <!--     <div class="bg-gray-300 text-center py-4 lg:px-4">
+      <a href="#products">
+        <div
+          class="p-2 bg-blue-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
+          role="alert"
+        >
+          <span
+            class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3"
+            >New</span
+          >
+          <span class="font-semibold mr-2 text-left flex-auto"
+            >Get the coolest t-shirts from our brand new store</span
+          >
+          <svg
+            class="fill-current opacity-75 h-4 w-4"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"
+            />
+          </svg>
+        </div>
+      </a>
+    </div> -->
+    <!-- End of Shop Alert -->
+    <!-- Start of Schedule -->
+    <div class="m-12">
+      <h1 class="text-blue-900 my-10 uppercase font-bold text-base text-4xl">
+        Upcoming Matches
+      </h1>
+      <div class="tl w-full p-8 flex items-center justify-around">
+        <div class="flex flex-col items-center">
+          <span
+            class="text-base text-6xl font-bold text-blue-800 block leading-none uppercase"
+            >12</span
+          >
+          <span
+            class="text-base text-3xl font-bold text-gray-400 leading-none uppercase"
+            >OCT</span
+          >
+        </div>
+        <div>
+          <span
+            class="text-base text-4xl font-bold text-gray-400 leading-none uppercase flex-shrink"
+            >vs</span
+          >
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-24" src="/brands/damwon.png" alt="" />
+          <span class="text-base text-3xl font-bold text-gray-400 uppercase"
+            >Korea</span
+          >
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-48" src="/brands/lol.png" alt="" />
+          <span class="text-base text-2xl font-bold text-gray-400 uppercase"
+            >World Championship</span
+          >
+        </div>
+        <div class="flex flex-col items-center">
+          <span
+            class="text-base text-4xl font-bold text-gray-400 block uppercase"
+            >Verti Music Hall</span
+          >
+          <span
+            class="text-base text-2xl font-bold text-blue-800 leading-none uppercase"
+            >Berlin Germany</span
+          >
+        </div>
+        <div class="flex flex-col items-center">
+          <span
+            class="text-base text-4xl font-bold text-gray-400 block uppercase"
+            >07:00</span
+          >
+          <span class="text-base text-1xl font-bold text-blue-800 uppercase"
+            >Time</span
+          >
+        </div>
+      </div>
+      <div
+        class="tl w-full border-t border-solid border-blue-900 p-8 flex items-center justify-around shadow-lg"
+      >
+        <div class="flex flex-col items-center">
+          <span
+            class="text-base text-6xl font-bold text-blue-800 block leading-none uppercase"
+            >13</span
+          >
+          <span
+            class="text-base text-3xl font-bold text-gray-400 leading-none uppercase"
+            >OCT</span
+          >
+        </div>
+        <div>
+          <span
+            class="text-base text-4xl font-bold text-gray-400 leading-none uppercase flex-shrink"
+            >vs</span
+          >
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-24" src="/brands/ig.png" alt="" />
+          <span class="text-base text-3xl font-bold text-gray-400 uppercase"
+            >China</span
+          >
+        </div>
+        <div class="flex flex-col items-center">
+          <img class="w-48" src="/brands/lol.png" alt="" />
+          <span class="text-base text-2xl font-bold text-gray-400 uppercase"
+            >World Championship</span
+          >
+        </div>
+        <div class="flex flex-col items-center">
+          <span
+            class="text-base text-4xl font-bold text-gray-400 block uppercase"
+            >Verti Music Hall</span
+          >
+          <span
+            class="text-base text-2xl font-bold text-blue-800 leading-none uppercase"
+            >Berlin Germany</span
+          >
+        </div>
+        <div class="flex flex-col items-center">
+          <span
+            class="text-base text-4xl font-bold text-gray-400 block uppercase"
+            >14:00</span
+          >
+          <span class="text-base text-1xl font-bold text-blue-800 uppercase"
+            >Time</span
+          >
+        </div>
+      </div>
+    </div>
+    <!-- End of Schedule -->
+    <!-- Start of Article Cards -->
+    <div class="mx-12 flex justify-between">
+      <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+        <a href="#article"
+          ><img
+            class="w-full"
+            src="https://www.teamliquid.com/staff/OmniEulogy/AutoChess/TFTFP3.png"
+            alt=""
+        /></a>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">
+            Special Tactics - Alanq and DarkHydra join TL
+          </div>
+          <p class="text-gray-700 text-base">
+            Join us in welcoming Alanzq and DarkHydra to Team Liquid! They are
+            #1 and #2 respectively on the EUW leaderboards for Team Fight
+            Tactics and we could not be more excited to have them join the TL
+            family.
+          </p>
+        </div>
+        <div class="px-6 py-4">
+          <span
+            class="inline-block bg-blue-100 rounded-full px-3 py-1 text-sm font-semibold text-blue-600 mr-2"
+            >League of Legends</span
+          >
+          <span
+            class="inline-block bg-blue-100 rounded-full px-3 py-1 text-sm font-semibold text-blue-600 mr-2"
+            >Team Fight Tactics</span
+          >
+        </div>
+      </div>
+      <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+        <a href="#article"
+          ><img
+            class="w-full"
+            src="https://www.teamliquid.com/staff/OmniEulogy/TLPro/FanLeaveFP.png"
+            alt=""
+        /></a>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">
+            A Fan Above Departs From Team Liquid
+          </div>
+          <p class="text-gray-700 text-base">
+            Team Liquid is sad to announce the departure of Joseph “Touken_” Le,
+            the winner of the Jersey Mike's A Fan Above contest.
+          </p>
+        </div>
+        <div class="px-6 py-4">
+          <span
+            class="inline-block bg-blue-100 rounded-full px-3 py-1 text-sm font-semibold text-blue-600"
+            >CS:GO</span
+          >
+        </div>
+      </div>
+      <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+        <a href="#article"
+          ><img
+            class="w-full"
+            src="https://www.teamliquid.com/staff/OmniEulogy/LoL/WorldsIntroFP.jpg"
+            alt=""
+        /></a>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">
+            Sights Set On Worlds
+          </div>
+          <p class="text-gray-700 text-base">
+            The 2019 World Championship is right around the corner. We're ready
+            to take on all challengers.
+          </p>
+        </div>
+        <div class="px-6 py-4">
+          <span
+            class="inline-block bg-blue-100 rounded-full px-3 py-1 text-sm font-semibold text-blue-600 "
+            >League of Legends</span
+          >
+        </div>
+      </div>
+      <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white ">
+        <a href="#article"
+          ><img
+            class="w-full"
+            src="https://www.teamliquid.com/images/converted/dec50ac7d72280ef7d48680e2186cfdd94563416.jpg"
+            alt=""
+        /></a>
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">
+            Melee Gods Watch Out: ChuDat is Back
+          </div>
+          <p class="text-gray-700 text-base">
+            ChuDat had an amazing run at Shine which took many in the Melee
+            community by surprise. But you’ll soon be quite used to it. We spoke
+            to him about his recent success and what he believes changed that
+            allowed him to earn it.
+          </p>
+        </div>
+        <div class="px-6 py-4">
+          <span
+            class="inline-block bg-blue-100 rounded-full px-3 py-1 text-sm font-semibold text-blue-600 mr-2"
+            >Smash</span
+          >
+        </div>
+      </div>
+    </div>
+    <!-- End of Article Cards -->
+    <!-- Start of Social -->
+    <div class="flex tl p-8 mt-10 justify-center">
+      <div class="max-w-3xl">
+        <div class="flex ">
+          <i class="fab fa-instagram text-2xl text-gray-200 mr-2"></i>
+          <span class="uppercase text-white font-semibold">Instagram</span>
+        </div>
+        <div class="insta-images my-6 flex flex-wrap">
+          <img
+            class="pl-4 pt-4"
+            src="https://scontent.cdninstagram.com/vp/2492513162fe236499b17ce2a4024ea3/5DEC711A/t51.2885-15/e35/c0.53.1440.1440/s150x150/66604474_1530721483719659_1996931764461797694_n.jpg?_nc_ht=scontent.cdninstagram.com"
+            alt=""
+          />
+          <img
+            class="pl-4 pt-4"
+            src="https://scontent.cdninstagram.com/vp/971529447e4c2a9ce7254b6db9093e68/5DE9C9F6/t51.2885-15/e35/c0.180.1440.1440a/s150x150/66619934_1200152453489784_1105458780760104849_n.jpg?_nc_ht=scontent.cdninstagram.com"
+            alt=""
+          />
+          <img
+            class="pl-4 pt-4"
+            src="https://scontent.cdninstagram.com/vp/48232f9c77e6e130265b84d234912414/5DD4C5E3/t51.2885-15/e35/c5.0.800.800/s150x150/66379292_118982749404256_5110856779917719193_n.jpg?_nc_ht=scontent.cdninstagram.com"
+            alt=""
+          />
+          <img
+            class="pl-4 pt-4"
+            src="https://scontent.cdninstagram.com/vp/bb5da2bc2eb6f675ca9ace31ee2e75fc/5DCECE01/t51.2885-15/e35/c35.0.1010.1010/s150x150/66444269_152867149235163_1914646036250552365_n.jpg?_nc_ht=scontent.cdninstagram.com"
+            alt=""
+          />
+          <img
+            class="pl-4 pt-4"
+            src="https://scontent.cdninstagram.com/vp/5f47e21d2784e6856f4d4030d973fda0/5DD1AC47/t51.2885-15/e35/c1.0.1437.1437/s150x150/66477898_2535771856486691_592619363035994745_n.jpg?_nc_ht=scontent.cdninstagram.com"
+            alt=""
+          />
+          <img
+            class="pl-4 pt-4"
+            src="https://scontent.cdninstagram.com/vp/69fd231fe95adcde0c8dd2941d453a6e/5DE6000F/t51.2885-15/e35/s150x150/67607033_443295929854254_6532890708585520296_n.jpg?_nc_ht=scontent.cdninstagram.com"
+            alt=""
+          />
+          <img
+            class="pl-4 pt-4"
+            src="https://scontent.cdninstagram.com/vp/6072c7d6cf85314d0969af899f684d4f/5DE97431/t51.2885-15/e35/s150x150/67713475_437503340176296_230681002201976643_n.jpg?_nc_ht=scontent.cdninstagram.com"
+            alt=""
+          />
+          <img
+            class="pl-4 pt-4"
+            src="https://scontent.cdninstagram.com/vp/709a2a56a74339e430b553e82d4f2db9/5DB686FF/t51.2885-15/e35/s150x150/65724724_135467210993346_7591608168909236205_n.jpg?_nc_ht=scontent.cdninstagram.com"
+            alt=""
+          />
+          <img
+            class="pl-4 pt-4"
+            src="https://scontent.cdninstagram.com/vp/5d7f00af75cd0e1326d55ac4da3bc4f8/5DB687A4/t51.2885-15/e35/s150x150/67577551_860121544359005_204381398295568209_n.jpg?_nc_ht=scontent.cdninstagram.com"
+            alt=""
+          />
+          <img
+            class="pl-4 pt-4"
+            src="https://scontent.cdninstagram.com/vp/5ad742d41136e5e06a5747bfabfbf9e5/5DB00640/t51.2885-15/e35/s150x150/66681202_318540562181909_2782946956828397824_n.jpg?_nc_ht=scontent.cdninstagram.com"
+            alt=""
+          />
+          <img
+            class="pl-4 pt-4"
+            src="https://scontent.cdninstagram.com/vp/ac2deae0b2adec81372d0c52fc42a161/5DCA396D/t51.2885-15/e35/s150x150/67783291_166128217769603_7471910742247305627_n.jpg?_nc_ht=scontent.cdninstagram.com"
+            alt=""
+          />
+          <img
+            class="pl-4 pt-4"
+            src="https://scontent.cdninstagram.com/vp/ea7b5e6db6e3a949c982963bdec73145/5DE6881B/t51.2885-15/e35/c21.0.1398.1398a/s150x150/65790417_920002918353036_8920065509151484833_n.jpg?_nc_ht=scontent.cdninstagram.com"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="flex flex-col mx-20 max-w-xl">
+        <div class="flex items-center mb-2">
+          <i class="fab fa-twitter text-2xl text-gray-200 mr-2"></i>
+          <span class="text-white uppercase font-semibold">Twitter</span>
+        </div>
+        <div class="twitter-posts bg-gray-300 my-2 flex">
+          <div class="p-4">
+            <span class="text-gray-600 mr-2">11 mins</span>
+            <span class="text-blue-700">@paulopsk1</span>
+            <p class="text-gray-700">
+              Tô indo na BGS com o @sqrafa , mais alguém vai?
+            </p>
+          </div>
+        </div>
+        <div class="twitter-posts bg-gray-300 my-2 flex">
+          <div class="p-4">
+            <span class="text-gray-600 mr-2">12 mins</span>
+            <span class="text-blue-700">@xSexyCake</span>
+            <p class="text-gray-700">
+              RT @sqrafa: So cool!!!!!
+            </p>
+            <p class="text-blue-700">
+              https://twitter.com/ESLRainbowSix/status/1181980866160910337
+            </p>
+          </div>
+        </div>
+        <div class="twitter-posts bg-gray-300 my-2 flex">
+          <div class="p-4">
+            <span class="text-gray-600 mr-2">17 mins</span>
+            <span class="text-blue-700">@paulopsk1</span>
+            <p class="text-gray-700">
+              RT @sqrafa: Belo jogo 7x1 contra a BD. Agora é torcer pros outros
+              resultados nos ajudarem. @neskwga voando! #Eusouliquid
+              #Letsgoliquid…
+            </p>
+          </div>
+        </div>
+        <div class="twitter-posts bg-gray-300 my-2 flex">
+          <div class="p-4">
+            <span class="text-gray-600 mr-2">12 mins</span>
+            <span class="text-blue-700">@paulopsk1</span>
+            <p class="text-gray-700">
+              @Sandra60553413 obrigado mae eu te amo muito
+            </p>
+          </div>
+        </div>
+        <div class="twitter-posts bg-gray-300 my-2 flex">
+          <div class="p-4">
+            <span class="text-gray-600 mr-2">12 mins</span>
+            <span class="text-blue-700">@paulopsk1</span>
+            <p class="text-gray-700">
+              RT @sqrafa: So cool!!!!!
+            </p>
+            <p class="text-blue-700">
+              https://twitter.com/ESLRainbowSix/status/1181980866160910337
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Social -->
+
+    <!-- Start of Alienware -->
+    <div class="tl flex justify-center">
+      <img style="width: 20rem" src="/brands/alienware.png" alt="" />
+    </div>
+    <!-- End of Alienware -->
+    <!-- Footer -->
+    <!-- TL Logo -->
+    <div class="flex flex-col bg-black items-center pt-4">
+      <div class="bg-black p-2 rounded-full w-24">
+        <img src="/brands/liquid.png" alt="" />
+      </div>
+    </div>
+    <div class="text-center mx-auto text-sm bg-black p-10 text-white">
+      <p>
+        This is a fanbase website for Team Liquid designed by Efren Palacios
+        <a target="_new" class="text-blue-600" href="https://efrenpalacios.dev"
+          >(https://efrenpalacios.dev)</a
+        >
+
+        You can reach the real Team Liquid website
+        <a class="text-blue-600" target="_new" href="http://teamliquid.com"
+          >Here</a
+        >
+      </p>
+    </div>
+  </body>
+</html>
