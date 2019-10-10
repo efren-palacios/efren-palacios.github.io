@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-gray-200">
-    <div class="app">
+    <div id="app">
       <nav class="flex items-center justify-between flex-wrap tl p-6">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
           <img
@@ -29,19 +29,30 @@
         </div>
         <div class="block lg:hidden">
           <button
-            class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-blue"
+            @click="isOpen = !isOpen"
+            class="flex items-center px-3 py-2 text-white  hover:text-white hover:border-blue focus:outline-none"
           >
             <svg
-              class="fill-current h-3 w-3"
+              v-if="!isOpen"
+              class="fill-current h-5 w-5"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <title>Menu</title>
               <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+            <svg v-if="isOpen" class="fill-current h-5 w-5" viewBox="0 0 20 20">
+              <path
+                style="background-color: white;"
+                v-if="isOpen"
+                d="M14.348 14.849a1.2 1.2 0 01-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 11-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 111.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 111.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 010 1.698z"
+              />
             </svg>
           </button>
         </div>
-        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div
+          :class="isOpen ? 'block' : 'hidden'"
+          class="w-full block flex-grow lg:flex lg:items-center lg:w-auto"
+        >
           <div class="text-sm lg:flex-grow">
             <a
               href="#responsive-header"
@@ -135,11 +146,8 @@
         <a
           href="#article"
           class="flex items-end flex-grow sm:h-64 lg:h-64"
-          style="background: linear-gradient(
-          rgba(0, 0, 0, 0.5), 
-          rgba(0,0,0, .5)
-        ), url('https://www.teamliquid.com/staff/OmniEulogy/Dota2/SAPLOLFP.png') no-repeat; background-size: cover; height: 48rem; 
-        "
+          :style="{ background: 'linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(https://www.teamliquid.com/staff/OmniEulogy/Dota2/SAPLOLFP.png) no-repeat 0 0 / cover'}"
+          style="height: 48rem;"
         >
           <div
             style="background-color: rgba(0,0,0,0.7); width:100%"
@@ -156,10 +164,8 @@
           <a
             href="#article"
             class="flex items-end flex-grow lg:h-64"
-            style="background: linear-gradient(
-            rgba(0, 0, 0, 0.5), 
-            rgba(0,0,0,0.5)
-          ), url('https://www.teamliquid.com/staff/OmniEulogy/Fortnite/StretchFPHeader.jpg') no-repeat; background-size: cover; height: 24rem; "
+            :style="{background: 'linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(https://www.teamliquid.com/staff/OmniEulogy/Fortnite/StretchFPHeader.jpg) no-repeat 0 0 / cover'}"
+            style="height: 24rem;"
           >
             <div
               style="background-color: rgba(0,0,0,0.7); width:100%"
@@ -174,10 +180,8 @@
           <a
             href="#article"
             class="flex items-end flex-grow lg:h-64"
-            style="background: linear-gradient(
-            rgba(0, 0, 0, 0.5) , 
-            rgba(0,0,0, 0.5) 
-          ), url('https://www.teamliquid.com/staff/lichter/TLpro/dota2/new/articleheader.jpg') no-repeat; background-size: cover; height: 24rem;"
+            :style="{background: 'linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(https://www.teamliquid.com/staff/lichter/TLpro/dota2/new/articleheader.jpg) no-repeat 0 0 / cover'}"
+            style="height: 24rem;"
           >
             <div
               style="background-color: rgba(0,0,0,0.7); width:100%"
@@ -630,9 +634,9 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
       var app = new Vue({
-        el: "app",
+        el: "#app",
         data: {
-          message: "Hello Vue!"
+          isOpen: false
         }
       });
     </script>
