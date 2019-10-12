@@ -3810,11 +3810,11 @@ video {
 }
 
 .h-slide {
-  height: 48rem;
+  height: 50rem;
 }
 
 .h-hslide {
-  height: 24rem;
+  height: 25rem;
 }
 
 .h-full {
@@ -3950,11 +3950,11 @@ video {
 }
 
 .m-slide {
-  margin: 48rem;
+  margin: 50rem;
 }
 
 .m-hslide {
-  margin: 24rem;
+  margin: 25rem;
 }
 
 .-m-1 {
@@ -4030,11 +4030,11 @@ video {
 }
 
 .-m-slide {
-  margin: -48rem;
+  margin: -50rem;
 }
 
 .-m-hslide {
-  margin: -24rem;
+  margin: -25rem;
 }
 
 .my-0 {
@@ -4238,23 +4238,23 @@ video {
 }
 
 .my-slide {
-  margin-top: 48rem;
-  margin-bottom: 48rem;
+  margin-top: 50rem;
+  margin-bottom: 50rem;
 }
 
 .mx-slide {
-  margin-left: 48rem;
-  margin-right: 48rem;
+  margin-left: 50rem;
+  margin-right: 50rem;
 }
 
 .my-hslide {
-  margin-top: 24rem;
-  margin-bottom: 24rem;
+  margin-top: 25rem;
+  margin-bottom: 25rem;
 }
 
 .mx-hslide {
-  margin-left: 24rem;
-  margin-right: 24rem;
+  margin-left: 25rem;
+  margin-right: 25rem;
 }
 
 .-my-1 {
@@ -4438,23 +4438,23 @@ video {
 }
 
 .-my-slide {
-  margin-top: -48rem;
-  margin-bottom: -48rem;
+  margin-top: -50rem;
+  margin-bottom: -50rem;
 }
 
 .-mx-slide {
-  margin-left: -48rem;
-  margin-right: -48rem;
+  margin-left: -50rem;
+  margin-right: -50rem;
 }
 
 .-my-hslide {
-  margin-top: -24rem;
-  margin-bottom: -24rem;
+  margin-top: -25rem;
+  margin-bottom: -25rem;
 }
 
 .-mx-hslide {
-  margin-left: -24rem;
-  margin-right: -24rem;
+  margin-left: -25rem;
+  margin-right: -25rem;
 }
 
 .mt-0 {
@@ -4778,35 +4778,35 @@ video {
 }
 
 .mt-slide {
-  margin-top: 48rem;
+  margin-top: 50rem;
 }
 
 .mr-slide {
-  margin-right: 48rem;
+  margin-right: 50rem;
 }
 
 .mb-slide {
-  margin-bottom: 48rem;
+  margin-bottom: 50rem;
 }
 
 .ml-slide {
-  margin-left: 48rem;
+  margin-left: 50rem;
 }
 
 .mt-hslide {
-  margin-top: 24rem;
+  margin-top: 25rem;
 }
 
 .mr-hslide {
-  margin-right: 24rem;
+  margin-right: 25rem;
 }
 
 .mb-hslide {
-  margin-bottom: 24rem;
+  margin-bottom: 25rem;
 }
 
 .ml-hslide {
-  margin-left: 24rem;
+  margin-left: 25rem;
 }
 
 .-mt-1 {
@@ -5098,35 +5098,35 @@ video {
 }
 
 .-mt-slide {
-  margin-top: -48rem;
+  margin-top: -50rem;
 }
 
 .-mr-slide {
-  margin-right: -48rem;
+  margin-right: -50rem;
 }
 
 .-mb-slide {
-  margin-bottom: -48rem;
+  margin-bottom: -50rem;
 }
 
 .-ml-slide {
-  margin-left: -48rem;
+  margin-left: -50rem;
 }
 
 .-mt-hslide {
-  margin-top: -24rem;
+  margin-top: -25rem;
 }
 
 .-mr-hslide {
-  margin-right: -24rem;
+  margin-right: -25rem;
 }
 
 .-mb-hslide {
-  margin-bottom: -24rem;
+  margin-bottom: -25rem;
 }
 
 .-ml-hslide {
-  margin-left: -24rem;
+  margin-left: -25rem;
 }
 
 .max-h-full {
@@ -5472,11 +5472,11 @@ video {
 }
 
 .p-slide {
-  padding: 48rem;
+  padding: 50rem;
 }
 
 .p-hslide {
-  padding: 24rem;
+  padding: 25rem;
 }
 
 .py-0 {
@@ -5670,23 +5670,23 @@ video {
 }
 
 .py-slide {
-  padding-top: 48rem;
-  padding-bottom: 48rem;
+  padding-top: 50rem;
+  padding-bottom: 50rem;
 }
 
 .px-slide {
-  padding-left: 48rem;
-  padding-right: 48rem;
+  padding-left: 50rem;
+  padding-right: 50rem;
 }
 
 .py-hslide {
-  padding-top: 24rem;
-  padding-bottom: 24rem;
+  padding-top: 25rem;
+  padding-bottom: 25rem;
 }
 
 .px-hslide {
-  padding-left: 24rem;
-  padding-right: 24rem;
+  padding-left: 25rem;
+  padding-right: 25rem;
 }
 
 .pt-0 {
@@ -5994,35 +5994,35 @@ video {
 }
 
 .pt-slide {
-  padding-top: 48rem;
+  padding-top: 50rem;
 }
 
 .pr-slide {
-  padding-right: 48rem;
+  padding-right: 50rem;
 }
 
 .pb-slide {
-  padding-bottom: 48rem;
+  padding-bottom: 50rem;
 }
 
 .pl-slide {
-  padding-left: 48rem;
+  padding-left: 50rem;
 }
 
 .pt-hslide {
-  padding-top: 24rem;
+  padding-top: 25rem;
 }
 
 .pr-hslide {
-  padding-right: 24rem;
+  padding-right: 25rem;
 }
 
 .pb-hslide {
-  padding-bottom: 24rem;
+  padding-bottom: 25rem;
 }
 
 .pl-hslide {
-  padding-left: 24rem;
+  padding-left: 25rem;
 }
 
 .placeholder-transparent::-webkit-input-placeholder {
@@ -11414,11 +11414,11 @@ video {
 }
 
 .w-slide {
-  width: 48rem;
+  width: 50rem;
 }
 
 .w-hslide {
-  width: 24rem;
+  width: 25rem;
 }
 
 .w-1\/2 {
@@ -14741,11 +14741,11 @@ video {
   }
 
   .sm\:h-slide {
-    height: 48rem;
+    height: 50rem;
   }
 
   .sm\:h-hslide {
-    height: 24rem;
+    height: 25rem;
   }
 
   .sm\:h-full {
@@ -14881,11 +14881,11 @@ video {
   }
 
   .sm\:m-slide {
-    margin: 48rem;
+    margin: 50rem;
   }
 
   .sm\:m-hslide {
-    margin: 24rem;
+    margin: 25rem;
   }
 
   .sm\:-m-1 {
@@ -14961,11 +14961,11 @@ video {
   }
 
   .sm\:-m-slide {
-    margin: -48rem;
+    margin: -50rem;
   }
 
   .sm\:-m-hslide {
-    margin: -24rem;
+    margin: -25rem;
   }
 
   .sm\:my-0 {
@@ -15169,23 +15169,23 @@ video {
   }
 
   .sm\:my-slide {
-    margin-top: 48rem;
-    margin-bottom: 48rem;
+    margin-top: 50rem;
+    margin-bottom: 50rem;
   }
 
   .sm\:mx-slide {
-    margin-left: 48rem;
-    margin-right: 48rem;
+    margin-left: 50rem;
+    margin-right: 50rem;
   }
 
   .sm\:my-hslide {
-    margin-top: 24rem;
-    margin-bottom: 24rem;
+    margin-top: 25rem;
+    margin-bottom: 25rem;
   }
 
   .sm\:mx-hslide {
-    margin-left: 24rem;
-    margin-right: 24rem;
+    margin-left: 25rem;
+    margin-right: 25rem;
   }
 
   .sm\:-my-1 {
@@ -15369,23 +15369,23 @@ video {
   }
 
   .sm\:-my-slide {
-    margin-top: -48rem;
-    margin-bottom: -48rem;
+    margin-top: -50rem;
+    margin-bottom: -50rem;
   }
 
   .sm\:-mx-slide {
-    margin-left: -48rem;
-    margin-right: -48rem;
+    margin-left: -50rem;
+    margin-right: -50rem;
   }
 
   .sm\:-my-hslide {
-    margin-top: -24rem;
-    margin-bottom: -24rem;
+    margin-top: -25rem;
+    margin-bottom: -25rem;
   }
 
   .sm\:-mx-hslide {
-    margin-left: -24rem;
-    margin-right: -24rem;
+    margin-left: -25rem;
+    margin-right: -25rem;
   }
 
   .sm\:mt-0 {
@@ -15709,35 +15709,35 @@ video {
   }
 
   .sm\:mt-slide {
-    margin-top: 48rem;
+    margin-top: 50rem;
   }
 
   .sm\:mr-slide {
-    margin-right: 48rem;
+    margin-right: 50rem;
   }
 
   .sm\:mb-slide {
-    margin-bottom: 48rem;
+    margin-bottom: 50rem;
   }
 
   .sm\:ml-slide {
-    margin-left: 48rem;
+    margin-left: 50rem;
   }
 
   .sm\:mt-hslide {
-    margin-top: 24rem;
+    margin-top: 25rem;
   }
 
   .sm\:mr-hslide {
-    margin-right: 24rem;
+    margin-right: 25rem;
   }
 
   .sm\:mb-hslide {
-    margin-bottom: 24rem;
+    margin-bottom: 25rem;
   }
 
   .sm\:ml-hslide {
-    margin-left: 24rem;
+    margin-left: 25rem;
   }
 
   .sm\:-mt-1 {
@@ -16029,35 +16029,35 @@ video {
   }
 
   .sm\:-mt-slide {
-    margin-top: -48rem;
+    margin-top: -50rem;
   }
 
   .sm\:-mr-slide {
-    margin-right: -48rem;
+    margin-right: -50rem;
   }
 
   .sm\:-mb-slide {
-    margin-bottom: -48rem;
+    margin-bottom: -50rem;
   }
 
   .sm\:-ml-slide {
-    margin-left: -48rem;
+    margin-left: -50rem;
   }
 
   .sm\:-mt-hslide {
-    margin-top: -24rem;
+    margin-top: -25rem;
   }
 
   .sm\:-mr-hslide {
-    margin-right: -24rem;
+    margin-right: -25rem;
   }
 
   .sm\:-mb-hslide {
-    margin-bottom: -24rem;
+    margin-bottom: -25rem;
   }
 
   .sm\:-ml-hslide {
-    margin-left: -24rem;
+    margin-left: -25rem;
   }
 
   .sm\:max-h-full {
@@ -16403,11 +16403,11 @@ video {
   }
 
   .sm\:p-slide {
-    padding: 48rem;
+    padding: 50rem;
   }
 
   .sm\:p-hslide {
-    padding: 24rem;
+    padding: 25rem;
   }
 
   .sm\:py-0 {
@@ -16601,23 +16601,23 @@ video {
   }
 
   .sm\:py-slide {
-    padding-top: 48rem;
-    padding-bottom: 48rem;
+    padding-top: 50rem;
+    padding-bottom: 50rem;
   }
 
   .sm\:px-slide {
-    padding-left: 48rem;
-    padding-right: 48rem;
+    padding-left: 50rem;
+    padding-right: 50rem;
   }
 
   .sm\:py-hslide {
-    padding-top: 24rem;
-    padding-bottom: 24rem;
+    padding-top: 25rem;
+    padding-bottom: 25rem;
   }
 
   .sm\:px-hslide {
-    padding-left: 24rem;
-    padding-right: 24rem;
+    padding-left: 25rem;
+    padding-right: 25rem;
   }
 
   .sm\:pt-0 {
@@ -16925,35 +16925,35 @@ video {
   }
 
   .sm\:pt-slide {
-    padding-top: 48rem;
+    padding-top: 50rem;
   }
 
   .sm\:pr-slide {
-    padding-right: 48rem;
+    padding-right: 50rem;
   }
 
   .sm\:pb-slide {
-    padding-bottom: 48rem;
+    padding-bottom: 50rem;
   }
 
   .sm\:pl-slide {
-    padding-left: 48rem;
+    padding-left: 50rem;
   }
 
   .sm\:pt-hslide {
-    padding-top: 24rem;
+    padding-top: 25rem;
   }
 
   .sm\:pr-hslide {
-    padding-right: 24rem;
+    padding-right: 25rem;
   }
 
   .sm\:pb-hslide {
-    padding-bottom: 24rem;
+    padding-bottom: 25rem;
   }
 
   .sm\:pl-hslide {
-    padding-left: 24rem;
+    padding-left: 25rem;
   }
 
   .sm\:placeholder-transparent::-webkit-input-placeholder {
@@ -22345,11 +22345,11 @@ video {
   }
 
   .sm\:w-slide {
-    width: 48rem;
+    width: 50rem;
   }
 
   .sm\:w-hslide {
-    width: 24rem;
+    width: 25rem;
   }
 
   .sm\:w-1\/2 {
@@ -25673,11 +25673,11 @@ video {
   }
 
   .md\:h-slide {
-    height: 48rem;
+    height: 50rem;
   }
 
   .md\:h-hslide {
-    height: 24rem;
+    height: 25rem;
   }
 
   .md\:h-full {
@@ -25813,11 +25813,11 @@ video {
   }
 
   .md\:m-slide {
-    margin: 48rem;
+    margin: 50rem;
   }
 
   .md\:m-hslide {
-    margin: 24rem;
+    margin: 25rem;
   }
 
   .md\:-m-1 {
@@ -25893,11 +25893,11 @@ video {
   }
 
   .md\:-m-slide {
-    margin: -48rem;
+    margin: -50rem;
   }
 
   .md\:-m-hslide {
-    margin: -24rem;
+    margin: -25rem;
   }
 
   .md\:my-0 {
@@ -26101,23 +26101,23 @@ video {
   }
 
   .md\:my-slide {
-    margin-top: 48rem;
-    margin-bottom: 48rem;
+    margin-top: 50rem;
+    margin-bottom: 50rem;
   }
 
   .md\:mx-slide {
-    margin-left: 48rem;
-    margin-right: 48rem;
+    margin-left: 50rem;
+    margin-right: 50rem;
   }
 
   .md\:my-hslide {
-    margin-top: 24rem;
-    margin-bottom: 24rem;
+    margin-top: 25rem;
+    margin-bottom: 25rem;
   }
 
   .md\:mx-hslide {
-    margin-left: 24rem;
-    margin-right: 24rem;
+    margin-left: 25rem;
+    margin-right: 25rem;
   }
 
   .md\:-my-1 {
@@ -26301,23 +26301,23 @@ video {
   }
 
   .md\:-my-slide {
-    margin-top: -48rem;
-    margin-bottom: -48rem;
+    margin-top: -50rem;
+    margin-bottom: -50rem;
   }
 
   .md\:-mx-slide {
-    margin-left: -48rem;
-    margin-right: -48rem;
+    margin-left: -50rem;
+    margin-right: -50rem;
   }
 
   .md\:-my-hslide {
-    margin-top: -24rem;
-    margin-bottom: -24rem;
+    margin-top: -25rem;
+    margin-bottom: -25rem;
   }
 
   .md\:-mx-hslide {
-    margin-left: -24rem;
-    margin-right: -24rem;
+    margin-left: -25rem;
+    margin-right: -25rem;
   }
 
   .md\:mt-0 {
@@ -26641,35 +26641,35 @@ video {
   }
 
   .md\:mt-slide {
-    margin-top: 48rem;
+    margin-top: 50rem;
   }
 
   .md\:mr-slide {
-    margin-right: 48rem;
+    margin-right: 50rem;
   }
 
   .md\:mb-slide {
-    margin-bottom: 48rem;
+    margin-bottom: 50rem;
   }
 
   .md\:ml-slide {
-    margin-left: 48rem;
+    margin-left: 50rem;
   }
 
   .md\:mt-hslide {
-    margin-top: 24rem;
+    margin-top: 25rem;
   }
 
   .md\:mr-hslide {
-    margin-right: 24rem;
+    margin-right: 25rem;
   }
 
   .md\:mb-hslide {
-    margin-bottom: 24rem;
+    margin-bottom: 25rem;
   }
 
   .md\:ml-hslide {
-    margin-left: 24rem;
+    margin-left: 25rem;
   }
 
   .md\:-mt-1 {
@@ -26961,35 +26961,35 @@ video {
   }
 
   .md\:-mt-slide {
-    margin-top: -48rem;
+    margin-top: -50rem;
   }
 
   .md\:-mr-slide {
-    margin-right: -48rem;
+    margin-right: -50rem;
   }
 
   .md\:-mb-slide {
-    margin-bottom: -48rem;
+    margin-bottom: -50rem;
   }
 
   .md\:-ml-slide {
-    margin-left: -48rem;
+    margin-left: -50rem;
   }
 
   .md\:-mt-hslide {
-    margin-top: -24rem;
+    margin-top: -25rem;
   }
 
   .md\:-mr-hslide {
-    margin-right: -24rem;
+    margin-right: -25rem;
   }
 
   .md\:-mb-hslide {
-    margin-bottom: -24rem;
+    margin-bottom: -25rem;
   }
 
   .md\:-ml-hslide {
-    margin-left: -24rem;
+    margin-left: -25rem;
   }
 
   .md\:max-h-full {
@@ -27335,11 +27335,11 @@ video {
   }
 
   .md\:p-slide {
-    padding: 48rem;
+    padding: 50rem;
   }
 
   .md\:p-hslide {
-    padding: 24rem;
+    padding: 25rem;
   }
 
   .md\:py-0 {
@@ -27533,23 +27533,23 @@ video {
   }
 
   .md\:py-slide {
-    padding-top: 48rem;
-    padding-bottom: 48rem;
+    padding-top: 50rem;
+    padding-bottom: 50rem;
   }
 
   .md\:px-slide {
-    padding-left: 48rem;
-    padding-right: 48rem;
+    padding-left: 50rem;
+    padding-right: 50rem;
   }
 
   .md\:py-hslide {
-    padding-top: 24rem;
-    padding-bottom: 24rem;
+    padding-top: 25rem;
+    padding-bottom: 25rem;
   }
 
   .md\:px-hslide {
-    padding-left: 24rem;
-    padding-right: 24rem;
+    padding-left: 25rem;
+    padding-right: 25rem;
   }
 
   .md\:pt-0 {
@@ -27857,35 +27857,35 @@ video {
   }
 
   .md\:pt-slide {
-    padding-top: 48rem;
+    padding-top: 50rem;
   }
 
   .md\:pr-slide {
-    padding-right: 48rem;
+    padding-right: 50rem;
   }
 
   .md\:pb-slide {
-    padding-bottom: 48rem;
+    padding-bottom: 50rem;
   }
 
   .md\:pl-slide {
-    padding-left: 48rem;
+    padding-left: 50rem;
   }
 
   .md\:pt-hslide {
-    padding-top: 24rem;
+    padding-top: 25rem;
   }
 
   .md\:pr-hslide {
-    padding-right: 24rem;
+    padding-right: 25rem;
   }
 
   .md\:pb-hslide {
-    padding-bottom: 24rem;
+    padding-bottom: 25rem;
   }
 
   .md\:pl-hslide {
-    padding-left: 24rem;
+    padding-left: 25rem;
   }
 
   .md\:placeholder-transparent::-webkit-input-placeholder {
@@ -33277,11 +33277,11 @@ video {
   }
 
   .md\:w-slide {
-    width: 48rem;
+    width: 50rem;
   }
 
   .md\:w-hslide {
-    width: 24rem;
+    width: 25rem;
   }
 
   .md\:w-1\/2 {
@@ -36605,11 +36605,11 @@ video {
   }
 
   .lg\:h-slide {
-    height: 48rem;
+    height: 50rem;
   }
 
   .lg\:h-hslide {
-    height: 24rem;
+    height: 25rem;
   }
 
   .lg\:h-full {
@@ -36745,11 +36745,11 @@ video {
   }
 
   .lg\:m-slide {
-    margin: 48rem;
+    margin: 50rem;
   }
 
   .lg\:m-hslide {
-    margin: 24rem;
+    margin: 25rem;
   }
 
   .lg\:-m-1 {
@@ -36825,11 +36825,11 @@ video {
   }
 
   .lg\:-m-slide {
-    margin: -48rem;
+    margin: -50rem;
   }
 
   .lg\:-m-hslide {
-    margin: -24rem;
+    margin: -25rem;
   }
 
   .lg\:my-0 {
@@ -37033,23 +37033,23 @@ video {
   }
 
   .lg\:my-slide {
-    margin-top: 48rem;
-    margin-bottom: 48rem;
+    margin-top: 50rem;
+    margin-bottom: 50rem;
   }
 
   .lg\:mx-slide {
-    margin-left: 48rem;
-    margin-right: 48rem;
+    margin-left: 50rem;
+    margin-right: 50rem;
   }
 
   .lg\:my-hslide {
-    margin-top: 24rem;
-    margin-bottom: 24rem;
+    margin-top: 25rem;
+    margin-bottom: 25rem;
   }
 
   .lg\:mx-hslide {
-    margin-left: 24rem;
-    margin-right: 24rem;
+    margin-left: 25rem;
+    margin-right: 25rem;
   }
 
   .lg\:-my-1 {
@@ -37233,23 +37233,23 @@ video {
   }
 
   .lg\:-my-slide {
-    margin-top: -48rem;
-    margin-bottom: -48rem;
+    margin-top: -50rem;
+    margin-bottom: -50rem;
   }
 
   .lg\:-mx-slide {
-    margin-left: -48rem;
-    margin-right: -48rem;
+    margin-left: -50rem;
+    margin-right: -50rem;
   }
 
   .lg\:-my-hslide {
-    margin-top: -24rem;
-    margin-bottom: -24rem;
+    margin-top: -25rem;
+    margin-bottom: -25rem;
   }
 
   .lg\:-mx-hslide {
-    margin-left: -24rem;
-    margin-right: -24rem;
+    margin-left: -25rem;
+    margin-right: -25rem;
   }
 
   .lg\:mt-0 {
@@ -37573,35 +37573,35 @@ video {
   }
 
   .lg\:mt-slide {
-    margin-top: 48rem;
+    margin-top: 50rem;
   }
 
   .lg\:mr-slide {
-    margin-right: 48rem;
+    margin-right: 50rem;
   }
 
   .lg\:mb-slide {
-    margin-bottom: 48rem;
+    margin-bottom: 50rem;
   }
 
   .lg\:ml-slide {
-    margin-left: 48rem;
+    margin-left: 50rem;
   }
 
   .lg\:mt-hslide {
-    margin-top: 24rem;
+    margin-top: 25rem;
   }
 
   .lg\:mr-hslide {
-    margin-right: 24rem;
+    margin-right: 25rem;
   }
 
   .lg\:mb-hslide {
-    margin-bottom: 24rem;
+    margin-bottom: 25rem;
   }
 
   .lg\:ml-hslide {
-    margin-left: 24rem;
+    margin-left: 25rem;
   }
 
   .lg\:-mt-1 {
@@ -37893,35 +37893,35 @@ video {
   }
 
   .lg\:-mt-slide {
-    margin-top: -48rem;
+    margin-top: -50rem;
   }
 
   .lg\:-mr-slide {
-    margin-right: -48rem;
+    margin-right: -50rem;
   }
 
   .lg\:-mb-slide {
-    margin-bottom: -48rem;
+    margin-bottom: -50rem;
   }
 
   .lg\:-ml-slide {
-    margin-left: -48rem;
+    margin-left: -50rem;
   }
 
   .lg\:-mt-hslide {
-    margin-top: -24rem;
+    margin-top: -25rem;
   }
 
   .lg\:-mr-hslide {
-    margin-right: -24rem;
+    margin-right: -25rem;
   }
 
   .lg\:-mb-hslide {
-    margin-bottom: -24rem;
+    margin-bottom: -25rem;
   }
 
   .lg\:-ml-hslide {
-    margin-left: -24rem;
+    margin-left: -25rem;
   }
 
   .lg\:max-h-full {
@@ -38267,11 +38267,11 @@ video {
   }
 
   .lg\:p-slide {
-    padding: 48rem;
+    padding: 50rem;
   }
 
   .lg\:p-hslide {
-    padding: 24rem;
+    padding: 25rem;
   }
 
   .lg\:py-0 {
@@ -38465,23 +38465,23 @@ video {
   }
 
   .lg\:py-slide {
-    padding-top: 48rem;
-    padding-bottom: 48rem;
+    padding-top: 50rem;
+    padding-bottom: 50rem;
   }
 
   .lg\:px-slide {
-    padding-left: 48rem;
-    padding-right: 48rem;
+    padding-left: 50rem;
+    padding-right: 50rem;
   }
 
   .lg\:py-hslide {
-    padding-top: 24rem;
-    padding-bottom: 24rem;
+    padding-top: 25rem;
+    padding-bottom: 25rem;
   }
 
   .lg\:px-hslide {
-    padding-left: 24rem;
-    padding-right: 24rem;
+    padding-left: 25rem;
+    padding-right: 25rem;
   }
 
   .lg\:pt-0 {
@@ -38789,35 +38789,35 @@ video {
   }
 
   .lg\:pt-slide {
-    padding-top: 48rem;
+    padding-top: 50rem;
   }
 
   .lg\:pr-slide {
-    padding-right: 48rem;
+    padding-right: 50rem;
   }
 
   .lg\:pb-slide {
-    padding-bottom: 48rem;
+    padding-bottom: 50rem;
   }
 
   .lg\:pl-slide {
-    padding-left: 48rem;
+    padding-left: 50rem;
   }
 
   .lg\:pt-hslide {
-    padding-top: 24rem;
+    padding-top: 25rem;
   }
 
   .lg\:pr-hslide {
-    padding-right: 24rem;
+    padding-right: 25rem;
   }
 
   .lg\:pb-hslide {
-    padding-bottom: 24rem;
+    padding-bottom: 25rem;
   }
 
   .lg\:pl-hslide {
-    padding-left: 24rem;
+    padding-left: 25rem;
   }
 
   .lg\:placeholder-transparent::-webkit-input-placeholder {
@@ -44209,11 +44209,11 @@ video {
   }
 
   .lg\:w-slide {
-    width: 48rem;
+    width: 50rem;
   }
 
   .lg\:w-hslide {
-    width: 24rem;
+    width: 25rem;
   }
 
   .lg\:w-1\/2 {
@@ -47537,11 +47537,11 @@ video {
   }
 
   .xl\:h-slide {
-    height: 48rem;
+    height: 50rem;
   }
 
   .xl\:h-hslide {
-    height: 24rem;
+    height: 25rem;
   }
 
   .xl\:h-full {
@@ -47677,11 +47677,11 @@ video {
   }
 
   .xl\:m-slide {
-    margin: 48rem;
+    margin: 50rem;
   }
 
   .xl\:m-hslide {
-    margin: 24rem;
+    margin: 25rem;
   }
 
   .xl\:-m-1 {
@@ -47757,11 +47757,11 @@ video {
   }
 
   .xl\:-m-slide {
-    margin: -48rem;
+    margin: -50rem;
   }
 
   .xl\:-m-hslide {
-    margin: -24rem;
+    margin: -25rem;
   }
 
   .xl\:my-0 {
@@ -47965,23 +47965,23 @@ video {
   }
 
   .xl\:my-slide {
-    margin-top: 48rem;
-    margin-bottom: 48rem;
+    margin-top: 50rem;
+    margin-bottom: 50rem;
   }
 
   .xl\:mx-slide {
-    margin-left: 48rem;
-    margin-right: 48rem;
+    margin-left: 50rem;
+    margin-right: 50rem;
   }
 
   .xl\:my-hslide {
-    margin-top: 24rem;
-    margin-bottom: 24rem;
+    margin-top: 25rem;
+    margin-bottom: 25rem;
   }
 
   .xl\:mx-hslide {
-    margin-left: 24rem;
-    margin-right: 24rem;
+    margin-left: 25rem;
+    margin-right: 25rem;
   }
 
   .xl\:-my-1 {
@@ -48165,23 +48165,23 @@ video {
   }
 
   .xl\:-my-slide {
-    margin-top: -48rem;
-    margin-bottom: -48rem;
+    margin-top: -50rem;
+    margin-bottom: -50rem;
   }
 
   .xl\:-mx-slide {
-    margin-left: -48rem;
-    margin-right: -48rem;
+    margin-left: -50rem;
+    margin-right: -50rem;
   }
 
   .xl\:-my-hslide {
-    margin-top: -24rem;
-    margin-bottom: -24rem;
+    margin-top: -25rem;
+    margin-bottom: -25rem;
   }
 
   .xl\:-mx-hslide {
-    margin-left: -24rem;
-    margin-right: -24rem;
+    margin-left: -25rem;
+    margin-right: -25rem;
   }
 
   .xl\:mt-0 {
@@ -48505,35 +48505,35 @@ video {
   }
 
   .xl\:mt-slide {
-    margin-top: 48rem;
+    margin-top: 50rem;
   }
 
   .xl\:mr-slide {
-    margin-right: 48rem;
+    margin-right: 50rem;
   }
 
   .xl\:mb-slide {
-    margin-bottom: 48rem;
+    margin-bottom: 50rem;
   }
 
   .xl\:ml-slide {
-    margin-left: 48rem;
+    margin-left: 50rem;
   }
 
   .xl\:mt-hslide {
-    margin-top: 24rem;
+    margin-top: 25rem;
   }
 
   .xl\:mr-hslide {
-    margin-right: 24rem;
+    margin-right: 25rem;
   }
 
   .xl\:mb-hslide {
-    margin-bottom: 24rem;
+    margin-bottom: 25rem;
   }
 
   .xl\:ml-hslide {
-    margin-left: 24rem;
+    margin-left: 25rem;
   }
 
   .xl\:-mt-1 {
@@ -48825,35 +48825,35 @@ video {
   }
 
   .xl\:-mt-slide {
-    margin-top: -48rem;
+    margin-top: -50rem;
   }
 
   .xl\:-mr-slide {
-    margin-right: -48rem;
+    margin-right: -50rem;
   }
 
   .xl\:-mb-slide {
-    margin-bottom: -48rem;
+    margin-bottom: -50rem;
   }
 
   .xl\:-ml-slide {
-    margin-left: -48rem;
+    margin-left: -50rem;
   }
 
   .xl\:-mt-hslide {
-    margin-top: -24rem;
+    margin-top: -25rem;
   }
 
   .xl\:-mr-hslide {
-    margin-right: -24rem;
+    margin-right: -25rem;
   }
 
   .xl\:-mb-hslide {
-    margin-bottom: -24rem;
+    margin-bottom: -25rem;
   }
 
   .xl\:-ml-hslide {
-    margin-left: -24rem;
+    margin-left: -25rem;
   }
 
   .xl\:max-h-full {
@@ -49199,11 +49199,11 @@ video {
   }
 
   .xl\:p-slide {
-    padding: 48rem;
+    padding: 50rem;
   }
 
   .xl\:p-hslide {
-    padding: 24rem;
+    padding: 25rem;
   }
 
   .xl\:py-0 {
@@ -49397,23 +49397,23 @@ video {
   }
 
   .xl\:py-slide {
-    padding-top: 48rem;
-    padding-bottom: 48rem;
+    padding-top: 50rem;
+    padding-bottom: 50rem;
   }
 
   .xl\:px-slide {
-    padding-left: 48rem;
-    padding-right: 48rem;
+    padding-left: 50rem;
+    padding-right: 50rem;
   }
 
   .xl\:py-hslide {
-    padding-top: 24rem;
-    padding-bottom: 24rem;
+    padding-top: 25rem;
+    padding-bottom: 25rem;
   }
 
   .xl\:px-hslide {
-    padding-left: 24rem;
-    padding-right: 24rem;
+    padding-left: 25rem;
+    padding-right: 25rem;
   }
 
   .xl\:pt-0 {
@@ -49721,35 +49721,35 @@ video {
   }
 
   .xl\:pt-slide {
-    padding-top: 48rem;
+    padding-top: 50rem;
   }
 
   .xl\:pr-slide {
-    padding-right: 48rem;
+    padding-right: 50rem;
   }
 
   .xl\:pb-slide {
-    padding-bottom: 48rem;
+    padding-bottom: 50rem;
   }
 
   .xl\:pl-slide {
-    padding-left: 48rem;
+    padding-left: 50rem;
   }
 
   .xl\:pt-hslide {
-    padding-top: 24rem;
+    padding-top: 25rem;
   }
 
   .xl\:pr-hslide {
-    padding-right: 24rem;
+    padding-right: 25rem;
   }
 
   .xl\:pb-hslide {
-    padding-bottom: 24rem;
+    padding-bottom: 25rem;
   }
 
   .xl\:pl-hslide {
-    padding-left: 24rem;
+    padding-left: 25rem;
   }
 
   .xl\:placeholder-transparent::-webkit-input-placeholder {
@@ -55141,11 +55141,11 @@ video {
   }
 
   .xl\:w-slide {
-    width: 48rem;
+    width: 50rem;
   }
 
   .xl\:w-hslide {
-    width: 24rem;
+    width: 25rem;
   }
 
   .xl\:w-1\/2 {

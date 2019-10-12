@@ -2,8 +2,8 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
-        slide: "48rem",
-        hslide: "24rem"
+        slide: "50rem",
+        hslide: "25rem"
       }
     }
   },
