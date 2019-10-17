@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="card.css" />
+
+		<title>TEPPEN Card Maker</title>
+	</head>
+	<body class="bg-gray-900 text-white tracking-tight">
+		<div id="app">
+			<div class="uppercase font-bold text-center py-8"
+				><p class="text-4xl">TEPPEN Card Maker</p>
+				<p class="text-xl text-gray-700">By Effy</p>
+			</div>
+			<div class="flex justify-around">
+				<div class="w-full md:w-1/3 bg-gray-900 p-10">
+					<label
+						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+						for=""
+					>
+						Card Name
+					</label>
+					<input
+						v-model="cardName"
+						class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none mb-8 "
+						id=""
+						type="text"
+					/>
+					<label
+						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+						for=""
+					>
+						Tribe
+					</label>
+					<input
+						v-model="cardTribe"
+						class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none  mb-8"
+						id=""
+						type="text"
+					/>
+					<label
+						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+						for="grid-state"
+					>
+						Color
+					</label>
+					<div class="relative">
+						<select
+							@change="changeEmblem(cardColor);changeInner(cardColor)"
+							v-model="cardColor"
+							class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none mb-8"
+							id="grid-state"
+						>
+							<option disabled value="">Please Select Color</option>
+							<option>Red</option>
+							<option>Green</option>
+							<option>Purple</option>
+							<option>Black</option>
+						</select>
+						<div
+							class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+						>
+							<svg
+								class="fill-current h-4 w-4"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 20 20"
+							>
+								<path
+									d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+								/>
+							</svg>
+						</div>
+					</div>
+					<label
+						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+						for="grid-state"
+					>
+						Rarity
+					</label>
+					<div class="relative">
+						<select
+							v-model="cardRarity"
+							@change="changeRarity(cardRarity)"
+							class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none mb-8"
+							id="grid-state"
+						>
+							<option disabled value="">Please Select Rarity</option>
+							<option>Common</option>
+							<option>Rare</option>
+							<option>Epic</option>
+							<option>Legendary</option>
+						</select>
+						<div
+							class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+						>
+							<svg
+								class="fill-current h-4 w-4"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 20 20"
+							>
+								<path
+									d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+								/>
+							</svg>
+						</div>
+					</div>
+					<label
+						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+						for="grid-state"
+					>
+						Artwork
+					</label>
+					<input
+						v-model="artwork"
+						class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none  mb-8"
+						id=""
+						type="text"
+					/>
+				</div>
+
+				<!-- 				<div class="block">
+					<canvas
+						style="cursor: grab"
+						id="card"
+						width="361px"
+						height="495px"
+						v-insert-card="cardEmblem[cardColor]"
+						v-insert-rarity="cardEmblemRarity[cardRarity]"
+						v-insert-artwork="artwork"
+					>
+						<img :src="artwork" alt="" srcset="" />
+					</canvas>
+				</div> -->
+				<!-- 				<div
+					width="361"
+					height="495"
+					class="block"
+					id="container"
+					v-insert-card="cardEmblem[cardColor]"
+					v-insert-rarity="cardEmblemRarity[cardRarity]"
+				>
+				</div> -->
+
+				<v-stage ref="stage" :config="configKonva">
+					<v-layer ref="layer">
+
+						</v-image>
+						<v-image
+							:config="{
+							image: bg
+						}"
+						>
+						</v-image>
+						<v-image
+							:config="{
+						image: inner
+					}"
+						>
+						</v-image>
+						<v-image
+							:config="{
+							image: stats
+						}"
+						></v-image>
+						<v-image
+							:config="{
+								image: emblem
+							}"
+						></v-image>
+						<v-image
+						:config="{
+							image: rarity
+						}"
+					></v-image>
+						<v-image
+						:config="{
+						image: art,
+						draggable: true
+					}"
+					>
+					</v-layer>
+				</v-stage>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/konva@4.0.0/konva.min.js"></script>
+		<script src="https://unpkg.com/vue-konva/umd/vue-konva.min.js"></script>
+
+		<script>
+			new Vue({
+				el: "#app",
+				data: {
+					configKonva: {
+						width: 361,
+						height: 495
+					},
+					configCircle: {
+						x: 100,
+						y: 100,
+						radius: 70,
+						fill: "red",
+						stroke: "black",
+						strokeWidth: 4
+					},
+					card: "Card Example",
+					artwork:
+						"https://cdn.discordapp.com/attachments/634104212766326834/634105064427880511/image0.jpg",
+					cardName: "Card Name",
+					emblem: null,
+					bg: null,
+					stats: null,
+					inner: null,
+					art: null,
+					rarity: null,
+					cardMask: "card/mask.png",
+					cardTribe: "Human",
+					cardColor: "Red",
+					cardRarity: "Legendary",
+					cardEmblemRarity: {
+						Legendary: "card/legendaryRarity.png",
+						Epic: "card/epicRarity.png",
+						Rare: "card/rareRarity.png",
+						Common: "card/commonRarity.png"
+					},
+					cardEmblem: {
+						Red: ["card/redEmblem.png", "card/redBorder.png"],
+						Green: ["card/greenEmblem.png", "card/greenBorder.png"],
+						Purple: ["card/purpleEmblem.png", "card/purpleBorder.png"],
+						Black: ["card/blackEmblem.png", "card/blackborder.png"]
+					}
+				},
+				mounted: function() {
+					const stats = new window.Image();
+					stats.src = "card/cardStats.png";
+					stats.onload = () => {
+						this.stats = stats;
+					};
+					const inner = new window.Image();
+					inner.src = this.cardEmblem[this.cardColor][1];
+					inner.onload = () => {
+						this.inner = inner;
+					};
+					const emblemColor = new window.Image();
+					emblemColor.src = this.cardEmblem[this.cardColor][0];
+					emblemColor.onload = () => {
+						this.emblem = emblemColor;
+					};
+					const rarity = new window.Image();
+					rarity.src = this.cardEmblemRarity[this.cardRarity]
+					rarity.onload = () => {
+						this.rarity = rarity;
+					}
+					const border = new window.Image();
+					border.src = "card/border.png";
+					border.onload = () => {
+						this.bg = border;
+					};
+					
+					const art = new window.Image();
+					const mask = new Image();
+					mask.onload = () => {
+						let img = new Image();
+						img.onload = () => {
+						let image = new Konva.Shape({
+						sceneFunc: (ctx) => {
+							ctx.save();
+							ctx.drawImage(mask, -image.x(), -image.y(), 200,200)
+							ctx.globalCompositeOperation = 'source-in';
+							ctx.drawImage(art, 0,0, 200,200);
+							ctx.globalCompositeOperation = 'source-over';
+							ctx.restore();
+						}, 
+						hitFunc: (ctx) => {
+							ctx.rect(0,0,0,200);
+							ctx.fillStrokeShape(image)
+						},
+						draggable: true
+					})
+						}
+					img.src = this.artwork
+					}
+					mask.src = "card/mask.png"
+				
+				},
+				methods: {
+					changeEmblem: function(color) {
+						const image = new window.Image();
+						image.src = this.cardEmblem[color][0];
+						image.onload = () => {
+							this.emblem = image;
+						};
+					},
+					changeInner: function(color) {
+						const image = new window.Image();
+						image.src = this.cardEmblem[color][1];
+						image.onload = () => {
+							this.inner = image;
+						};
+					},
+					changeRarity: function(color) {
+						const image = new window.Image();
+						image.src = this.cardEmblemRarity[color];
+						image.onload = () => {
+							this.rarity = image
+						}
+					}
+				}
+			});
+		</script>
+	</body>
+	<script>
+		/* 	var app = new Vue({
+			el: "#app",
+			data: {
+				card: "Card Example",
+				artwork:
+					"https://cdn.discordapp.com/attachments/634104212766326834/634105064427880511/image0.jpg",
+				cardName: "Card Name",
+				cardMask: "card/mask.png",
+				cardTribe: "Human",
+				cardColor: "Red",
+				cardRarity: "Legendary",
+				cardEmblemRarity: {
+					Legendary: "card/legendaryRarity.png",
+					Epic: "card/epicRarity.png",
+					Rare: "card/rareRarity.png",
+					Common: "card/commonRarity.png"
+				},
+				cardEmblem: {
+					Red: ["card/redEmblem.png", "card/redBorder.png"],
+					Green: ["card/greenEmblem.png", "card/greenBorder.png"],
+					Purple: ["card/purpleEmblem.png", "card/purpleBorder.png"],
+					Black: ["card/blackEmblem.png", "card/blackborder.png"]
+				},
+				stage: new Konva.Stage({
+					container: "container",
+					width: 361,
+					height: 495
+				})
+			},
+			mounted: function() {},
+			directives: {
+				insertArtwork: function(canvasElement, binding) {
+					var ctx = canvasElement.getContext("2d");
+					var artwork = document.createElement("IMG");
+					artwork.onload = setTimeout(function() {
+						ctx.drawImage(artwork, 0, 0);
+					}, 50);
+					artwork.src = binding.value;
+				},
+				insertCard: function(canvasElement, binding) {
+					var stage = new Konva.Stage({
+						container: "container",
+						width: 361,
+						height: 495
+					});
+					var layer = new Konva.Layer();
+					var group = new Konva.Group();
+					var imageObj = new Image();
+					imageObj.onload = function() {
+						var bg = new Konva.Image({
+							image: imageObj
+						});
+						group.add(bg);
+						bg.moveToBottom();
+						layer.batchDraw();
+					};
+					imageObj.src = binding.value[1];
+
+					var imageObj2 = new Image();
+					imageObj2.onload = function() {
+						var border = new Konva.Image({
+							image: imageObj2
+						});
+						group.add(border);
+						group.moveToTop();
+						layer.batchDraw();
+					};
+					imageObj2.src = binding.value[0];
+
+					var imageObj3 = new Image();
+					imageObj3.onload = function() {
+						var border = new Konva.Image({
+							image: imageObj3
+						});
+
+						group.add(border);
+						border.moveToBottom();
+						layer.batchDraw();
+					};
+					imageObj3.src = "card/border.png";
+					layer.add(group);
+					layer.batchDraw();
+					stage.add(layer);
+				},
+				insertRarity: function(canvasElement, binding) {
+					var image = new Image();
+					image.onload = function() {
+						var emblem = new Konva.Image({
+							image: image
+						});
+						group.add(emblem);
+						emblem.moveToTop();
+						layer.batchDraw();
+					};
+					image.src = binding.value;
+					layer.add(group);
+					layer.batchDraw();
+					stage.add(layer);
+				},
+				insertCard: function(canvasElement, binding) {
+					var ctx = canvasElement.getContext("2d");
+					var img = document.createElement("IMG");
+					var bg = document.createElement("IMG");
+					var inner = document.createElement("IMG");
+					var stats = document.createElement("IMG");
+					var artwork = document.createElement("IMG");
+					ctx.clearRect(0, 0, 361, 495);
+					function drawStats() {
+						stats.onload = function() {
+							ctx.drawImage(stats, 0, 0);
+						};
+						stats.src = "card/cardStats.png";
+					}
+					function drawEmblem() {
+						img.onload = function() {
+							ctx.drawImage(img, 0, 0);
+							drawStats();
+						};
+						img.src = binding.value[0];
+					}
+					function drawInner() {
+						inner.onload = function() {
+							ctx.drawImage(inner, 0, 0);
+							drawEmblem();
+						};
+						inner.src = binding.value[1];
+					}
+					function drawBg() {
+						bg.onload = setTimeout(function() {
+							ctx.drawImage(bg, 0, 0);
+							drawInner();
+						}, 60);
+						bg.src = "card/border.png";
+					}
+					drawBg();
+				},
+				insertRarity: function(canvasElement, binding) {
+					var ctx = canvasElement.getContext("2d");
+					var img = document.createElement("IMG");
+					ctx.clearRect(0, 0, 361, 495);
+					img.onload = setTimeout(function() {
+						ctx.drawImage(img, 0, 0);
+					}, 70);
+					img.src = binding.value;
+				}
+			}
+		}); */
+	</script>
+</html>
