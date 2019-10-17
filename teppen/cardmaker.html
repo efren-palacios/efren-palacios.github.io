@@ -46,6 +46,20 @@
 					/>
 					<label
 						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+						for=""
+					>
+						Cost
+					</label>
+					<input
+						@change="changeCost(cardCost)"
+						v-model="cardCost"
+						class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none  mb-8"
+						id=""
+						type="number"
+					/>
+					
+					<label
+						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
 						for="grid-state"
 					>
 						Color
@@ -171,8 +185,18 @@
 						<v-image
 							:config="{
 								image: emblem
+
 							}"
 						></v-image>
+						<v-image
+						:config="{
+						image: cost,
+						x: 20,
+						y: 22,
+						width: 48,
+						height: 70
+					}"
+					></v-image>
 						<v-image
 						:config="{
 							image: rarity
@@ -218,10 +242,12 @@
 					inner: null,
 					art: null,
 					rarity: null,
+					cost: null,
 					cardMask: "card/mask.png",
 					cardTribe: "Human",
 					cardColor: "Red",
 					cardRarity: "Legendary",
+					cardCost: 0,
 					cardEmblemRarity: {
 						Legendary: "card/legendaryRarity.png",
 						Epic: "card/epicRarity.png",
@@ -233,6 +259,18 @@
 						Green: ["card/greenEmblem.png", "card/greenBorder.png"],
 						Purple: ["card/purpleEmblem.png", "card/purpleBorder.png"],
 						Black: ["card/blackEmblem.png", "card/blackBorder.png"]
+					},
+					number: {
+						0: 'card/0.png',
+						1: 'card/1.png',
+						2: 'card/2.png',
+						3: 'card/3.png',
+						4: 'card/4.png',
+						5: 'card/5.png',
+						6: 'card/6.png',
+						7: 'card/7.png',
+						8: 'card/8.png',
+						9: 'card/9.png',
 					}
 				},
 				mounted: function() {
@@ -262,6 +300,12 @@
 						this.bg = border;
 					};
 					
+					const cost = new window.Image();
+					cost.src = "card/0.png";
+					cost.onload = () => {
+						this.cost = cost
+					}
+
 					const art = new window.Image();
 					const mask = new Image();
 					mask.onload = () => {
@@ -308,6 +352,13 @@
 						image.src = this.cardEmblemRarity[color];
 						image.onload = () => {
 							this.rarity = image
+						}
+					},
+					changeCost: function(cost) {
+						const image = new window.Image();
+						image.src = this.number[cost];
+						image.onload = () => {
+							this.cost = image
 						}
 					}
 				}
