@@ -18,7 +18,7 @@
 				><p class="text-4xl">TEPPEN Card Maker</p>
 				<p class="text-xl text-gray-700">By Effy</p>
 			</div>
-			<div class="flex justify-around">
+			<div class="sm:flex justify-around items-center">
 				<div class="w-full md:w-1/3 bg-gray-900 p-10">
 					<label
 						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -56,8 +56,40 @@
 						class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none  mb-8"
 						id=""
 						type="number"
+						min="0"
+						max="99"
 					/>
-					
+					<label
+						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+						for=""
+					>
+						Attack
+					</label>
+					<input
+						@change="changeAttack(cardAttack)"
+						v-model="cardAttack"
+						class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none  mb-8"
+						id=""
+						type="number"
+						min="0"
+						max="99"
+					/>
+					<label
+						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+						for=""
+					>
+						Health
+					</label>
+					<input
+						@change="changeHealth(cardHealth)"
+						v-model="cardHealth"
+						class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none  mb-8"
+						id=""
+						type="number"
+						min="0"
+						max="99"
+					/>
+
 					<label
 						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
 						for="grid-state"
@@ -135,107 +167,35 @@
 						class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none  mb-8"
 						id=""
 						type="text"
+						@change="changeArt(artwork)"
 					/>
 				</div>
-
-				<!-- 				<div class="block">
-					<canvas
-						style="cursor: grab"
-						id="card"
-						width="361px"
-						height="495px"
-						v-insert-card="cardEmblem[cardColor]"
-						v-insert-rarity="cardEmblemRarity[cardRarity]"
-						v-insert-artwork="artwork"
+				<div class="flex flex-col items-center justify-center"
+					><div id="container" style="cursor:grab"></div>
+					<button
+						@click="saveImage"
+						class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded my-8"
 					>
-						<img :src="artwork" alt="" srcset="" />
-					</canvas>
-				</div> -->
-				<!-- 				<div
-					width="361"
-					height="495"
-					class="block"
-					id="container"
-					v-insert-card="cardEmblem[cardColor]"
-					v-insert-rarity="cardEmblemRarity[cardRarity]"
-				>
-				</div> -->
-
-				<v-stage ref="stage" :config="configKonva">
-					<v-layer ref="layer">
-
-						</v-image>
-						<v-image
-							:config="{
-							image: bg
-						}"
-						>
-						</v-image>
-						<v-image
-							:config="{
-						image: inner
-					}"
-						>
-						</v-image>
-						<v-image
-							:config="{
-							image: stats
-						}"
-						></v-image>
-						<v-image
-							:config="{
-								image: emblem
-
-							}"
-						></v-image>
-						<v-image
-						:config="{
-						image: cost,
-						x: 20,
-						y: 22,
-						width: 48,
-						height: 70
-					}"
-					></v-image>
-						<v-image
-						:config="{
-							image: rarity
-						}"
-					></v-image>
-						<v-image
-						:config="{
-						image: art,
-						draggable: true
-					}"
-					>
-					</v-layer>
-				</v-stage>
+						Download Image
+					</button>
+				</div>
 			</div>
 		</div>
+		<script src="./konva.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-		<script src="https://unpkg.com/konva@4.0.0/konva.min.js"></script>
-		<script src="https://unpkg.com/vue-konva/umd/vue-konva.min.js"></script>
 
 		<script>
 			new Vue({
 				el: "#app",
 				data: {
-					configKonva: {
+					canvas: {
 						width: 361,
 						height: 495
 					},
-					configCircle: {
-						x: 100,
-						y: 100,
-						radius: 70,
-						fill: "red",
-						stroke: "black",
-						strokeWidth: 4
-					},
 					card: "Card Example",
 					artwork:
-						"https://cdn.discordapp.com/attachments/634104212766326834/634105064427880511/image0.jpg",
-					cardName: "Card Name",
+						"https://news.toyark.com/wp-content/uploads/sites/4/2015/12/Kinetiquettes-Street-Fighter-Ken-Statue-Print.jpg",
+					cardName: "Card Example",
 					emblem: null,
 					bg: null,
 					stats: null,
@@ -243,11 +203,30 @@
 					art: null,
 					rarity: null,
 					cost: null,
+					mask: null,
 					cardMask: "card/mask.png",
 					cardTribe: "Human",
 					cardColor: "Red",
 					cardRarity: "Legendary",
 					cardCost: 0,
+					cardHealth: 0,
+					cardAttack: 0,
+					costImg: null,
+					healthImg: null,
+					artworkImg: null,
+					stage: null,
+					layer1: null,
+					layer2: null,
+					layer3: null,
+					mask: null,
+					rarityLoaded: false,
+					emblemLoaded: false,
+					colorLoaded: false,
+					costLoaded: false,
+					innerImg: null,
+					emblemImg: null,
+					healthLoaded: null,
+					attackLoaded: null,
 					cardEmblemRarity: {
 						Legendary: "card/legendaryRarity.png",
 						Epic: "card/epicRarity.png",
@@ -261,257 +240,216 @@
 						Black: ["card/blackEmblem.png", "card/blackBorder.png"]
 					},
 					number: {
-						0: 'card/0.png',
-						1: 'card/1.png',
-						2: 'card/2.png',
-						3: 'card/3.png',
-						4: 'card/4.png',
-						5: 'card/5.png',
-						6: 'card/6.png',
-						7: 'card/7.png',
-						8: 'card/8.png',
-						9: 'card/9.png',
+						0: "card/0.png",
+						1: "card/1.png",
+						2: "card/2.png",
+						3: "card/3.png",
+						4: "card/4.png",
+						5: "card/5.png",
+						6: "card/6.png",
+						7: "card/7.png",
+						8: "card/8.png",
+						9: "card/9.png"
 					}
 				},
 				mounted: function() {
-					const stats = new window.Image();
-					stats.src = "card/cardStats.png";
-					stats.onload = () => {
-						this.stats = stats;
-					};
-					const inner = new window.Image();
-					inner.src = this.cardEmblem[this.cardColor][1];
-					inner.onload = () => {
-						this.inner = inner;
-					};
-					const emblemColor = new window.Image();
-					emblemColor.src = this.cardEmblem[this.cardColor][0];
-					emblemColor.onload = () => {
-						this.emblem = emblemColor;
-					};
-					const rarity = new window.Image();
-					rarity.src = this.cardEmblemRarity[this.cardRarity]
-					rarity.onload = () => {
-						this.rarity = rarity;
-					}
-					const border = new window.Image();
-					border.src = "card/border.png";
-					border.onload = () => {
-						this.bg = border;
-					};
-					
-					const cost = new window.Image();
-					cost.src = "card/0.png";
-					cost.onload = () => {
-						this.cost = cost
-					}
+					this.stage = new Konva.Stage({
+						container: "container",
+						width: 361,
+						height: 495
+					});
 
-					const art = new window.Image();
-					const mask = new Image();
-					mask.onload = () => {
-						let img = new Image();
-						img.onload = () => {
-						let image = new Konva.Shape({
-						sceneFunc: (ctx) => {
-							ctx.save();
-							ctx.drawImage(mask, -image.x(), -image.y(), 200,200)
-							ctx.globalCompositeOperation = 'source-in';
-							ctx.drawImage(art, 0,0, 200,200);
-							ctx.globalCompositeOperation = 'source-over';
-							ctx.restore();
-						}, 
-						hitFunc: (ctx) => {
-							ctx.rect(0,0,0,200);
-							ctx.fillStrokeShape(image)
-						},
-						draggable: true
-					})
-						}
-					img.src = this.artwork
-					}
-					mask.src = "card/mask.png"
-				
+					this.layer = new Konva.Layer();
+					this.layer2 = new Konva.Layer();
+					this.layer3 = new Konva.Layer();
+
+					this.stage.add(this.layer, this.layer2, this.layer3);
+					this.mask = new Image();
+					this.mask.onload = () => {
+						this.artworkImg = new Image();
+						this.artworkImg.onload = () => {
+							let image = new Konva.Shape({
+								sceneFunc: ctx => {
+									ctx.save();
+									ctx.drawImage(this.mask, -image.x(), -image.y(), 361, 495);
+									ctx.globalCompositeOperation = "source-in";
+									ctx.drawImage(this.artworkImg, 0, 0);
+									ctx.globalCompositeOperation = "source-over";
+									ctx.restore();
+								},
+								hitFunc: ctx => {
+									ctx.rect(0, 0, 500, 500);
+									ctx.fillStrokeShape(image);
+								},
+								draggable: true
+							});
+							this.layer2.add(image);
+							this.layer2.draw();
+						};
+						this.artworkImg.setAttribute("crossOrigin", "anonymous");
+						this.artworkImg.src = this.artwork;
+					};
+					this.mask.src = this.cardMask;
+
+					let imageObj = new Image();
+					imageObj.onload = () => {
+						var border = new Konva.Shape({
+							sceneFunc: ctx => {
+								ctx.save();
+								ctx.drawImage(imageObj, 0, 0);
+								ctx.restore();
+							}
+						});
+						this.layer.add(border);
+						this.layer.draw();
+					};
+					imageObj.src = "card/border.png";
+					this.innerImg = new Image();
+					this.innerImg.onload = () => {
+						if (this.emblemLoaded) return this.layer.draw();
+						this.emblemLoaded = true;
+
+						var inner = new Konva.Shape({
+							sceneFunc: ctx => {
+								ctx.save();
+								ctx.drawImage(this.innerImg, 0, 0);
+								ctx.restore();
+							}
+						});
+						this.layer.add(inner);
+						this.layer.draw();
+					};
+					this.innerImg.src = this.cardEmblem[this.cardColor][1];
+					this.emblemImg = new Image();
+					this.emblemImg.onload = () => {
+						if (this.colorLoaded) return this.layer3.draw();
+						this.colorLoaded = true;
+						var emblem = new Konva.Shape({
+							sceneFunc: ctx => {
+								ctx.save();
+								ctx.drawImage(this.emblemImg, 0, 0);
+								ctx.restore();
+							}
+						});
+						this.layer3.add(emblem);
+						this.layer3.draw();
+					};
+					this.emblemImg.src = this.cardEmblem[this.cardColor][0];
+					let statEmblem = new Image();
+					statEmblem.onload = () => {
+						var stat = new Konva.Shape({
+							sceneFunc: ctx => {
+								ctx.save();
+								ctx.drawImage(statEmblem, 0, 0);
+								ctx.restore();
+							}
+						});
+						this.layer3.add(stat);
+						this.layer3.draw();
+					};
+					statEmblem.src = "card/cardStats.png";
+
+					this.rarityEmblem = new Image();
+					this.rarityEmblem.onload = () => {
+						if (this.rarityLoaded) return this.layer3.draw();
+						this.rarityLoaded = true;
+						var rarity = new Konva.Shape({
+							sceneFunc: ctx => {
+								ctx.save();
+								ctx.drawImage(this.rarityEmblem, 0, 0);
+								ctx.restore();
+							}
+						});
+						this.layer3.draw();
+						this.layer3.add(rarity);
+					};
+					this.rarityEmblem.src = this.cardEmblemRarity[this.cardRarity];
+
+					this.costImg = new Image();
+					this.costImg.onload = () => {
+						if (this.costLoaded) return this.layer3.draw();
+						this.costLoaded = true;
+						var cost = new Konva.Shape({
+							sceneFunc: ctx => {
+								ctx.save();
+								ctx.drawImage(this.costImg, 20, 22, 48, 65);
+								ctx.restore();
+							}
+						});
+						this.layer3.add(cost);
+						this.layer3.draw();
+					};
+					this.costImg.src = this.number[this.cardCost];
+
+					this.healthImg = new Image();
+					this.healthImg.onload = () => {
+						if (this.healthLoaded) return this.layer3.draw();
+						this.healthLoaded = true;
+						var cost = new Konva.Shape({
+							sceneFunc: ctx => {
+								ctx.save();
+								ctx.drawImage(this.healthImg, 295, 350, 36, 58);
+								ctx.restore();
+							}
+						});
+						this.layer3.add(cost);
+						this.layer3.draw();
+					};
+					this.healthImg.src = this.number[this.cardHealth];
+
+					this.attackImg = new Image();
+					this.attackImg.onload = () => {
+						if (this.attackLoaded) return this.layer3.draw();
+						this.attackLoaded = true;
+						var cost = new Konva.Shape({
+							sceneFunc: ctx => {
+								ctx.save();
+								ctx.drawImage(this.attackImg, 295, 268, 36, 58);
+								ctx.restore();
+							}
+						});
+						this.layer3.add(cost);
+						this.layer3.draw();
+					};
+					this.attackImg.src = this.number[this.cardAttack];
 				},
 				methods: {
+					saveImage: function() {
+						function downloadURI(uri, name) {
+							var link = document.createElement("a");
+							link.download = name;
+							link.href = uri;
+							document.body.appendChild(link);
+							link.click();
+							document.body.removeChild(link);
+							delete link;
+						}
+						var dataUrl = this.stage.toDataURL();
+						downloadURI(dataUrl, `${this.cardName}.png`);
+					},
 					changeEmblem: function(color) {
-						const image = new window.Image();
-						image.src = this.cardEmblem[color][0];
-						image.onload = () => {
-							this.emblem = image;
-						};
+						this.emblemImg.src = this.cardEmblem[color][0];
 					},
 					changeInner: function(color) {
-						const image = new window.Image();
-						image.src = this.cardEmblem[color][1];
-						image.onload = () => {
-							this.inner = image;
-						};
+						return (this.innerImg.src = this.cardEmblem[color][1]);
 					},
 					changeRarity: function(color) {
-						const image = new window.Image();
-						image.src = this.cardEmblemRarity[color];
-						image.onload = () => {
-							this.rarity = image
-						}
+						return (this.rarityEmblem.src = this.cardEmblemRarity[color]);
 					},
 					changeCost: function(cost) {
-						const image = new window.Image();
-						image.src = this.number[cost];
-						image.onload = () => {
-							this.cost = image
-						}
+						return (this.costImg.src = this.number[this.cardCost]);
+					},
+					changeHealth: function(cost) {
+						return (this.healthImg.src = this.number[this.cardHealth]);
+					},
+					changeAttack: function(cost) {
+						return (this.attackImg.src = this.number[this.cardAttack]);
+					},
+					changeArt: function(card) {
+						return (this.artworkImg.src = card);
 					}
 				}
 			});
 		</script>
 	</body>
-	<script>
-		/* 	var app = new Vue({
-			el: "#app",
-			data: {
-				card: "Card Example",
-				artwork:
-					"https://cdn.discordapp.com/attachments/634104212766326834/634105064427880511/image0.jpg",
-				cardName: "Card Name",
-				cardMask: "card/mask.png",
-				cardTribe: "Human",
-				cardColor: "Red",
-				cardRarity: "Legendary",
-				cardEmblemRarity: {
-					Legendary: "card/legendaryRarity.png",
-					Epic: "card/epicRarity.png",
-					Rare: "card/rareRarity.png",
-					Common: "card/commonRarity.png"
-				},
-				cardEmblem: {
-					Red: ["card/redEmblem.png", "card/redBorder.png"],
-					Green: ["card/greenEmblem.png", "card/greenBorder.png"],
-					Purple: ["card/purpleEmblem.png", "card/purpleBorder.png"],
-					Black: ["card/blackEmblem.png", "card/blackborder.png"]
-				},
-				stage: new Konva.Stage({
-					container: "container",
-					width: 361,
-					height: 495
-				})
-			},
-			mounted: function() {},
-			directives: {
-				insertArtwork: function(canvasElement, binding) {
-					var ctx = canvasElement.getContext("2d");
-					var artwork = document.createElement("IMG");
-					artwork.onload = setTimeout(function() {
-						ctx.drawImage(artwork, 0, 0);
-					}, 50);
-					artwork.src = binding.value;
-				},
-				insertCard: function(canvasElement, binding) {
-					var stage = new Konva.Stage({
-						container: "container",
-						width: 361,
-						height: 495
-					});
-					var layer = new Konva.Layer();
-					var group = new Konva.Group();
-					var imageObj = new Image();
-					imageObj.onload = function() {
-						var bg = new Konva.Image({
-							image: imageObj
-						});
-						group.add(bg);
-						bg.moveToBottom();
-						layer.batchDraw();
-					};
-					imageObj.src = binding.value[1];
-
-					var imageObj2 = new Image();
-					imageObj2.onload = function() {
-						var border = new Konva.Image({
-							image: imageObj2
-						});
-						group.add(border);
-						group.moveToTop();
-						layer.batchDraw();
-					};
-					imageObj2.src = binding.value[0];
-
-					var imageObj3 = new Image();
-					imageObj3.onload = function() {
-						var border = new Konva.Image({
-							image: imageObj3
-						});
-
-						group.add(border);
-						border.moveToBottom();
-						layer.batchDraw();
-					};
-					imageObj3.src = "card/border.png";
-					layer.add(group);
-					layer.batchDraw();
-					stage.add(layer);
-				},
-				insertRarity: function(canvasElement, binding) {
-					var image = new Image();
-					image.onload = function() {
-						var emblem = new Konva.Image({
-							image: image
-						});
-						group.add(emblem);
-						emblem.moveToTop();
-						layer.batchDraw();
-					};
-					image.src = binding.value;
-					layer.add(group);
-					layer.batchDraw();
-					stage.add(layer);
-				},
-				insertCard: function(canvasElement, binding) {
-					var ctx = canvasElement.getContext("2d");
-					var img = document.createElement("IMG");
-					var bg = document.createElement("IMG");
-					var inner = document.createElement("IMG");
-					var stats = document.createElement("IMG");
-					var artwork = document.createElement("IMG");
-					ctx.clearRect(0, 0, 361, 495);
-					function drawStats() {
-						stats.onload = function() {
-							ctx.drawImage(stats, 0, 0);
-						};
-						stats.src = "card/cardStats.png";
-					}
-					function drawEmblem() {
-						img.onload = function() {
-							ctx.drawImage(img, 0, 0);
-							drawStats();
-						};
-						img.src = binding.value[0];
-					}
-					function drawInner() {
-						inner.onload = function() {
-							ctx.drawImage(inner, 0, 0);
-							drawEmblem();
-						};
-						inner.src = binding.value[1];
-					}
-					function drawBg() {
-						bg.onload = setTimeout(function() {
-							ctx.drawImage(bg, 0, 0);
-							drawInner();
-						}, 60);
-						bg.src = "card/border.png";
-					}
-					drawBg();
-				},
-				insertRarity: function(canvasElement, binding) {
-					var ctx = canvasElement.getContext("2d");
-					var img = document.createElement("IMG");
-					ctx.clearRect(0, 0, 361, 495);
-					img.onload = setTimeout(function() {
-						ctx.drawImage(img, 0, 0);
-					}, 70);
-					img.src = binding.value;
-				}
-			}
-		}); */
-	</script>
 </html>
