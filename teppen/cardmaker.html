@@ -13,7 +13,7 @@
 		<title>TEPPEN Card Maker</title>
 	</head>
 	<body class="bg-gray-900 text-white tracking-tight">
-		<div id="app">
+		<div @paste="pasteImage" id="app">
 			<div class="uppercase font-bold text-center py-8"
 				><p class="text-4xl">TEPPEN Card Maker</p>
 				<p class="text-xl text-gray-700">By Effy</p>
@@ -29,18 +29,6 @@
 					<input
 						v-model="cardName"
 						class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none mb-8 "
-						id=""
-						type="text"
-					/>
-					<label
-						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-						for=""
-					>
-						Tribe
-					</label>
-					<input
-						v-model="cardTribe"
-						class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none  mb-8"
 						id=""
 						type="text"
 					/>
@@ -162,16 +150,21 @@
 					>
 						Artwork
 					</label>
-					<input
-						v-model="artwork"
-						class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none  mb-8"
-						id=""
-						type="text"
-						@change="changeArt(artwork)"
-					/>
+					<div>
+						<label class="w-64 flex flex-col items-center px-2 py-3 bg-gray-800 text-white rounded-lg shadow-lg tracking-wide text-xs font-bold uppercase border border-gray-900 cursor-pointer">
+											<svg class="w-8 h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+												<path
+													d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+											</svg>
+						<span>Select A File</span>
+						<input class="hidden" @change="handleImage(fileInput)" ref="fileInput" type="file" id="imageLoader" name="imageLoader" />
+						</label>
+					</div>
+									
 				</div>
+
 				<div class="flex flex-col items-center justify-center"
-					><div id="container" style="cursor:grab"></div>
+					><canvas width="361" height="495" id="c"></canvas>
 					<button
 						@click="saveImage"
 						class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded my-8"
@@ -181,7 +174,7 @@
 				</div>
 			</div>
 		</div>
-		<script src="./konva.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.4.0/fabric.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 		<script>
@@ -193,67 +186,168 @@
 						height: 495
 					},
 					card: "Card Example",
-					artwork:
-						"https://news.toyark.com/wp-content/uploads/sites/4/2015/12/Kinetiquettes-Street-Fighter-Ken-Statue-Print.jpg",
 					cardName: "Card Example",
-					emblem: null,
-					bg: null,
-					stats: null,
-					inner: null,
-					art: null,
-					rarity: null,
-					cost: null,
+					border: null,
+					borderImg: null,
+					borderColor: null,
+					borderColorImg: null,
 					mask: null,
-					cardMask: "card/mask.png",
-					cardTribe: "Human",
-					cardColor: "Red",
-					cardRarity: "Legendary",
-					cardCost: 0,
-					cardHealth: 0,
-					cardAttack: 0,
-					costImg: null,
-					healthImg: null,
+					maskImg: null,
 					artworkImg: null,
-					stage: null,
-					layer1: null,
-					layer2: null,
-					layer3: null,
-					mask: null,
-					rarityLoaded: false,
-					emblemLoaded: false,
-					colorLoaded: false,
-					costLoaded: false,
-					innerImg: null,
+					artwork: null,
+					rarity: null,
+					rarityImg: null,
+					emblem: null,
 					emblemImg: null,
-					healthLoaded: null,
-					attackLoaded: null,
-					cardEmblemRarity: {
-						Legendary: "card/legendaryRarity.png",
-						Epic: "card/epicRarity.png",
-						Rare: "card/rareRarity.png",
-						Common: "card/commonRarity.png"
-					},
-					cardEmblem: {
-						Red: ["card/redEmblem.png", "card/redBorder.png"],
-						Green: ["card/greenEmblem.png", "card/greenBorder.png"],
-						Purple: ["card/purpleEmblem.png", "card/purpleBorder.png"],
-						Black: ["card/blackEmblem.png", "card/blackBorder.png"]
-					},
-					number: {
-						0: "card/0.png",
-						1: "card/1.png",
-						2: "card/2.png",
-						3: "card/3.png",
-						4: "card/4.png",
-						5: "card/5.png",
-						6: "card/6.png",
-						7: "card/7.png",
-						8: "card/8.png",
-						9: "card/9.png"
-					}
+					stats: null,
+					statsImg: null,
+					canvas: null,
+					fileInput: null,
+					cost: null,
+					costImg: null,
+					attack: null,
+					attackImg: null,
+					health: null,
+					healthImg: null,
 				},
 				mounted: function() {
-					this.stage = new Konva.Stage({
+					function sortLayout(canvas) {
+						canvas.sendToBack(this.maskImg);
+						canvas.bringForward(this.artworkImg)
+						canvas.bringForward(this.borderColorImg);
+						canvas.bringForward(this.borderImg);
+						canvas.bringForward(this.emblemImg);
+						canvas.bringToFront(this.statsImg);
+						canvas.renderAll()
+					}
+					let canvas = new fabric.Canvas("c", {
+						preserveObjectStacking: true
+					});
+					this.canvas = canvas
+					this.fileInput = this.$refs.fileInput
+					function renderLayer2() {
+						this.emblem = fabric.Image.fromURL(
+							"./card/redEmblem.png",
+							function (oImg) {
+								this.emblemImg = oImg;
+								this.emblemImg.selectable = false;
+								this.emblemImg.evented = false;
+								canvas.add(this.emblemImg);
+								canvas.bringToFront(this.emblemImg);
+							}
+						);
+						this.rarity = fabric.Image.fromURL(
+							"./card/legendaryRarity.png",
+							oImg => {
+								this.rarityImg = oImg;
+								this.rarityImg.selectable = false;
+								this.rarityImg.evented = false;
+								canvas.add(this.rarityImg);
+								canvas.bringToFront(this.rarityImg);
+							}
+						);
+						this.stats = fabric.Image.fromURL(
+							"./card/cardStats.png",
+							function (oImg) {
+								this.statsImg = oImg;
+								this.statsImg.selectable = false;
+								this.statsImg.evented = false;
+								canvas.add(this.statsImg);
+								canvas.bringToFront(this.statsImg);
+							}
+						);
+
+						this.cost = fabric.Image.fromURL('./card/0.png', oImg => {
+							this.costImg = oImg;
+							this.costImg.selectable = false;
+							this.costImg.evented = false;
+							//20, 22, 48, 65
+							this.costImg.top = 22;
+							this.costImg.left = 20;
+							this.costImg.scaleToHeight(65);
+							this.costImg.scaleToWidth(48);						
+							canvas.add(this.costImg)
+							canvas.bringToFront(this.costImg);
+						})	
+
+						this.attack = fabric.Image.fromURL('./card/0.png', oImg => {
+							this.attackImg = oImg;
+							this.attackImg.selectable = false;
+							this.attackImg.evented = false;
+							//295, 268, 36, 58
+							this.attackImg.top = 268;
+							this.attackImg.left = 295;
+							this.attackImg.scaleToHeight(58);
+							this.attackImg.scaleToWidth(36);
+							canvas.add(this.attackImg);
+							canvas.bringToFront(this.attackImg);
+						})
+
+						this.health = fabric.Image.fromURL('./card/0.png', oImg => {
+							this.healthImg = oImg;							
+							this.healthImg.selectable = false;
+							this.healthImg.evented = false;
+							//295, 350, 36, 58
+							this.healthImg.top = 350;
+							this.healthImg.left = 295;
+							this.healthImg.scaleToHeight(58);
+							this.healthImg.scaleToWidth(36);
+							canvas.add(this.healthImg);
+							canvas.bringToFront(this.healthImg);
+						})
+
+						this.canvas = canvas;
+						return sortLayout(canvas)
+						
+
+					}
+					function renderLayer1() {
+						// interface
+						this.border = fabric.Image.fromURL(
+							"./card/border.png",
+							function (oImg) {
+								this.borderImg = oImg;
+								this.borderImg.selectable = false;
+								this.borderImg.evented = false;
+								canvas.add(this.borderImg);
+							}
+						);
+						this.borderColor = fabric.Image.fromURL(
+							"./card/redBorder.png",
+							function (oImg) {
+								this.borderColorImg = oImg;
+								this.borderColorImg.selectable = false;
+								this.borderColorImg.evented = false;
+								canvas.add(this.borderColorImg);
+							}
+						);
+						renderLayer2();
+					}
+
+					this.mask = new fabric.Image.fromURL(
+						"./card/mask.png",
+						function (oImg) {
+							this.maskImg = oImg;
+							this.maskImg.selectable = false;
+							this.artwork = new fabric.Image.fromURL(
+								"./card/artwork.png",
+								function (oImg) {
+									this.artworkImg = oImg;
+									this.artworkImg.selectable = true;
+									this.artworkImg.left = 0;
+									this.artworkImg.top = 0;
+									this.artwork.originX = "center";
+									this.artwork.originY = "center";
+									this.artworkImg.globalCompositeOperation = "source-atop";
+									canvas.add(this.maskImg);
+									canvas.add(this.artworkImg);
+									renderLayer1();
+								}
+							);
+						}
+					);
+				
+				/* 	this.stage = new Konva.Stage({
 						container: "container",
 						width: 361,
 						height: 495
@@ -268,22 +362,22 @@
 					this.mask.onload = () => {
 						this.artworkImg = new Image();
 						this.artworkImg.onload = () => {
-							let image = new Konva.Shape({
+							this.image = new Konva.Shape({
 								sceneFunc: ctx => {
 									ctx.save();
-									ctx.drawImage(this.mask, -image.x(), -image.y(), 361, 495);
+									ctx.drawImage(this.mask, -this.image.x(), -this.image.y(), 361 , 495);
 									ctx.globalCompositeOperation = "source-in";
-									ctx.drawImage(this.artworkImg, 0, 0);
+									ctx.drawImage(this.artworkImg, 0, 0, 361 * this.value / 50, 495 * this.value / 50);
 									ctx.globalCompositeOperation = "source-over";
 									ctx.restore();
 								},
 								hitFunc: ctx => {
-									ctx.rect(0, 0, 500, 500);
-									ctx.fillStrokeShape(image);
+									ctx.rect(0, 0, 361, 495);
+									ctx.fillStrokeShape(this.image);
 								},
 								draggable: true
 							});
-							this.layer2.add(image);
+							this.layer2.add(this.image);		
 							this.layer2.draw();
 						};
 						this.artworkImg.setAttribute("crossOrigin", "anonymous");
@@ -411,9 +505,44 @@
 						this.layer3.add(cost);
 						this.layer3.draw();
 					};
-					this.attackImg.src = this.number[this.cardAttack];
+					this.attackImg.src = this.number[this.cardAttack]; */
 				},
 				methods: {
+					handleImage: (image) => {
+						const input = image
+						const files = input.files
+						if (files && files[0]) {
+							const reader = new FileReader
+							reader.onload = e => {
+								  this.artworkImg.setSrc(e.target.result, (img) => {
+									img.scaleToWidth(361);
+									img.scaleToHeight(495);
+									this.canvas.centerObject(img);
+									this.canvas.renderAll();
+								})
+							}
+							reader.readAsDataURL(files[0]);
+						}  
+					},
+					pasteImage: (e) => {
+						var items = e.clipboardData.items;
+						e.preventDefault();
+						e.stopPropagation();
+						for (var i = 0; i < items.length; i++) {
+							if (items[i].type.indexOf('image') == -1) continue;
+							var file = items[i],
+								type = items[i].type;
+							var imageData = file.getAsFile();
+							var URLobj = window.URL || window.webkitURL;
+							this.artworkImg.setSrc(URLobj.createObjectURL(imageData), (img) => {
+								img.scaleToWidth(361);
+								img.scaleToHeight(495);
+								this.canvas.centerObject(img);
+								this.canvas.renderAll();
+							})
+
+						}
+					},
 					saveImage: function() {
 						function downloadURI(uri, name) {
 							var link = document.createElement("a");
@@ -424,29 +553,97 @@
 							document.body.removeChild(link);
 							delete link;
 						}
-						var dataUrl = this.stage.toDataURL();
+						var dataUrl = this.canvas.toDataURL();
 						downloadURI(dataUrl, `${this.cardName}.png`);
 					},
-					changeEmblem: function(color) {
-						this.emblemImg.src = this.cardEmblem[color][0];
+					changeEmblem: (color) => {
+						let cardEmblem = {
+							Red: "./card/redEmblem.png",
+							Green: "./card/greenEmblem.png", 
+							Purple: "./card/purpleEmblem.png", 
+							Black: "./card/blackEmblem.png",
+						}
+						return this.emblemImg.setSrc(cardEmblem[color], (img) => {
+							this.canvas.renderAll();
+						})
+						
 					},
-					changeInner: function(color) {
-						return (this.innerImg.src = this.cardEmblem[color][1]);
+					changeInner: (color) => {
+						let cardEmblem = {
+							Red: "./card/redBorder.png",
+							Green: "./card/greenBorder.png",
+							Purple: "./card/purpleBorder.png",
+							Black: "./card/blackBorder.png"
+						}
+						return this.borderColorImg.setSrc(cardEmblem[color], (img) => {
+							this.canvas.renderAll()
+						})
+						
 					},
-					changeRarity: function(color) {
-						return (this.rarityEmblem.src = this.cardEmblemRarity[color]);
+					changeRarity: (color) => {
+						let cardEmblemRarity = {
+							Legendary: "card/legendaryRarity.png",
+							Epic: "card/epicRarity.png",
+							Rare: "card/rareRarity.png",
+							Common: "card/commonRarity.png"
+						}
+						return this.rarityImg.setSrc(cardEmblemRarity[color], (img) => {
+							this.canvas.renderAll();
+						});
 					},
-					changeCost: function(cost) {
-						return (this.costImg.src = this.number[this.cardCost]);
+					changeCost: (cost) => {
+						let number = {
+							0: "card/0.png",
+							1: "card/1.png",
+							2: "card/2.png",
+							3: "card/3.png",
+							4: "card/4.png",
+							5: "card/5.png",
+							6: "card/6.png",
+							7: "card/7.png",
+							8: "card/8.png",
+							9: "card/9.png"
+						}
+						return this.costImg.setSrc(number[cost], (img) => {
+							this.canvas.renderAll();
+						});
+					
 					},
-					changeHealth: function(cost) {
-						return (this.healthImg.src = this.number[this.cardHealth]);
+					changeHealth: (cost) => {
+						let number = {
+							0: "card/0.png",
+							1: "card/1.png",
+							2: "card/2.png",
+							3: "card/3.png",
+							4: "card/4.png",
+							5: "card/5.png",
+							6: "card/6.png",
+							7: "card/7.png",
+							8: "card/8.png",
+							9: "card/9.png"
+						}
+						return this.healthImg.setSrc(number[cost], (img) => {
+							this.canvas.renderAll();
+						})
+						
 					},
-					changeAttack: function(cost) {
-						return (this.attackImg.src = this.number[this.cardAttack]);
-					},
-					changeArt: function(card) {
-						return (this.artworkImg.src = card);
+					changeAttack: (cost) => {
+						let number = {
+							0: "card/0.png",
+							1: "card/1.png",
+							2: "card/2.png",
+							3: "card/3.png",
+							4: "card/4.png",
+							5: "card/5.png",
+							6: "card/6.png",
+							7: "card/7.png",
+							8: "card/8.png",
+							9: "card/9.png"
+						}
+						return this.attackImg.setSrc(number[cost], (img) => {
+							this.canvas.renderAll();
+						})
+						
 					}
 				}
 			});
