@@ -40,12 +40,12 @@
 					</label>
 					<input
 						@change="changeCost(cardCost)"
-						v-model="cardCost"
 						class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none  mb-8"
 						id=""
 						type="number"
 						min="0"
 						max="99"
+						v-model="cardCost"
 					/>
 					<label
 						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -165,12 +165,15 @@
 
 				<div class="flex flex-col items-center justify-center"
 					><canvas width="361" height="495" id="c"></canvas>
-					<button
-						@click="saveImage"
-						class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded my-8"
-					>
-						Download Image
+					<div class="flex">
+					<button @click="saveImage" class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded my-8 mr-4">
+						Download
 					</button>
+					<button @click="newTab" class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded my-8">
+						New Tab
+					</button>
+					</div>
+
 				</div>
 			</div>
 		</div>
@@ -187,6 +190,11 @@
 					},
 					card: "Card Example",
 					cardName: "Card Example",
+					cardHealth: 0,
+					cardCost: 0,
+					cardAttack: 0,
+					cardColor: "Red",
+					cardRarity: "Legendary",
 					border: null,
 					borderImg: null,
 					borderColor: null,
@@ -209,6 +217,7 @@
 					attackImg: null,
 					health: null,
 					healthImg: null,
+					imageGroup: null
 				},
 				mounted: function() {
 					function sortLayout(canvas) {
@@ -218,7 +227,9 @@
 						canvas.bringForward(this.borderImg);
 						canvas.bringForward(this.emblemImg);
 						canvas.bringToFront(this.statsImg);
-						canvas.renderAll()
+						canvas.bringToFront(this.attackImg);
+						canvas.bringToFront(this.healthImg);
+						return canvas.renderAll()
 					}
 					let canvas = new fabric.Canvas("c", {
 						preserveObjectStacking: true
@@ -302,13 +313,14 @@
 
 					}
 					function renderLayer1() {
+
 						// interface
 						this.border = fabric.Image.fromURL(
 							"./card/border.png",
 							function (oImg) {
 								this.borderImg = oImg;
 								this.borderImg.selectable = false;
-								this.borderImg.evented = false;
+								this.borderImg.evented = false;							
 								canvas.add(this.borderImg);
 							}
 						);
@@ -346,166 +358,6 @@
 							);
 						}
 					);
-				
-				/* 	this.stage = new Konva.Stage({
-						container: "container",
-						width: 361,
-						height: 495
-					});
-
-					this.layer = new Konva.Layer();
-					this.layer2 = new Konva.Layer();
-					this.layer3 = new Konva.Layer();
-
-					this.stage.add(this.layer, this.layer2, this.layer3);
-					this.mask = new Image();
-					this.mask.onload = () => {
-						this.artworkImg = new Image();
-						this.artworkImg.onload = () => {
-							this.image = new Konva.Shape({
-								sceneFunc: ctx => {
-									ctx.save();
-									ctx.drawImage(this.mask, -this.image.x(), -this.image.y(), 361 , 495);
-									ctx.globalCompositeOperation = "source-in";
-									ctx.drawImage(this.artworkImg, 0, 0, 361 * this.value / 50, 495 * this.value / 50);
-									ctx.globalCompositeOperation = "source-over";
-									ctx.restore();
-								},
-								hitFunc: ctx => {
-									ctx.rect(0, 0, 361, 495);
-									ctx.fillStrokeShape(this.image);
-								},
-								draggable: true
-							});
-							this.layer2.add(this.image);		
-							this.layer2.draw();
-						};
-						this.artworkImg.setAttribute("crossOrigin", "anonymous");
-						this.artworkImg.src = this.artwork;
-					};
-					this.mask.src = this.cardMask;
-
-					let imageObj = new Image();
-					imageObj.onload = () => {
-						var border = new Konva.Shape({
-							sceneFunc: ctx => {
-								ctx.save();
-								ctx.drawImage(imageObj, 0, 0);
-								ctx.restore();
-							}
-						});
-						this.layer.add(border);
-						this.layer.draw();
-					};
-					imageObj.src = "card/border.png";
-					this.innerImg = new Image();
-					this.innerImg.onload = () => {
-						if (this.emblemLoaded) return this.layer.draw();
-						this.emblemLoaded = true;
-
-						var inner = new Konva.Shape({
-							sceneFunc: ctx => {
-								ctx.save();
-								ctx.drawImage(this.innerImg, 0, 0);
-								ctx.restore();
-							}
-						});
-						this.layer.add(inner);
-						this.layer.draw();
-					};
-					this.innerImg.src = this.cardEmblem[this.cardColor][1];
-					this.emblemImg = new Image();
-					this.emblemImg.onload = () => {
-						if (this.colorLoaded) return this.layer3.draw();
-						this.colorLoaded = true;
-						var emblem = new Konva.Shape({
-							sceneFunc: ctx => {
-								ctx.save();
-								ctx.drawImage(this.emblemImg, 0, 0);
-								ctx.restore();
-							}
-						});
-						this.layer3.add(emblem);
-						this.layer3.draw();
-					};
-					this.emblemImg.src = this.cardEmblem[this.cardColor][0];
-					let statEmblem = new Image();
-					statEmblem.onload = () => {
-						var stat = new Konva.Shape({
-							sceneFunc: ctx => {
-								ctx.save();
-								ctx.drawImage(statEmblem, 0, 0);
-								ctx.restore();
-							}
-						});
-						this.layer3.add(stat);
-						this.layer3.draw();
-					};
-					statEmblem.src = "card/cardStats.png";
-
-					this.rarityEmblem = new Image();
-					this.rarityEmblem.onload = () => {
-						if (this.rarityLoaded) return this.layer3.draw();
-						this.rarityLoaded = true;
-						var rarity = new Konva.Shape({
-							sceneFunc: ctx => {
-								ctx.save();
-								ctx.drawImage(this.rarityEmblem, 0, 0);
-								ctx.restore();
-							}
-						});
-						this.layer3.draw();
-						this.layer3.add(rarity);
-					};
-					this.rarityEmblem.src = this.cardEmblemRarity[this.cardRarity];
-
-					this.costImg = new Image();
-					this.costImg.onload = () => {
-						if (this.costLoaded) return this.layer3.draw();
-						this.costLoaded = true;
-						var cost = new Konva.Shape({
-							sceneFunc: ctx => {
-								ctx.save();
-								ctx.drawImage(this.costImg, 20, 22, 48, 65);
-								ctx.restore();
-							}
-						});
-						this.layer3.add(cost);
-						this.layer3.draw();
-					};
-					this.costImg.src = this.number[this.cardCost];
-
-					this.healthImg = new Image();
-					this.healthImg.onload = () => {
-						if (this.healthLoaded) return this.layer3.draw();
-						this.healthLoaded = true;
-						var cost = new Konva.Shape({
-							sceneFunc: ctx => {
-								ctx.save();
-								ctx.drawImage(this.healthImg, 295, 350, 36, 58);
-								ctx.restore();
-							}
-						});
-						this.layer3.add(cost);
-						this.layer3.draw();
-					};
-					this.healthImg.src = this.number[this.cardHealth];
-
-					this.attackImg = new Image();
-					this.attackImg.onload = () => {
-						if (this.attackLoaded) return this.layer3.draw();
-						this.attackLoaded = true;
-						var cost = new Konva.Shape({
-							sceneFunc: ctx => {
-								ctx.save();
-								ctx.drawImage(this.attackImg, 295, 268, 36, 58);
-								ctx.restore();
-							}
-						});
-						this.layer3.add(cost);
-						this.layer3.draw();
-					};
-					this.attackImg.src = this.number[this.cardAttack]; */
 				},
 				methods: {
 					handleImage: (image) => {
@@ -543,6 +395,14 @@
 
 						}
 					},
+					newTab: function() {
+						function debugBase64(base64URL) {
+							var win = window.open();
+							win.document.write('<iframe src="' + base64URL + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%" allowfullscreen></iframe>');
+						}
+						var dataUrl = this.canvas.toDataURL();	
+						return debugBase64(dataUrl)		
+					},
 					saveImage: function() {
 						function downloadURI(uri, name) {
 							var link = document.createElement("a");
@@ -553,8 +413,8 @@
 							document.body.removeChild(link);
 							delete link;
 						}
-						var dataUrl = this.canvas.toDataURL();
-						downloadURI(dataUrl, `${this.cardName}.png`);
+						var dataUrl = this.canvas.toDataURL();					
+						return downloadURI(dataUrl, `${this.cardName}.png`);
 					},
 					changeEmblem: (color) => {
 						let cardEmblem = {
