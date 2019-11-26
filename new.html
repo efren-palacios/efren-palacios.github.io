@@ -10,6 +10,15 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Efren Palacios</title>
+  <style>
+    ::-moz-selection {
+      background: rgba(0, 0, 0, .5);
+    }
+
+    ::selection {
+      background: rgba(0, 0, 0, .5);
+    }
+  </style>
 </head>
 
 <body class="bg-gray-900 text-gray-100 anchor">
@@ -41,50 +50,42 @@
           <img class="sm:w-1/2" src="/img/design.svg" alt="">
         </div>
       </div>
-
-      <div class="my-4 border-2 border-solid border-yellow-500 sm:w-1/3 p-6 h-full ">
-        <h1 class="uppercase font-semibold text-2xl text-yellow-500 mt-2">Skills</h1>
-        <div class="flex justify-between">
-          <div>
-            <b>Programming Languages </b>
-            <ul>
-              <li>JavaScript</li>
-              <li>PHP</li>
-              <li>Ruby</li>
-              <li>Python</li>
-              <li>CSS3</li>
-              <li>HTML5</li>
-            </ul>
+    </div>
+    <div data-aos="fade-left" class="h-screen sm:mt-0 mt-32">
+      <div class="my-8 border-2 border-solid border-yellow-500 sm:w-1/3 w-5/6 p-6 mx-auto">
+        <h1 class="uppercase font-semibold text-2xl text-yellow-500 text-center mx-auto">Languages</h1>
+      </div>
+      <div class="flex justify-center sm:justify-start sm:w-1/3 w-full flex-wrap mx-auto">
+        <div v-for="item of languages" class="flex flex-col justify-center items-center">
+          <div class="mx-10 mt-5">
+            <img class="sm:w-10 w-8" :src="'/img/'+item+'.svg'" alt="">
           </div>
-          <div class="w-1/2">
-            <b>Web Technologies</b>
-            <ul>
-              <li>Angular.js</li>
-              <li>Vue.js</li>
-              <li>React.js</li>
-              <li>Node.js</li>
-              <li>Socket.io</li>
-              <li>Express.js</li>
-              <li>Electron.js</li>
-              <li>Jekyll.rb</li>
-              <li>Laravel</li>
-            </ul>
+          <div>
+            <p>{{item}}</p>
           </div>
         </div>
-        <h1 class="uppercase font-semibold text-2xl text-yellow-500 mt-2">My Development Tools</h1>
-        <ul>
-          <li>Visual Studio Code</li>
-          <li>Github</li>
-          <li>Bitbucket</li>
-          <li>Gitlab</li>
-          <li>Bulma</li>
-          <li>TailwindCSS</li>
-          <li>Windows Power Shell</li>
-          <li>Hyper</li>
-          <li>CMDer</li>
-        </ul>
+      </div>
+      <div class="my-8 border-2 border-solid border-yellow-500 sm:w-1/3 w-5/6 p-6 mx-auto">
+        <h1 class="uppercase font-semibold text-2xl text-yellow-500 text-center">Development Tools</h1>
+      </div>
+      <div class="flex justify-center sm:justify-start sm:w-1/3 w-full flex-wrap mx-auto">
+        <div v-for="item of tools" class="flex flex-col justify-center items-center">
+          <div class="mx-10 mt-5">
+            <img class="sm:w-10 w-8" :src="'/img/'+item+'.svg'" alt="">
+          </div>
+          <div>
+            <p>{{item}}</p>
+          </div>
+        </div>
       </div>
     </div>
+
+    <footer class="bg-gray-900 p-6 text-center">
+      <p>
+        Site designed by Me © Efren Palacios <a class="text-yellow-400 hover:text-yellow-200"
+          href="mailto:contact@efrenpalacios.dev">contact@efrenpalacios.dev</a>
+      </p>
+    </footer>
 
   </div>
 
@@ -96,7 +97,9 @@
     var app = new Vue({
       el: '#app',
       data: {
-        message: 'Hello Vue!'
+        message: 'Hello Vue!',
+        languages: ['JavaScript', 'PHP', 'Ruby', 'Python', 'CSS3', 'HTML5'],
+        tools: ['VSCode', 'GitHub', 'BitBucket', 'GitLab', 'Bulma', 'TailwindCSS', 'PowerShell', 'ConEmu', 'Hyper']
       },
       mounted: function () {
         AOS.init();
