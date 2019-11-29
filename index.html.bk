@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Efren Palacios</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma-timeline@3.0.1/dist/css/bulma-timeline.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <!--     <link rel="stylesheet" href="debug.css" /> -->
+    <link rel="stylesheet" href="helpers.css" />
+    <link rel="stylesheet" href="grid.css" />
+  </head>
+  <body>
+    <main role="main">
+      <section class="bg hero is-dark is-medium">
+        <div class="darken"></div>
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <h1 class="title has-text-warning	is-1 ">
+              Efren Palacios
+            </h1>
+            <h2 class="subtitle">
+              Programmer. Gamer.
+            </h2>
+          </div>
+        </div>
+      </section>
+    </main>
+    <section class="section">
+      <div class="container ">
+        <h1 class="title is-4 has-text-info	is-uppercase">About Me</h1>
+        <div class="subtitle intro">
+          <h4>
+            I'm a Programmer living in Orange County, California.
+          </h4>
+          <h4>
+            Currently developing software using NodeJS, Rest APIs, WebSockets,
+            and Electron.
+          </h4>
+          <h4>
+              I'm passionate towards Web & UI Design, Data Manipulation, Video Games and eSports.
+          </h4>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div>
+              <h1 class="title is-4 has-text-info	is-uppercase">My Profile</h1>
+              <ul>
+                <li><strong>Name:</strong> Efren Palacios</li>
+                <li><strong>Current Job:</strong> Security, Freelance</li>
+                <li><strong>Languages Spoken:</strong> English & Spanish</li>
+                <li>
+                  <strong>Email Address:</strong>
+                  <a href="mailto:contact@efrenpalacios.dev"
+                    >contact@efrenpalacios.dev</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="column is-2">
+            <h1 class="title is-4 has-text-info	is-uppercase">My Skills</h1>
+            <div class="skills">
+              <strong>Programming Languages</strong>
+              <ul>
+                <li>JavaScript</li>
+                <li>PHP</li>
+                <li>Ruby</li>
+                <li>Python</li>
+                <li>CSS3</li>
+                <li>HTML5</li>
+              </ul>
+            </div>
+          </div>
+          
+            <div class="column ">
+                <h1 class="title is-4 has-text-info	is-uppercase">&nbsp;</h1>
+                <strong>Web Technologies</strong>
+                <ul>
+                  <li>Angular.js</li>
+                  <li>Vue.js</li>
+                  <li>React.js</li>
+                  <li>Node.js</li>
+                  <li>Socket.io</li>
+                  <li>Express.js</li>
+                  <li>Electron.js</li>
+                  <li>Jekyll.rb</li>
+                  <li>Laravel</li> 
+                </ul>
+            </div>
+          </div>
+        </div>
+        <section>
+          <div class="container">
+            <h1 class="mb title is-4 has-text-info	is-uppercase has-text-centered">
+              My Development Tools
+            </h1>
+            <div class="subtitle intro has-text-centered">
+              <h4>
+                Visual Studio Code, Github, Bitbucket, Gitlab, Bulma, Windows
+                Powershell, Hyper, CMDer
+              </h4>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="container">
+            <h1 class="title is-4 has-text-info	is-uppercase has-text-centered">
+              My Projects
+            </h1>
+            <div class="subtitle intro has-text-centered">
+              Completed personal projects
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-image">
+                          <figure class="image">
+                            <a href="http://efrenpalacios.dev/teppen" target="_blank"><img src="./img/teppen.png" alt="Placeholder image"></a>
+                          </figure>
+                        </div>
+                        <div class="card-content">
+                          <div class="media">
+                            <div class="media-left">
+                              <figure class="image is-48x48">
+                                <img src="./img/github.png" alt="Placeholder image">
+                              </figure>
+                            </div>
+                            <div class="media-content">
+                              <a href="http://effy.moe/"  target="_blank"><p class="title is-4">TEPPEN Deck Builder</p></a>
+                              <p class="subtitle is-6">@orctamer</p>
+                            </div>
+                          </div>
+                      
+                          <div class="content">
+                            Online application created with Vue.js to allow users to customize and create decks for the game TEPPEN.
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              <div class="column">
+                  <div class="card">
+                      <div class="card-image">
+                        <figure class="image">
+                          <a href="http://effy.moe/" target="_blank"><img src="./img/mobame.png" alt="Placeholder image"></a>
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <div class="media">
+                          <div class="media-left">
+                            <figure class="image is-48x48">
+                              <img src="./img/github.png" alt="Placeholder image">
+                            </figure>
+                          </div>
+                          <div class="media-content">
+                            <a href="http://effy.moe/"  target="_blank"><p class="title is-4">MobaMe</p></a>
+                            <p class="subtitle is-6">@orctamer</p>
+                          </div>
+                        </div>
+                    
+                        <div class="content">
+                          Online application created with Express.js and Vue.js using Riot Game's official API.
+                        </div>
+                      </div>
+                    </div>
+              </div>
+              <div class="column">
+                  <div class="card">
+                      <div class="card-image">
+                        <figure class="image">
+                          <a href="https://github.com/orctamer/LetsPlayer/" target="_blank"><img src="./img/letsplayer.png" alt="Placeholder image"></a>
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                          <div class="media">
+                              <div class="media-left">
+                                <figure class="image is-48x48">
+                                  <img src="./img/github.png" alt="Placeholder image">
+                                </figure>
+                              </div>
+                              <div class="media-content">
+                                <a href="https://github.com/orctamer/LetsPlayer/" target="_blank"><p class="title is-4">LetsPlayer</p></a>
+                                <p class="subtitle is-6">@orctamer</p>
+                              </div>
+                            </div>
+                    
+                        <div class="content">
+                          Web application created using Sockets.io and Express.js, allows multiple people to control a game using Robot.js commands via mouse clicks or keyboard commands.
+                        </div>
+                      </div>
+                    </div>
+              </div>
+              <div class="column">
+                  <div class="card">
+                      <div class="card-image">
+                        <figure class="image">
+                          <a href="https://duellinksmeta.com/" target="_blank"><img src="./img/dlm.png" alt="Placeholder image"></a>
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <div class="media">
+                          <div class="media-left">
+                            <figure class="image is-48x48">
+                              <img src="./img/github.png" alt="Placeholder image">
+                            </figure>
+                          </div>
+                          <div class="media-content">
+                            <a href="https://duellinksmeta.com/" target="_blank"><p class="title is-4">Duel Links Meta</p></a>
+                            <p class="subtitle is-6">@orctamer</p>
+                          </div>
+                        </div>
+                    
+                        <div class="content">
+                          Website created using Jekyll.rb, responsible for creating deck playtester, and various components like article layouts and overall site design.
+                        </div>
+                      </div>
+                    </div>
+              </div>
+              <div class="column">
+                  <div class="card">
+                      <div class="card-image">
+                        <figure class="image">
+                          <a href="https://github.com/orctamer/VanguardBot/" target="_blank"><img src="./img/emi.png" alt="Placeholder image"></a>
+                        </figure>
+                      </div>
+                      <div class="card-content">
+                        <div class="media">
+                          <div class="media-left">
+                            <figure class="image is-48x48">
+                              <img src="./img/github.png" alt="Placeholder image">
+                            </figure>
+                          </div>
+                          <div class="media-content">
+                            <a href="https://github.com/orctamer/VanguardBot/" target="_blank"><p class="title is-4">Vanguard Bot</p></a>
+                            <p class="subtitle is-6">@orctamer</p>
+                          </div>
+                        </div>
+                    
+                        <div class="content">
+                          Vanguard Bot (Emi) created for Discord that allows users to look up cards from the TCG straight from the application.                    
+                        </div>
+                      </div>
+                    </div>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column is-one-quarter">
+                <div class="card">
+                    <div class="card-image">
+                      <figure class="image">
+                        <a href="/echofox/" target="_blank"><img src="./img/echofox.png" alt="Placeholder image"></a>
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                      <div class="media">
+                        <div class="media-left">
+                          <figure class="image is-48x48">
+                            <img src="./img/github.png" alt="Placeholder image">
+                          </figure>
+                        </div>
+                        <div class="media-content">
+                          <a href="/echofox/" target="_blank"><p class="title is-4">EchoFox Fanpage</p></a>
+                          <p class="subtitle is-6">@orctamer</p>
+                        </div>
+                      </div>
+                  
+                      <div class="content">
+                        Redesigned EchoFox frontpage design with a more semantic design approach.                   
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="column is-one-quarter">
+              <div class="card">
+                  <div class="card-image">
+                    <figure class="image">
+                      <img src="./img/dlp.png" alt="Placeholder image">
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <div class="media">
+                      <div class="media-left">
+                        <figure class="image is-48x48">
+                          <img src="./img/github.png" alt="Placeholder image">
+                        </figure>
+                      </div>
+                      <div class="media-content">
+                        <p class="title is-4">Duel Links Player</p>
+                        <p class="subtitle is-6">@orctamer</p>
+                      </div>
+                    </div>
+                
+                    <div class="content">
+                      Project designed in Electron.js that uses MITM to stimulate a game with endless options of cards inside the game.
+                      <span class="has-text-grey-light">E-mail me personally for more information</span>                  
+                    </div>
+                  </div>
+                </div>
+          </div>
+          </div>
+        </section>
+        <section>
+          <div class="container">
+            <div class="timeline is-centered">
+              <header class="timeline-header">
+                <span class="tag is-info">2019</span>
+              </header>
+              <div class="timeline-item">
+                <div class="timeline-marker is-success is-icon">
+                  <strong class="has-text-white">M</strong>
+                </div>
+                <div class="timeline-content">
+                  <p class="heading">February 2019</p>
+                  <p>
+                    <a href="http://effy.moe/" target="_blank">MobaMe</a> League
+                    of Legends Project Completed
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-marker is-success is-icon">
+                  <i class="fa fa-gamepad"></i>
+                </div>
+                <div class="timeline-content">
+                  <p class="heading">January 2019</p>
+                  <p>
+                    <a
+                      href="https://github.com/orctamer/LetsPlayer"
+                      target="_blank"
+                      >LetsPlayer</a
+                    >
+                    Application Completed
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-marker is-warning is-icon">
+                  <i class="fa fa-plus"></i>
+                </div>
+                <div class="timeline-content">
+                  <p class="heading">September 2017</p>
+                  <p>
+                    Initially Started
+                    <a href="http://duellinksmeta.com" target="_blank"
+                      >Duel Links Meta</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <header class="timeline-header">
+                <span class="tag is-info">2017</span>
+              </header>
+              <div class="timeline-item">
+                <div class="timeline-marker is-danger is-icon">
+                  <i class="fa fa-robot"></i>
+                </div>
+                <div class="timeline-content">
+                  <p class="heading">September 2016</p>
+                  <p><a href="https://github.com/orctamer/VanguardBot">Vanguard Discord Bot</a> finished</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <p class="heading">June 2016</p>
+                  <p>Completed <a href="https://github.com/orctamer/lodestone" target="_blank">LodeStone.js</a></p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-marker is-warning is-icon">
+                  <i class="fa fa-plus"></i>
+                </div>
+                <div class="timeline-content">
+                  <p class="heading">June 2016</p>
+                  <p>Created GitHub Profile</p>
+                </div>
+              </div>
+              <header class="timeline-header">
+                <span class="tag is-info">2016</span>
+              </header>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <section class="section">
+      <div class="columns ">
+        <div class="column is-offset-one-quarter ">
+          <div class="mb">
+            <h1 class="title is-4 has-text-info	is-uppercase">Fun stats</h1>
+            <ul>
+              <li>
+                <strong>🎮 Favorite Games:</strong> <li>Smash Brothers</li>
+                <li>League of Legends</li>
+                <li>Legend of Zelda</li>
+                <li>Final Fantasy X</li>
+                <li>Kirby</li>
+              </li>
+              <li>
+                <strong>Favorite Foods: 😋 </strong> Japanese, Chinese,
+                Mexican, Thai, Indian, and Italian
+              </li>
+              <li>
+                <strong>Pets Owned:</strong> ❤️🐕 One Lovable Terrier
+                Schnauzer Mix
+              </li>
+              <li>
+                <strong>Favorite Esport Orgs:</strong> Team Liquid, EchoFox, and Cloud9 
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          Site designed by Me &copy; Efren Palacios                   <a href="mailto:contact@efrenpalacios.dev"
+          >contact@efrenpalacios.dev</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
