@@ -32,6 +32,19 @@
       background: rgba(236, 201, 75, 1);
       border-radius: 10px;
     }
+
+    .fade-enter-active,
+    .fade-leave-active {
+      transition: opacity .5s;
+    }
+
+    .fade-enter,
+    .fade-leave-to
+
+    /* .fade-leave-active below version 2.1.8 */
+      {
+      opacity: 0;
+    }
   </style>
 </head>
 
@@ -137,7 +150,13 @@
           href="mailto:contact@efrenpalacios.dev">contact@efrenpalacios.dev</a>
       </p>
     </footer>
-
+    <!-- Scroll Button -->
+    <transition name="fade">
+      <a v-show="scroll" class="inline-block" href="#"><button
+          class="fixed inline-block bottom-0 right-0 m-5 bg-yellow-500 hover:bg-yellow-300 text-black font-bold py-2 px-4 rounded">
+          <img class=" w-6 fill-current text-black" src="./img/icons/caret.svg" alt="" srcset="">
+        </button></a>
+    </transition>
   </div>
 
   <!-- JS -->
@@ -146,6 +165,7 @@
     var app = new Vue({
       el: '#app',
       data: {
+        scroll: false,
         languages: ['JavaScript', 'Vue', 'Node', 'Socket-Io', 'PHP', 'Ruby', 'Jekyll', 'Python', 'CSS3', 'HTML5'],
         tools: ['VSCode', 'GitHub', 'BitBucket', 'GitLab', 'Bulma', 'Semantic-UI', 'TailwindCSS', 'PowerShell', 'ConEmu', 'Hyper'],
         projects: [
@@ -208,6 +228,22 @@
         ]
       },
       mounted: function () {
+
+      },
+      methods: {
+        scrollTop: function () {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            this.scroll = true
+          } else {
+            this.scroll = false
+          }
+        }
+      },
+      created() {
+        window.addEventListener('scroll', this.scrollTop)
+      },
+      destroyed() {
+        window.removeEventListener('scroll', this.scrollTop)
       }
     })
   </script>
