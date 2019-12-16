@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>League UI Concept</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <meta name="theme-color" content="#000000" />
+  <meta name="msapplication-navbutton-color" content="#000000">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="app">
+  <nav>
+    <div class="navHeader">
+      <router-link to="/">
+        <img src="https://universe.leagueoflegends.com/esimages/content_type_icon_champion__3nwJQ.png" />
+        Champions
+      </router-link>
+    </div>
+  </nav>
+<transition name="fade" mode="out-in">
+  <router-view></router-view>
+  </transition>
+  <footer>
+    <p>This site isn’t endorsed by Riot Games and doesn’t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends &copy; Riot Games, Inc.</p> <p>Site designed &amp; coded by <a href="https://efrenpalacios.dev" target="_blank">Efren Palacios</a></p>
+  </footer></div>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.1.3/vue-router.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
