@@ -2,112 +2,112 @@
   font-family: 'LoL Body';
   font-weight: normal;
   font-style: normal;
-  src: url('spiegel/Spiegel-Regular.otf') format('opentype');
+  src: url('./spiegel/Spiegel-Regular.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'LoL Body';
   font-weight: 700;
   font-style: normal;
-  src: url('spiegel/Spiegel-SemiBold.otf') format('opentype');
+  src: url('./spiegel/Spiegel-SemiBold.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'LoL Body';
   font-weight: 900;
   font-style: normal;
-  src: url('spiegel/Spiegel-Bold.otf') format('opentype');
+  src: url('./spiegel/Spiegel-Bold.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'LoL Body';
   font-weight: normal;
   font-style: italic;
-  src: url('spiegel/Spiegel-RegularItalic.otf') format('opentype');
+  src: url('./spiegel/Spiegel-RegularItalic.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'LoL Body';
   font-weight: 700;
   font-style: italic;
-  src: url('spiegel/Spiegel-SemiBoldItalic.otf') format('opentype');
+  src: url('./spiegel/Spiegel-SemiBoldItalic.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'LoL Body';
   font-weight: 900;
   font-style: italic;
-  src: url('spiegel/Spiegel-BoldItalic.otf') format('opentype');
+  src: url('./spiegel/Spiegel-BoldItalic.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'LoL Display';
   font-weight: 300;
   font-style: normal;
-  src: url('beaufort/BeaufortForLoL-Light.otf') format('opentype');
+  src: url('./beaufort/BeaufortForLoL-Light.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'LoL Display';
   font-weight: normal;
   font-style: normal;
-  src: url('beaufort/BeaufortForLoL-Regular.otf') format('opentype');
+  src: url('./beaufort/BeaufortForLoL-Regular.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'LoL Display';
   font-weight: 500;
   font-style: normal;
-  src: url('beaufort/BeaufortForLoL-Medium.otf') format('opentype');
+  src: url('./beaufort/BeaufortForLoL-Medium.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'LoL Display';
   font-weight: 700;
   font-style: normal;
-  src: url('beaufort/BeaufortForLoL-Bold.otf') format('opentype');
+  src: url('./beaufort/BeaufortForLoL-Bold.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'LoL Display';
   font-weight: 900;
   font-style: normal;
-  src: url('beaufort/BeaufortForLoL-Heavy.otf') format('opentype');
+  src: url('./beaufort/BeaufortForLoL-Heavy.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'LoL Display';
   font-weight: 300;
   font-style: italic;
-  src: url('beaufort/BeaufortForLoL-LightItalic.otf') format('opentype');
+  src: url('./beaufort/BeaufortForLoL-LightItalic.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'LoL Display';
   font-weight: normal;
   font-style: italic;
-  src: url('beaufort/BeaufortForLoL-Italic.otf') format('opentype');
+  src: url('./beaufort/BeaufortForLoL-Italic.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'LoL Display';
   font-weight: 500;
   font-style: italic;
-  src: url('beaufort/BeaufortForLoL-MediumItalic.otf') format('opentype');
+  src: url('./beaufort/BeaufortForLoL-MediumItalic.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'LoL Display';
   font-weight: 700;
   font-style: italic;
-  src: url('beaufort/BeaufortForLoL-BoldItalic.otf') format('opentype');
+  src: url('./beaufort/BeaufortForLoL-BoldItalic.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'LoL Display';
   font-weight: 900;
   font-style: italic;
-  src: url('beaufort/BeaufortForLoL-HeavyItalic.otf') format('opentype');
+  src: url('./beaufort/BeaufortForLoL-HeavyItalic.otf') format('opentype');
 }
 
 .modal {
