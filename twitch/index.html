@@ -1,19 +1,46 @@
 <html>
 
 <head>
-  <meta name="twitter:image" content="https://static-cdn.jtvnw.net/jtv_user_pictures/c1de8d24-e1b3-402d-9300-7ff5513a4094-profile_image-70x70.png" />
+  <meta name="twitter:image"
+    content="https://static-cdn.jtvnw.net/jtv_user_pictures/c1de8d24-e1b3-402d-9300-7ff5513a4094-profile_image-300x300.png" />
   <meta name="twitter:card" content="player" />
-  <meta name="twitter:title" content="ANTi Livestream" />
-  <meta name="twitter:description" content="Today's live stream will focus on awesome. Click play to watch now!" />
-  <meta name="twitter:player"
-    content="https://player.twitch.tv/?channel=anti&html5&muted=true&quality=mobile" />
+  <meta name="twitter:title" content="🔴LIVE! ANTi is live on Twitch!" />
+  <meta name="twitter:description" content="Smash Ultimate Pro" />
+  <meta name="twitter:player" content="https://player.twitch.tv/?channel=ANTi&html5&muted=false&quality=mobile" />
   <meta name="twitter:player:width" content="360" />
   <meta name="twitter:player:height" content="200" />
-  <title>Live Stream Twitter Card</title>
+  <title>Watch ANTi Live!</title>
+  <link rel="shortcut icon"
+    href="https://static-cdn.jtvnw.net/jtv_user_pictures/c1de8d24-e1b3-402d-9300-7ff5513a4094-profile_image-300x300.png"
+    type="image/x-icon" />
+  <script type="text/javascript">
+    // Send to Twitch page by default, fallback to embed
+    window.location.href = "https://www.Twitch.tv/ANTi";
+  </script>
 </head>
 
-<body>
-  This is a test page for Twitter Player Card
+<body style="margin: 0;">
+  <!-- Add a placeholder for the Twitch embed -->
+  <div id="twitch-embed"></div>
+
+  <!-- Load the Twitch embed script -->
+  <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+  <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+  <script type="text/javascript">
+
+    // This is the fallback if the redirect doesn't work
+    new Twitch.Embed("twitch-embed", {
+      width: "100%",
+      height: "100%",
+      channel: "ANTi"
+    });
+
+    embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+      var player = embed.getPlayer();
+      player.play();
+    });
+  </script>
 </body>
 
 </html>
