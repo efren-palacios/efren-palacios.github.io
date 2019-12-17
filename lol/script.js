@@ -59,7 +59,7 @@ const Champion = {
   },
   methods: {
     grabImage: function(key, skin) {
-      return (this.modalImage = `https://cdn.communitydragon.org/9.24.1/champion/${key}/splash-art/centered/skin/${skin}`);
+      return (this.modalImage = `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/${key}/${skin}.jpg`);
     },
     displayToolTip: function(text, description) {
       this.tooltipName = text;
@@ -84,7 +84,7 @@ const Champion = {
 <img class="modalImage" :src="modalImage" />
 </div>
 </transition>
-<div :style="{ backgroundImage: 'url(https://cdn.communitydragon.org/9.24.1/champion/' + champ.key + '/splash-art/centered)'}" class="champWallpaper">
+<div :style="{ backgroundImage: 'url(https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/' + champ.key + '/' + champ.skins[0].id + '.jpg)'}" class="champWallpaper">
 <div class="champWallpaperLayout">
 <div class="champWallpaperName">
 {{champ.name}}
@@ -126,8 +126,8 @@ const Champion = {
 <div class="champWallpaperTitle">Champion Skins</div>
 <div class="champWallpaperSkins">
 
-<div :style="{ backgroundImage: 'url(https://cdn.communitydragon.org/9.24.1/champion/'+champ.key+'/splash-art/centered/skin/' + skin.num + ')' }" class="champWallpaperSkinGallery" v-for="skin of champSkin">
-<div  @click="showModal = !showModal;grabImage(champ.key,skin.num);" class="champWallpaperData">
+<div :style="{ backgroundImage: 'url(https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/'+champ.key+'/' + skin.id + '.jpg)' }" class="champWallpaperSkinGallery" v-for="skin of champSkin">
+<div  @click="showModal = !showModal;grabImage(champ.key,skin.id);" class="champWallpaperData">
 <div class="champWallpaperDisplay">
 <h1 class="champName">{{skin.name}}</h1>
 </div>

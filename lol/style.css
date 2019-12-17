@@ -482,9 +482,11 @@ footer a:hover {
   color: #826332;
   font-weight: bold;
   font-size: 16px;
+  font-family: 'LoL Display', sans-serif;
 }
 .championToolTip p {
   font-size: 14px;
+  font-family: 'Arial', sans-serif;
 }
 
 .championSkillData {
