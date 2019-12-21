@@ -62,10 +62,17 @@ const Champion = {
     }
   },
   methods: {
+    closeModal: function() {
+      const body = document.body;
+      body.style.overflow = 'auto';
+
+    },
     modelEditor: function() {
       this.iframe.loaded = true;
     },
     grabImage: function(key, skin, num) {
+      const body = document.body;
+      body.style.overflow = 'hidden';
       this.modelView = `https://irule.at/models/?champKey=${this.champ.name}&skinId=${num}`
       return (this.modalImage = `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/${key}/${skin}.jpg`);
     },
