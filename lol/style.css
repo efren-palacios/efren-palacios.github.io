@@ -110,11 +110,28 @@
   src: url('./beaufort/beaufortforlol-heavyItalic.otf') format('opentype');
 }
 
+
+
+#modelViewer {
+  width: 25vw;
+  height: 80vh;
+}
+
+.modalImage {
+  height: 80vh;
+}
+
+.modelContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .modal {
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.75);
   display: flex;
@@ -122,6 +139,7 @@
   align-items: center;
   cursor: pointer;
   z-index: 3;
+  overflow-y: hidden;
 }
 
 a {

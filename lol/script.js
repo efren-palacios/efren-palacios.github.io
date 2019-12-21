@@ -49,16 +49,24 @@ const Champion = {
       modalImage: "",
       tooltipName: "",
       tooltipDescription: "",
-      showTooltip: false
+      modelView: "",
+      showTooltip: false,
+      iframe: {
+        loaded: false
+      }
     };
   },
   computed: {
     champSkin: function() {
-      return this.champ.skins.filter(x => x.name !== "default");
+      return this.champ.skins
     }
   },
   methods: {
-    grabImage: function(key, skin) {
+    modelEditor: function() {
+      this.iframe.loaded = true;
+    },
+    grabImage: function(key, skin, num) {
+      this.modelView = `https://irule.at/models/?champKey=${this.champ.name}&skinId=${num}`
       return (this.modalImage = `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/${key}/${skin}.jpg`);
     },
     displayToolTip: function(text, description) {
@@ -80,7 +88,10 @@ const Champion = {
   //$route.params.id
   template: `<div><section>
 <transition name="fade" mode="out-in">
-<div v-show="showModal" @click="showModal = !showModal" class="modal">
+<div v-show="showModal" @click="showModal = !showModal;closeModal()" class="modal">
+<div class="modelContainer">
+<iframe v-on:load="modelEditor" v-show="iframe.loaded" id="modelframe" ref="editor" :src="modelView" id="modelViewer"></iframe>
+</div>
 <img class="modalImage" :src="modalImage" />
 </div>
 </transition>
@@ -94,6 +105,9 @@ const Champion = {
 </div>
 </div>
 </div>
+
+
+
 <div class="champWallpaperContainer">
 <div class="champWallpaperLore">
 {{champ.lore}}
@@ -127,7 +141,7 @@ const Champion = {
 <div class="champWallpaperSkins">
 
 <div :style="{ backgroundImage: 'url(https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/'+champ.key+'/' + skin.id + '.jpg)' }" class="champWallpaperSkinGallery" v-for="skin of champSkin">
-<div  @click="showModal = !showModal;grabImage(champ.key,skin.id);" class="champWallpaperData">
+<div  @click="showModal = !showModal;grabImage(champ.key,skin.id, skin.num);" class="champWallpaperData">
 <div class="champWallpaperDisplay">
 <h1 class="champName">{{skin.name}}</h1>
 </div>
