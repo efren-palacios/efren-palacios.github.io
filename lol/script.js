@@ -4,7 +4,7 @@ const champList = {
  <input class="champSearch" v-model="search" type="text" placeholder="Find a Champion..." /></div>
 <div class="champList">
 <div v-for="champ of filteredList" class="champData">
-<div :style="{ backgroundImage: 'url(https://cdn.communitydragon.org/9.24.1/champion/' + champ.key + '/splash-art/centered)' }"  class="champImg">
+<div :style="{ backgroundImage: 'url(./champion-splashes/' + champ.key + '/'+champ.key+'000.jpg)' }"  class="champImg">
 <router-link :to="'/champion/'+champ.id">
 <div class="champData">
 <div class="champDisplay">
@@ -62,19 +62,8 @@ const Champion = {
     }
   },
   methods: {
-    closeModal: function() {
-      const body = document.body;
-      body.style.overflow = 'auto';
-
-    },
-    modelEditor: function() {
-      this.iframe.loaded = true;
-    },
     grabImage: function(key, skin, num) {
-      const body = document.body;
-      body.style.overflow = 'hidden';
-      this.modelView = `https://irule.at/models/?champKey=${this.champ.name}&skinId=${num}`
-      return (this.modalImage = `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/${key}/${skin}.jpg`);
+      return (this.modalImage = `./champion-splashes/${key}/${skin}.jpg`);
     },
     displayToolTip: function(text, description) {
       this.tooltipName = text;
@@ -95,14 +84,11 @@ const Champion = {
   //$route.params.id
   template: `<div><section>
 <transition name="fade" mode="out-in">
-<div v-show="showModal" @click="showModal = !showModal;closeModal()" class="modal">
-<div class="modelContainer">
-<iframe v-on:load="modelEditor" v-show="iframe.loaded" id="modelframe" ref="editor" :src="modelView" id="modelViewer"></iframe>
-</div>
+<div v-show="showModal" @click="showModal = !showModal" class="modal">
 <img class="modalImage" :src="modalImage" />
 </div>
 </transition>
-<div :style="{ backgroundImage: 'url(https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/' + champ.key + '/' + champ.skins[0].id + '.jpg)'}" class="champWallpaper">
+<div :style="{ backgroundImage: 'url(./champion-splashes/' + champ.key + '/' + champ.skins[0].id + '.jpg)'}" class="champWallpaper">
 <div class="champWallpaperLayout">
 <div class="champWallpaperName">
 {{champ.name}}
@@ -136,18 +122,18 @@ const Champion = {
 
 <div class="champWallpaperTitle">Champion Info</div>
 
-<div class="championSkills">
+
 <div class="championSkillData">
 <div class="champSkillBlockContainer" v-for="(key, value) of champ.info">
 <p>{{value}}</p><div class="champSkillSplit"> <div class="champSkillBlock" v-for="item of key"></div></div>
 </div>
 </div>
-</div>
+
 
 <div class="champWallpaperTitle">Champion Skins</div>
 <div class="champWallpaperSkins">
 
-<div :style="{ backgroundImage: 'url(https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/'+champ.key+'/' + skin.id + '.jpg)' }" class="champWallpaperSkinGallery" v-for="skin of champSkin">
+<div :style="{ backgroundImage: 'url(./champion-splashes/'+champ.key+'/' + skin.id + '.jpg)' }" class="champWallpaperSkinGallery" v-for="skin of champSkin">
 <div  @click="showModal = !showModal;grabImage(champ.key,skin.id, skin.num);" class="champWallpaperData">
 <div class="champWallpaperDisplay">
 <h1 class="champName">{{skin.name}}</h1>

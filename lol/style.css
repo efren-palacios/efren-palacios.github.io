@@ -112,19 +112,9 @@
 
 
 
-#modelViewer {
-  width: 25vw;
-  height: 80vh;
-}
 
 .modalImage {
-  height: 80vh;
-}
-
-.modelContainer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  height: 95vh;
 }
 
 .modal {
@@ -226,6 +216,7 @@ footer {
   font-size: 12px;
   text-align: center;
   color: rgba(255, 255, 255, 0.25);
+  font-family: sans-serif;
 }
 footer a {
   color: #826332;
@@ -403,6 +394,7 @@ footer a:hover {
   margin: 0 auto;
   background-color: #111318;
   line-height: 20px;
+  font-family: sans-serif;
 }
 .champWallpaperRole p {
   color: #c4b998;
@@ -465,24 +457,20 @@ footer a:hover {
 
 .championSkills {
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   border: 1px solid #31271e;
   background-color: #111318;
   padding: 2em;
-  width: 20vw;
   margin: 1em auto;
-  justify-content: center;
+  width: 350px;
+  grid-gap: 5px;
 }
-@media only screen and (max-width: 1024px) {
-  .championSkills {
-    width: 80vw;
-  }
-}
+
 .championSkills div > img {
-  margin-right: 5px;
   border: 1px solid #31271e;
   cursor: pointer;
-  width: 66px;
 }
 
 .championToolTip {
@@ -500,6 +488,7 @@ footer a:hover {
   color: #826332;
   font-weight: bold;
   font-size: 16px;
+  line-height: 2em;
   font-family: 'LoL Display', sans-serif;
 }
 .championToolTip p {
@@ -508,11 +497,16 @@ footer a:hover {
 }
 
 .championSkillData {
-  display: flex;
-  flex-direction: column;
+  border: 1px solid #31271e;
+  background-color: #111318;
+  padding: 2em;
+  margin: 1em auto;
+  width: 350px;
+  display: grid;
 }
+
 .championSkillData div {
-  justify-content: flex-start;
+  grid-template-columns: 8em repeat(8, 1fr);
 }
 .championSkillData p {
   text-transform: uppercase;
@@ -527,20 +521,14 @@ footer a:hover {
 }
 
 .champSkillBlockContainer {
-  display: flex;
+  display: grid;
   align-items: center;
 }
-.champSkillBlockContainer div {
-  justify-content: space-between;
+
+.champSkillBlockContainer p {
+  font-family: sans-serif;
 }
-@media only screen and (max-width: 1024px) {
-  .champSkillBlockContainer {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 0 1em;
-  }
-}
+
 
 .champSkillBlock {
   width: 25px;
