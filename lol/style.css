@@ -471,6 +471,8 @@ footer a:hover {
 .championSkills div > img {
   border: 1px solid #31271e;
   cursor: pointer;
+  max-width: 64px;
+  max-height:  64px;
 }
 
 .championToolTip {
@@ -506,7 +508,7 @@ footer a:hover {
 }
 
 .championSkillData div {
-  grid-template-columns: 8em repeat(8, 1fr);
+  grid-template-columns: 6em max-content;
 }
 .championSkillData p {
   text-transform: uppercase;
