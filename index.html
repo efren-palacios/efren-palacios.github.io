@@ -131,7 +131,7 @@
         <div v-for="project of projects" class="max-w-md bg-black rounded overflow-hidden shadow-lg m-5">
           <a :href="project.url" target="_blank"><img class="w-full" :src="project.img" alt="Teppen"></a>
           <div class="px-6 py-4">
-            <a :href="project.url" target="_blank">
+            <a :href="project.github || project.url" target="_blank">
               <div class="font-bold text-xl text-gray-200 flex items-center mb-2"> <img
                   class="fill-current text-teal-500 inline-block h-8 w-8" src="/img/icons/github.svg" alt=""
                   srcset=""><span class="ml-2">{{project.title}}</span></div>
@@ -175,24 +175,34 @@
         tools: ['VSCode', 'GitHub', 'BitBucket', 'GitLab', 'Bulma', 'Semantic-UI', 'TailwindCSS', 'PowerShell', 'ConEmu', 'Hyper'],
         projects: [
           {
+            title: 'League of Legends Champion UI',
+            img: '/img/lol.png',
+            desc: 'A vue, vue-router, vue-component project of League of Legends',
+            url: 'https://efrenpalacios.dev/lol',
+            github: 'https://github.com/orctamer/orctamer.github.io/tree/master/lol',
+            tech: ['HTML5', 'CSS3', 'Vue', 'JavaScript']
+          },
+          {
             title: 'Team Liquid Fanpage',
             img: '/img/tl.png',
             desc: 'Redesigned Team Liquid frontpage design with a more semantic design approach.',
-            url: "http://efrenpalacios.dev/tl",
-            tech: ['HTML5', 'CSS3', 'Semantic-UI', 'Vue', 'JavaScript']
+            url: "https://efrenpalacios.dev/tl",
+            github: 'https://github.com/orctamer/orctamer.github.io/tree/master/tl',
+            tech: ['HTML5', 'CSS3', 'TailWindCSS', 'Vue', 'JavaScript']
           },
           {
             title: 'TEPPEN Deck Builder',
             img: '/img/teppen.png',
             desc: 'Online application created with Vue.js to allow users to customize and create decks for the game TEPPEN.',
-            url: "http://efrenpalacios.dev/teppen",
+            url: "https://efrenpalacios.dev/teppen",
+            github: 'https://github.com/orctamer/orctamer.github.io/tree/master/teppen',
             tech: ['HTML5', 'CSS3', 'Semantic-UI', 'Vue', 'JavaScript']
           },
           {
             title: "MobaMe",
             img: '/img/mobame.png',
-            desc: 'Online application created with Express.js and Vue.js using Riot Game\'s official API.',
-            url: 'http://effy.moe/',
+            desc: 'Online application created with Express.js and Vue.js using Riot Game\'s official API. Using the NUXT framework.',
+            url: 'https://effy.moe/',
             tech: ['HTML5', 'CSS3', 'TailWindCSS', 'Vue', 'JavaScript']
           },
           {
@@ -207,6 +217,7 @@
             img: '/img/dlm.png',
             desc: 'Website created using Jekyll.rb, responsible for creating deck playtester, and various components like article layouts and overall site design.',
             url: 'https://duellinksmeta.com/',
+            github: 'https://github.com/orctamer/duellinks',
             tech: ['HTML5', 'CSS3', 'JavaScript', 'Jekyll', 'Ruby']
           },
           {
@@ -221,6 +232,7 @@
             img: '/img/echofox.png',
             desc: 'Redesigned EchoFox frontpage design with a more semantic design approach. Native JavaScript & CSS usage.',
             url: 'https://efrenpalacios.dev/echofox/',
+            github: 'https://github.com/orctamer/orctamer.github.io/tree/master/echofox',
             tech: ['HTML5', 'CSS3', 'JavaScript']
           },
           {
