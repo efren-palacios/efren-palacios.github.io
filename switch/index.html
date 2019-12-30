@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Switch UI</title>
+  <script src="https://kit.fontawesome.com/148a8bbbe5.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="./moment.js"></script>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="blur"></div>
+    <nav>
+      <ul>
+        <li class="active"><i class="fas fa-home main"></i> Home</li>
+        <li><i class="far fa-newspaper "></i> News</li>
+        <li><i class="fas fa-user-friends"></i> Friends</li>
+        <li><i class="fas fa-image"></i> Gallery</li>
+      </ul>
+      <ul class="active">
+        <li>{{time}}<span>{{ampm}}</span></li>
+        <li><i class="fas fa-wifi"></i></li>
+        <li>52<span>%</span><i class="fas fa-battery-half"></i></li>
+      </ul>
+    </nav>
+    <section>
+      <div class="sideBar">
+          <h1 class="sideTitle">Online</h1>
+          <div class="friendList">
+            <div class="friendContainer">
+            <img src="./profile-isabelle.png" alt="">
+            <div class="friendStatus">
+              <h1 class="sideName">Shawna Moser</h1>
+              <h2 class="sideGame">Playing Animal Crossing</h2>
+            </div>
+            </div>
+            <div class="friendContainer">
+            <img src="./profile-bowser.png" alt="">
+            <div class="friendStatus">
+              <h1 class="sideName">Ravil Gill</h1>
+              <h2 class="sideGame">Playing Azure Striker GUNVOLT</h2>
+            </div>
+            </div>
+            <div class="friendContainer">
+            <img src="./profile-kirby.png" alt="">
+            <div class="friendStatus">
+              <h1 class="sideName">Beckie Siu</h1>
+              <h2 class="sideGame">Playing Kirby Star Allies</h2>
+            </div>
+            </div>
+            <div class="friendContainer">
+            <img src="./profile-pikachu.png" alt="">
+            <div class="friendStatus">
+              <h1 class="sideName">Ryan McCready</h1>
+              <h2 class="sideGame">Playing Dragon Quest Builder</h2>
+            </div>
+            </div>
+          </div>
+      </div>
+      <div class="mainBar">
+        <h1 class="sideTitle">Recently Played</h1>
+        <div class="gameList">
+          <img src="./botw-cover.png" alt="">
+          <img src="./smash-cover.jpg" alt="">
+          <img src="./ffx-cover.png" alt="">
+          <img src="./kirby-cover.jpg" alt="">
+        </div>
+        <div class="gameDescription">
+          <h1 class="gameTitle">The Legend of Zelda: Breath of the Wild</h1>
+          <h2 class="gameSave">102 hours played &bull; Last Save: Hyrule Plains</h2>
+          <div class="gameInterface">
+            <h1><span>Ⓧ</span> Change User</h1>
+            <h1><span>Ⓨ</span> Close Software</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+<script>
+  var app = new Vue({
+    el: '.container',
+    data: {
+      time: '',
+      ampm: ''
+    },
+    methods: {
+      timeTick: function() {
+        this.time = moment(new Date()).format('h:mm');
+        this.ampm = moment(new Date()).format('A')
+      }
+    },
+    mounted: function() {
+      setInterval(this.timeTick, 1000);
+    }
+  })
+</script>
+</html>

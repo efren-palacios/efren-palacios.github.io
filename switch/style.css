@@ -1,0 +1,175 @@
+@font-face {
+  font-family: "Nintendo Switch UI";
+  src: url("./switchui.ttf");
+}
+body {
+  font-family: "Nintendo Switch UI", sans-serif;
+  background-color: #233149;
+  font-weight: 800;
+  color: white;
+}
+
+section {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.gameList {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 3em 0;
+}
+.gameList img {
+  width: 250px;
+  border-radius: 15px;
+}
+.gameList img:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 5px #5CD9D6;
+}
+
+.friendList {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5em;
+  height: 30vh;
+  justify-content: space-between;
+}
+.friendList img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.friendStatus {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 2em;
+}
+
+.sideName, .sideGame {
+  font-size: 10pt;
+}
+
+.sideGame {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.gameDescription .gameTitle {
+  font-size: 28pt;
+}
+.gameDescription .gameSave {
+  margin-top: 0.5em;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.gameInterface {
+  display: flex;
+  justify-content: space-between;
+  width: 30vw;
+  margin: 2.5em 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  align-items: center;
+}
+.gameInterface h1 > span {
+  color: #5CD9D6;
+}
+
+.friendContainer {
+  display: flex;
+}
+
+.mainBar {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80vw;
+  margin-right: 5em;
+  margin-left: 30vw;
+  margin-top: 15vh;
+}
+
+.sideTitle {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+.sideBar {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  width: 25vw;
+  justify-content: center;
+  padding-left: 5em;
+  height: 100vh;
+}
+
+li:hover {
+  cursor: pointer;
+  color: white;
+}
+
+li > i {
+  margin: 0 1em;
+}
+
+.main {
+  color: #5CD9D6;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+.blur {
+  position: absolute;
+  filter: blur(2px);
+  width: 100%;
+  height: 100%;
+  background: url("./botw-bg.jpg");
+  background-size: cover;
+  opacity: 0.5;
+}
+
+li > span {
+  text-transform: uppercase;
+  font-size: 10px;
+  margin: 0 15px 0 2px;
+}
+
+nav {
+  z-index: 3;
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  padding: 5em 0;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.5);
+}
+nav .active {
+  font-weight: bold;
+  color: white;
+}
+
+ul {
+  display: flex;
+  width: 50vw;
+  justify-content: space-around;
+}
+
+ul:nth-child(2) {
+  width: 15vw;
+  margin-right: 5em;
+}
+
+/*# sourceMappingURL=style.css.map */
