@@ -220,7 +220,7 @@
 					imageGroup: null
 				},
 				mounted: function() {
-					function sortLayout(canvas) {
+/* 					function sortLayout(canvas) {
 						canvas.sendToBack(this.maskImg);
 						canvas.bringForward(this.artworkImg)
 						canvas.bringForward(this.borderColorImg);
@@ -230,7 +230,7 @@
 						canvas.bringToFront(this.attackImg);
 						canvas.bringToFront(this.healthImg);
 						return canvas.renderAll()
-					}
+					} */
 					let canvas = new fabric.Canvas("c", {
 						preserveObjectStacking: true
 					});
@@ -267,7 +267,10 @@
 								canvas.bringToFront(this.statsImg);
 							}
 						);
+						return setTimeout(renderLayer3, 500);
+					}
 
+					function renderLayer3() {
 						this.cost = fabric.Image.fromURL('./card/0.png', oImg => {
 							this.costImg = oImg;
 							this.costImg.selectable = false;
@@ -276,11 +279,10 @@
 							this.costImg.top = 22;
 							this.costImg.left = 20;
 							this.costImg.scaleToHeight(65);
-							this.costImg.scaleToWidth(48);						
+							this.costImg.scaleToWidth(48);
 							canvas.add(this.costImg)
 							canvas.bringToFront(this.costImg);
-						})	
-
+						})
 						this.attack = fabric.Image.fromURL('./card/0.png', oImg => {
 							this.attackImg = oImg;
 							this.attackImg.selectable = false;
@@ -295,7 +297,7 @@
 						})
 
 						this.health = fabric.Image.fromURL('./card/0.png', oImg => {
-							this.healthImg = oImg;							
+							this.healthImg = oImg;
 							this.healthImg.selectable = false;
 							this.healthImg.evented = false;
 							//295, 350, 36, 58
@@ -306,12 +308,10 @@
 							canvas.add(this.healthImg);
 							canvas.bringToFront(this.healthImg);
 						})
-
-						this.canvas = canvas;
-						return sortLayout(canvas)
-						
-
+						return this.canvas = canvas;
+						// return sortLayout(canvas);
 					}
+
 					function renderLayer1() {
 
 						// interface
@@ -333,7 +333,7 @@
 								canvas.add(this.borderColorImg);
 							}
 						);
-						renderLayer2();
+						return setTimeout(renderLayer2, 500);
 					}
 
 					this.mask = new fabric.Image.fromURL(
@@ -353,7 +353,7 @@
 									this.artworkImg.globalCompositeOperation = "source-atop";
 									canvas.add(this.maskImg);
 									canvas.add(this.artworkImg);
-									renderLayer1();
+									return setTimeout(renderLayer1, 500);
 								}
 							);
 						}
