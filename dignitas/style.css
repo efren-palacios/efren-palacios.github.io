@@ -307,6 +307,8 @@ ul, ol {
 
 .footer__img {
   height: 25px;
+  position: absolute;
+  left: 10px;
 }
 
 .footer__copyright {

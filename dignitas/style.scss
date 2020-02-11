@@ -213,6 +213,8 @@ ul, ol {
   }
   &__img {
     height: 25px;
+    position: absolute;
+    left: 10px;
   }
   &__copyright {
     flex-grow: 1;
