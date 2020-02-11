@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
+html, body {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  background-color: #0d0d0d;
+  color: gray;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  background-color: #000;
+  height: 100px;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  border: 0px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-weight: bold;
+  letter-spacing: 2px;
+  -webkit-box-shadow: 1px 1px 15px #000;
+          box-shadow: 1px 1px 15px #000;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+}
+
+.nav__item--active {
+  color: #ffdd00;
+}
+
+.nav__item {
+  list-style-type: none;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: none;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav__item:hover {
+  border-bottom: 2px solid #ffdd00;
+  cursor: pointer;
+  padding-top: 2px;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.nav__logo {
+  padding: 1em;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+.nav:hover {
+  border-left: 5px solid #ffdd00;
+}
+
+.nav:hover > .nav__logo {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+.card {
+  height: 650px;
+  width: 49%;
+  -webkit-box-shadow: 1px 1px 15px black;
+          box-shadow: 1px 1px 15px black;
+  background-color: black;
+  color: #cccccc;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: .5em;
+}
+
+.card:hover .card__img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 1;
+}
+
+.card__container {
+  max-height: 450px;
+  overflow: hidden;
+  background: black;
+}
+
+.card__img {
+  min-height: 450px;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  opacity: .5;
+  max-width: 100%;
+}
+
+.card__img:hover {
+  cursor: pointer;
+}
+
+.card__caption {
+  padding: 2em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card__header {
+  color: #e6e6e6;
+  font-weight: bold;
+  font-size: 18pt;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+.card__header:hover {
+  color: goldenrod;
+  cursor: pointer;
+}
+
+.card__sub {
+  font-size: 10pt;
+}
+
+.card__more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 10pt;
+}
+
+.card__button {
+  border-radius: 5px;
+  margin-right: 5px;
+  border: 1px solid goldenrod;
+  padding: 1em 1.2em;
+  font-weight: bold;
+  color: goldenrod;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  text-transform: uppercase;
+}
+
+.card__button:hover {
+  cursor: pointer;
+  background-color: goldenrod;
+  color: #000;
+}
+
+.card__author {
+  color: goldenrod;
+}
+
+.card__author:hover {
+  color: #e4b849;
+  cursor: pointer;
+}
+
+.main {
+  margin: 100px 2em auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer {
+  background-color: #1a1a1a;
+  height: 250px;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-image: url("http://cdn.esportsify.com/teamdignitasv2/images/logos/footer-logo.png");
+  background-repeat: no-repeat;
+  background-size: 80px auto;
+  background-position-x: 3.5em;
+  background-position-y: 25%;
+}
+
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style-type: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 150px;
+  line-height: 1.5;
+  font-size: 10pt;
+}
+
+.footer__container {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+  width: 20%;
+}
+
+.footer__header {
+  color: white;
+  font-size: 16pt;
+}
+
+.footer__sub {
+  color: gray;
+  font-size: 10pt;
+  font-weight: normal;
+}
+
+.footer__link {
+  color: gold;
+}
+
+.footer__link:hover {
+  color: #ffe766;
+  cursor: pointer;
+}
+
+.footer__end {
+  margin: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 10pt;
+}
+
+.footer__img {
+  height: 25px;
+}
+
+.footer__copyright {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
