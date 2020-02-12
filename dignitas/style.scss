@@ -3,6 +3,12 @@
 $main: #000;
 $sub: #ffdd00;
 
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -49,7 +55,6 @@ ul, ol {
   &__item {
     list-style-type: none;
     text-align: center;
-    box-sizing: border-box;
     flex: 1;
     border: none;
     text-transform: uppercase;
@@ -57,6 +62,7 @@ ul, ol {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
     &:hover {
       border-bottom: 2px solid $sub;
       cursor: pointer;
@@ -64,9 +70,23 @@ ul, ol {
       background-color: lighten($main,10);
       color: white;
     }
+    &::before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 1px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: lighten($main,10);
+    }
   }
   &__logo {
+    display: flex;
+    align-items: center;
     padding: 1em;
+    height: 100px;
+    width: 100px;
     filter: grayscale(100%);
     transition: 250ms;
   }
@@ -88,7 +108,6 @@ ul, ol {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  box-sizing: border-box;
   margin: .5em;
   &:hover &__img {
     transform: scale(1.1);
@@ -158,7 +177,7 @@ ul, ol {
 }
 
 .main {
-  margin: 100px 2em auto; 
+  margin: 1em 2em auto; 
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -219,5 +238,66 @@ ul, ol {
   &__copyright {
     flex-grow: 1;
     text-align: center;
+  }
+}
+
+.schedule {
+  margin-top: 120px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: lighten($main, 5);
+  border-top: 1px solid lighten($main, 10);
+  border-bottom: 1px solid lighten($main, 10);
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.5em 2.5em;
+    height: 100%;
+    position: relative;
+    &::after {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 1px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: lighten($main,10);
+    }
+    &:last-child {
+      border-right: 1px solid lighten($main,10);
+    }
+  }
+  &__hour {
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: lighten($main, 90);
+  }
+  &__code {
+    font-weight: bold;
+    color: lighten($main, 80);
+  }
+  &__logo {
+    width: 25px;
+    margin-right: 5px;
+  }
+  &__team {
+    display: flex;
+    align-items: center;
+  }
+  &__teams {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  &__date {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1.5px;
   }
 }
