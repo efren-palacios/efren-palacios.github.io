@@ -1,0 +1,54 @@
+$background: #00FF00;
+
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Anton', sans-serif;
+}
+
+body {
+  background-color: $background;
+  overflow: hidden;
+}
+
+.stream {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__container {
+    width: 150vw;
+    background-color: lighten(black, 10);
+    transform: rotate(-8deg);
+    position: relative;
+  }
+  &__main {
+    height: 100%;
+    font-size: 48pt;
+    color: darken(gold, 10);
+    text-transform: uppercase;
+    position: absolute;
+    left: 0;
+    top: 20%;
+    transform: translateX(-50%);
+  }
+  &__sub {
+    height: 100%;
+    font-size: 24pt;
+    color: white;
+    text-transform: uppercase;
+    position: absolute;
+    right: -100px;
+    top: 60%;
+    transform: translateX(50%);
+  }
+}

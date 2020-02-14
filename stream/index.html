@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Streamer Effects - By Effy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<div class="stream">
+  <div class="stream__container">
+    <div class="stream__main">Effy</div>
+    <div class="stream__sub">Has just followed!</div>
+  </div>
+</div>
+
+</body>
+<script src="./anime.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.3/howler.min.js"></script>
+<script>
+  let isPlaying = true;
+  Howler.mobileAutoEnable = true;
+  var sound = new Howl({
+    src: ['sound.mp3'],
+    sprite: {
+      intro: [0, 2000],
+      mid: [2000,3000]
+    }
+  })
+
+
+  anime({
+    targets: '.stream__main',
+    keyframes: [
+      {left: '50%', easing: 'easeOutExpo', duration: 2500, delay: 2000},
+      {left: '120%', easing: 'easeOutExpo', delay: 2500, duration: 2500}
+    ],
+    begin: function(anim) {
+      sound.play('intro');
+    }
+  })
+  anime({
+    targets: '.stream__sub',
+    keyframes: [
+      { right: '50%', easing: 'easeOutExpo', duration: 2500, delay: 2000 },
+      { right: '120%', easing: 'easeOutExpo', delay: 2500, duration: 2500 }
+    ]
+  })
+  anime({
+    targets: '.stream__container',
+    keyframes: [
+      { height: '0px', easing: 'easeOutExpo', duration: 500 },
+      { height: '250px', easing: 'easeOutExpo', duration: 500, delay: 1000 },
+      { height: '0px', easing: 'easeOutExpo', duration: 500, delay: 7000 },
+    ],
+    update: function(anim) {
+      if (Math.round(anim.progress) > 85 && isPlaying) {
+        if (isPlaying) {
+          sound.play('mid')
+          isPlaying = false
+        }
+      }
+    }
+  })
+</script>
+</html>
