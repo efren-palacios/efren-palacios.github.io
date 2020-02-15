@@ -1,5 +1,5 @@
 $background: #00FF00;
-
+$t1: #E01727;
 @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 
 
@@ -27,19 +27,23 @@ body {
   justify-content: center;
   &__container {
     width: 150vw;
-    background-color: lighten(black, 10);
+    animation-name: open;
+    animation-duration: 7000ms;
+    background-color: $t1;
     transform: rotate(-8deg);
     position: relative;
   }
   &__main {
     height: 100%;
     font-size: 48pt;
-    color: darken(gold, 10);
+    color: white;
     text-transform: uppercase;
     position: absolute;
     left: 0;
     top: 20%;
     transform: translateX(-50%);
+    animation-name: left;
+    animation-duration: 6000ms;
   }
   &__sub {
     height: 100%;
@@ -50,5 +54,28 @@ body {
     right: -100px;
     top: 60%;
     transform: translateX(50%);
+    animation-name: right;
+    animation-duration: 6000ms;
   }
+}
+
+@keyframes right {
+  from {right: 0}
+  20% {right: 50%}
+  90% {right: 50%}
+  to {right: 120%}
+}
+
+@keyframes left {
+  from {left: 0}
+  20% {left: 50%}
+  90% {left: 50%}
+  to {left: 120%}
+}
+
+@keyframes open {
+  from {height: 0px}
+  5% {height: 250px}
+  95% {height: 250px}
+  to {height: 0px}
 }
