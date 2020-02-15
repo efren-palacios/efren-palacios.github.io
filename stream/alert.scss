@@ -1,0 +1,79 @@
+$background: #00FF00;
+$t1: #E01727;
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Anton', sans-serif;
+}
+
+body {
+  background-color: $background;
+  overflow: hidden;
+}
+
+
+.stream {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__container {
+    width: 0px;
+    height: 0px;
+    background-color: $t1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: box;
+    animation-duration: 8s;
+    animation-timing-function: ease-in;
+    z-index: 9999;
+  }
+  &__logo {
+    width: 90%;
+    filter: invert(99%) sepia(97%) saturate(0%) hue-rotate(146deg) brightness(102%) contrast(102%);
+  }
+  &__alert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    color: rgba(0,0,0,0);
+    text-transform: uppercase;
+    font-size: 18pt;
+    background-color: $t1;
+    position: absolute;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-name: pop;
+    visibility: hidden;
+  }
+}
+
+@keyframes pop {
+  5% {width: 0px;height: 0px;left:150px;visibility: hidden;}
+  10% {width: 350px;height: 0px;left:150px;visibility: visible;font-size: 0;}
+  15% {width: 350px;height: 0px;left:150px;visibility: visible;font-size: 18pt;}
+  40% {width: 350px;height:150px;left:150px;color:white;visibility: visible;}
+  85% {width: 350px;height: 150px;left:150px;color:white;visibility: visible;}
+  90% {width: 350px;height: 0px;left:150px;color:white;visibility: visible;}
+  95% {width:350px;height:0px;left:150px;visibility: visible;}
+  100% {width:0px;height:0px;left:150px;visibility: hidden;}
+}
+
+@keyframes box {
+  from {height: 0px;width: 0px;}
+  5% {height: 150px;width:150px;}
+  10% {height: 150px;width:150px;margin-right: 500px;}
+  95% {height: 150px;width:150px;margin-right: 500px;}
+  100% {height: 0px;width: 0px;margin-right: 500px;}
+}
