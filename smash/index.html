@@ -4,132 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Character Reveal</title>
-  <style>
-
-@font-face {
-    font-family: 'FOT-RodinHimawari Pro UB';
-    src: url('FOT-RodinHimawariPro-UB.otf');
-}
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  html,
-  body {
-    height: 100%;
-  }
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .container {
-    background-color: #2f74f3;
-    background-image: url('./bg.png');
-    background-size: cover;
-    width: 1280px;
-    height: 720px;
-    z-index: 1;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    line-height: 10em;
-    position: relative;
-    overflow: hidden;
-  }
-  #charName {
-    font-family: 'FOT-RodinHimawari Pro UB';
-    font-size: 120pt;
-    color: white;
-    font-weight: normal;
-    text-shadow: -5px 10px 1px black;
-    transform: rotate(2deg);
-    letter-spacing: -5px;
-    margin-left: .2em;
-    visibility: hidden;
-  }
-  #wrapper {
-    -webkit-transform: rotate(-2deg);
-    transform: rotate(-2deg);
-    visibility: hidden;
-  }
-  #battle {
-    font-family: 'FOT-RodinHimawari Pro UB';
-    font-size: 90pt;
-    background: -webkit-linear-gradient(#f9db09,#fbb503);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: -5px;
-    position: relative;
-    margin-left: .2em;
-    margin-bottom: .75em;
-  }
-  #battle:after {
-    background: none;
-    content: 'Joins the Battle!';
-    left: 0;
-    position: absolute;
-    text-shadow: -10px 1px 1px #000;
-    top: 0;
-    z-index: -1;
-  }
-  #character {
-    height: 720px;
-    position: absolute;
-    right: 0;
-    visibility: hidden;
-  }
-  .charAnim {
-    animation: char 8s forwards;
-  }
-
-  .charText {
-    animation: chartext 8s forwards;
-  }
-
-  @keyframes chartext {
-    0% {
-      visibility: visible;
-      filter: brightness(100%);
-      transform: scale(2);
-    }
-    10% {
-      filter: brightness(100%);
-      transform: scale(1);
-    }
-  }
-
-  @keyframes char {
-    0% {
-      visibility: visible;
-      filter: brightness(0%);
-      right: 0px;
-      transform: scale(1);
-    }
-    10% {
-      filter: brightness(100%);
-      right: 0px;
-      transform: scale(1.2);
-    }
-    50%, 100% {
-      transform: scale(1.2);
-      right: 80px;
-    }
-  }
-  </style>
-  <script>
-  </script>
+  <title>Character Reveal</title> 
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <input onchange="changeName()" type="text" id="charNameSrc" />
-  Character Name
-  <input id="changeImageSrc" onchange="changeImage()" type="text" />
-  Image Url
-  <br />
-  <button onclick="playAudio()">Play Animation</button>
-  <br />
+  <div class="input__container">
+  <input onchange="changeName()" type="text" id="charNameSrc" placeholder="Character Name..." />
+<label for="img" class="file__upload">
+  Upload An Image
+</label>
+  <input type="file" onchange="changeImage(event)" id="img" name="img" accept="image/*">
+<button id="submit" onclick="playAudio()">Play Animation</button>
+
+  </div>
   <div class="container">
     <img id="character" src="mario.png" alt="">
     <div data-text="Fighter Name" id="charName"></div>
@@ -143,19 +30,36 @@
   let wrapper = document.getElementById('wrapper')
   let imageSrc = document.getElementById('changeImageSrc')
   let charName = document.getElementById('charNameSrc')
+  let audio
   function changeName() {
     fighterName.innerHTML = charName.value
   }
-  function changeImage() {
-    image.setAttribute('src', imageSrc.value);
+  function changeImage(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      image.setAttribute('src', reader.result)
+      imageSrc.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0])
+    //image.setAttribute('src', imageSrc.value);
   }
   fighterName.innerHTML = 'Mario'
   battle.innerHTML = 'Joins the Battle!'
   function playAudio () {
+    fighterName.classList.remove('charText');
+    void fighterName.offsetWidth;
     fighterName.classList.add('charText');
+    wrapper.classList.remove('charText');
+    void wrapper.offsetWidth;
     wrapper.classList.add('charText');
+    image.classList.remove('charAnim')
+    void image.offsetWidth;
     image.classList.add('charAnim')
-    var audio = new Audio('./reveal.mp3');
+    if (audio) {
+      audio.pause();
+      audio.currentTime = 0; 
+    }
+    audio = new Audio('./reveal.mp3');
     audio.play();
   }
   </script>

@@ -1,0 +1,180 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: 'FOT-RodinHimawari Pro UB';
+    src: url('FOT-RodinHimawariPro-UB.otf');
+}
+
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: lighten(black,2);
+  }
+  .container {
+    background-color: #2f74f3;
+    background-image: url('./bg.png');
+    background-size: cover;
+    width: 1280px;
+    height: 720px;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    line-height: 10em;
+    position: relative;
+    overflow: hidden;
+  }
+  #charName {
+    font-family: 'FOT-RodinHimawari Pro UB';
+    font-size: 120pt;
+    color: white;
+    font-weight: normal;
+    text-shadow: -5px 10px 1px black;
+    transform: rotate(2deg);
+    letter-spacing: -5px;
+    margin-left: .2em;
+    visibility: hidden;
+  }
+  #wrapper {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+    visibility: hidden;
+  }
+  #battle {
+    font-family: 'FOT-RodinHimawari Pro UB';
+    font-size: 90pt;
+    background: -webkit-linear-gradient(#f9db09,#fbb503);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -5px;
+    position: relative;
+    margin-left: .2em;
+    margin-bottom: .75em;
+  }
+  #battle:after {
+    background: none;
+    content: 'Joins the Battle!';
+    left: 0;
+    position: absolute;
+    text-shadow: -10px 1px 1px #000;
+    top: 0;
+    z-index: -1;
+  }
+  #character {
+    height: 720px;
+    position: absolute;
+    right: 0;
+    visibility: hidden;
+    overflow: hidden;
+    top: 10%;
+  }
+  .charAnim {
+    animation: char 8s linear forwards;
+  }
+
+  .charText {
+    animation: chartext 8s linear forwards;
+  }
+
+.input__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  align-content: center;
+  height: 175px;
+  width: 30%;
+  div {
+    margin: 50px;
+  }
+}
+
+#charNameSrc {
+  padding: 1em 1.2em;
+  outline: none;
+  border: none;
+  background-color: darken(gray, 40);
+  color: darken(white,5);
+  border-radius: 5px;
+  height: 50px;
+  &::-webkit-input-placeholder{
+    color: darken(white,50);
+  }
+}
+
+
+
+#submit {
+  padding: 1em 1.2em;
+  color: white;
+  background-color: darken(gray, 40);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  height: 50px;
+  &:hover {
+    background-color: darken(gray,35);
+  }
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.file__upload {
+  display: inline-block;
+  padding: 1em 1.2em;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: bold;
+  background-color: darken(gray, 40);
+  height: 50px;
+}
+
+
+  @keyframes chartext {
+    0% {
+      visibility: visible;
+      filter: brightness(100%);
+      transform: scale(2);
+    }
+    10%, 100% {
+      filter: brightness(100%);
+      transform: scale(1);
+      visibility: visible;
+    }
+  }
+
+  @keyframes char {
+    0% {
+      visibility: visible;
+      filter: brightness(0%);
+      right: 0px;
+      transform: scale(1);
+    }
+    10% {
+      filter: brightness(100%);
+      right: 0px;
+      transform: scale(1.2);
+    }
+    50%, 100% {
+      transform: scale(1.2);
+      right: 80px;
+      visibility: visible;
+    }
+  }
