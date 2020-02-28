@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Duel Links Duel Generator</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="scss/style.css">
+</head>
+<body>
+  <main>
+    <p class="logo">YU-GI-OH DUEL LINKS</p>
+    <h1 class="title">Duel <span class="blue"> Generator</span></h1>
+    <p class="author">v1.0.5 by <span class="name">Effy</span></p>
+  </main>
+  <section>
+    <h2>Disclaimer:</h2>
+    <p style="color:red">Just a friendly reminder, if you are using this app the data sent to the server is taken to consideration, from all case studies from banned accounts they were from instant wins + speed hacks, although I can't claim this app to be fool proof there's a slim chance Konami will flag your account. The replay method returns the server you just finished watching but any pve duel sends the data you used in your duel, since duel points are going to be random and not instant don't be too alarmed by Konami touching your account. However, if you don't feel comfortable, use a throwaway account, since everything will be unlocked anyways</p>
+    <h2><a href="#nox"> <img src="nox.png" style="width:25px;display:inline-block;vertical-align: middle;" alt=""> Nox Installation Guide</a></h2>
+    <h2><a href="#steam"> <img src="steam.png" style="width:25px;display:inline-block;vertical-align: middle;" alt=""> Steam Installation Guide</a></h2>
+    <h1>Installation Instructions</h1>
+    <ul>
+      <li><p>Download the App <a href="https://github.com/orctamer/duelgenerator/releases/download/1.0.7/Duel.Links.Duel.Generator.rar">Here</a></p></li>
+      <li><p>Sign up for <a href="https://www.patreon.com/effy_dev">Effy</a> as a <span class="payment">$5.00 (USD)</span> Patreon with your Discord Information (Username/ID)</p></li>
+      <li><p>Extract the .zip file and launch the application <br /> <img class="img" src="launch.png" alt=""></p></li>
+      <li><p>Allow access to the application <br /> <img class="img" src="network.png" alt=""></p></li>
+      <li><p>You will need to login into your Discord account (This is for authentication) <br /> <img class="img" src="login.png" alt=""></p></li>
+      <li><p>Authorize the Discord Application <br /> <img class="img" src="discord.png" alt=""></p></li>
+      <li><p>You will be greeted by the Application <br /> <img class="img" src="main.png" alt=""></p></li>
+      <h1 id="nox">Nox Version</h1>
+      <li><p>While this Application can be used on Steam version, I encourage you using <a href="https://www.bignox.com/">NOX Player</a>. We are going to grab a file inside the Application in a folder called <code>.http-mitm-proxy</code> <br /> <img class="img" src="mitm.png" alt=""></p>
+      <p>Inside this folder there is two folders called <code>certs</code> and <code>keys</code> open the certs folder and there will be a file called <code>ca.pem</code> we need to import that file into NOX.</p>
+      </li>
+      <li><p>Launch NOX Player and navigate to Settings -> Security -> Credential Storage | Install certificates from SD Card <br/> <img class="img" src="noxsettings.png" alt=""></p>
+      <p>Once you find your <code>ca.pem</code> file install it to NOX, you can name it whatever you like </p>
+      <img class="img" src="cert.png" alt=""></li>
+      <li>Once the certificate is install you will need to change the proxy settings inside your WIFI settings, go to your WIFI settings and click <code>Modify Network</code> click on <code>Show advance options</code> and go to Proxy and select <code>Manual</code> for your Proxy hostname you will need to go to your command line <code>cmd</code> and run the command <code>ipconfig</code> find your <code>IPv4 Address</code> and for the port you will use <code>8888</code></li>
+      <li>You can now launch Duel Links and go into an NPC battle or even clicking the Replay Button to enable the Application <br> <img src="replay.png" alt="" class="img"> </li>
+      <h1 id="steam">Steam Version</h1>
+      <li>You will need to install <code>ca.pem</code>on your Windows machine in order for the app to work</li>
+      <li>Locate your certificates settings <br><img src="certificate.png" alt="" class="img"></li>
+      <li>Right-click on <code>Enterprise Trust</code> folder and import your certificate</li> <br> <img src="import.png" alt="" class="img"> <br>  <img src="wizard.png" alt="" class="img"> <br>  <img src="wizard2.png" alt="" class="img"> <br>  <img src="wizard3.png" alt="" class="img"> <br>  <img src="wizard4.png" alt="" class="img">
+      <li>Nagivate to your Proxy Settings on Windows <br><img class="img" src="proxysettings.png" alt=""></li>
+      <li>You will need to adjust your proxy settings, you will need to download <a href="./proxy.pac">proxy.pac</a> put the directory the file was saved. In your proxy address box use <code>http=127.0.0.1:8888;https=127.0.0.1:8888</code> <br> <img src="proxypac.png" alt="" class="img"> <br> <img src="proxyserver.png" alt="" class="img"> </li>
+      <h2 style="color:red">You will need to disable the proxy settings when you want to run Duel Links without the app</h2>
+      <li>You can now launch Duel Links and go into an NPC battle or even clicking the Replay Button to enable the Application <br> <img src="replay.png" alt="" class="img"> </li>
+      <br>
+      <li style="list-style-type: none;">Enjoy Using The App! <span style="color:red;font-size:24px;display:inline-block;vertical-align:middle">❤️</span> <br/> <img class="img" src="favicon.ico" alt=""></li>
+    </ul>
+  </section>
+</body>
+</html>
+  
+  
+
+</body>
+
+</html>
