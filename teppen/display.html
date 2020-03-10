@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TEPPEN Card Display</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-900 text-white tracking-tight">
+
+  <div @paste="pasteImage" id="app">
+      <div class="uppercase font-bold text-center py-8">
+        <p class="text-4xl">TEPPEN Card Maker</p>
+        <p class="text-xl text-gray-700">By Effy</p>
+      </div>
+      <div class="sm:flex justify-around items-center flex-col">
+        <div class="w-full md:w1/3 bg-gray-900 p-10 flex">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+            Artwork
+          </label>
+          <div>
+            <label
+              class="w-64 flex flex-col items-center px-2 py-3 mx-5 bg-gray-800 text-white rounded-lg shadow-lg tracking-wide text-xs font-bold uppercase border border-gray-900 cursor-pointer">
+              <svg class="w-8 h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path
+                  d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+              </svg>
+              <span>Select A File</span>
+              <input class="hidden" @change="handleImage(fileInput)" ref="fileInput" type="file" id="imageLoader"
+                name="imageLoader" />
+            </label>
+          </div>
+            <label class="block uppercase tracking-wide text-gray-700 mx-5 text-xs font-bold mb-2" for="grid-state">
+              Color
+            </label>
+            <div class="relative">
+              <select @change="changeColor(cardColor);changeEmblem(cardColor)" v-model="cardColor"
+                class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none mb-8"
+                id="grid-state">
+                <option disabled value="">Please Select Color</option>
+                <option>Red</option>
+                <option>Green</option>
+                <option>Purple</option>
+                <option>Black</option>
+              </select>
+            </div>
+            <label class="block uppercase tracking-wide text-gray-700 text-xs mx-5 font-bold mb-2" for="grid-state">
+              Rarity
+            </label>
+            <div class="relative">
+              <select v-model="cardRarity" @change="changeRarity(cardRarity)"
+                class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none mb-8"
+                id="grid-state">
+                <option disabled value="">Please Select Rarity</option>
+                <option>Common</option>
+                <option>Rare</option>
+                <option>Epic</option>
+                <option>Legendary</option>
+              </select>
+            </div>
+            <div class="block uppercase tracking-wide text-gray-700 mx-5 text-xs font-bold mb-2">Select text and use (Ctrl+B) for <span style="color: #B9BB72">Gold</span> and (Ctrl+Z) for <span style="color: #588599">Blue</span></div>
+        </div>
+        
+        <div><canvas id="c" width="950" height="600"></canvas>
+                    <div class="flex justify-center">
+                      <button @click="saveImage" class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded my-8 mr-4">
+                        Download
+                      </button>
+                      <button @click="newTab" class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded my-8">
+                        New Tab
+                      </button>
+                    </div>
+        </div>
+      </div>
+  </div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.4.0/fabric.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<script>
+
+  new Vue({
+    el: "#app",
+    data: {
+      canvas: null,
+      cardName: 'Leon S. Kennedy',
+      cardRename: null,
+      bg: null,
+      cardArt: null,
+      cardArtImg: null,
+      fileInput: null,
+      cardColor: 'Red',
+      cardRarity: "Legendary",
+      cardRarityImg: null,
+      cardRarityArt: null,
+      cardRarityEmblem: {
+        Legendary: "./card/legendaryRarity.png",
+        Epic: "./card/epicRarity.png",
+        Rare: "./card/rareRarity.png",
+        Common: "./card/commonRarity.png"
+      },
+      line: null,
+      lineColor: {
+        "Red": "#b42819",
+        "Green": "#288269",
+        "Purple": "#8c50a0",
+        "Black": "#323c55"
+      },
+      emblem: null,
+      emblemColor: {
+        "Red": "./card/icon-attribute-red.png",
+        "Green": "./card/icon-attribute-green.png",
+        "Purple": "./card/icon-attribute-purple.png",
+        "Black": "./card/icon-attribute-black.png"
+      },
+      emblemImg: null
+    },
+    methods: {
+        handleImage: function(image) {
+        const input = image
+        const files = input.files
+        if (files && files[0]) {
+          const reader = new FileReader
+          reader.onload = e => {
+            this.cardArtImg.setSrc(e.target.result, (img) => {
+              img.scaleToWidth(360);
+              img.scaleToHeight(498);          
+              this.canvas.renderAll();
+            })
+          }
+          reader.readAsDataURL(files[0]);
+        }
+      },
+        pasteImage: function(e) {
+          var items = e.clipboardData.items;
+          e.preventDefault();
+          e.stopPropagation();
+          for (var i = 0; i < items.length; i++) {
+            if (items[i].type.indexOf('image') == -1) continue;
+            var file = items[i],
+              type = items[i].type;
+            var imageData = file.getAsFile();
+            var URLobj = window.URL || window.webkitURL;
+            this.cardArtImg.setSrc(URLobj.createObjectURL(imageData), (img) => {
+              img.scaleToWidth(360);
+              img.scaleToHeight(498);
+              this.canvas.renderAll();
+            })
+        }
+      },
+      newTab: function () {
+        function debugBase64(base64URL) {
+          var win = window.open();
+          win.document.write('<iframe src="' + base64URL + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%" allowfullscreen></iframe>');
+        }
+        var dataUrl = this.canvas.toDataURL();
+        return debugBase64(dataUrl)
+      },
+      saveImage: function () {
+        function downloadURI(uri, name) {
+          var link = document.createElement("a");
+          link.download = name;
+          link.href = uri;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          delete link;
+        }
+        var dataUrl = this.canvas.toDataURL();
+        console.log(dataUrl)
+        return downloadURI(dataUrl, `${this.cardName}.png`);
+      },
+      changeColor: function(color) {
+        this.line = new fabric.Line([425, 45, 425, 125], {
+          stroke: this.lineColor[color],
+          strokeWidth: 6,
+          selectable: false,
+          evented: false,
+        })
+        this.canvas.add(this.line);
+        this.canvas.renderAll();
+      },
+      changeEmblem: function(color) {
+          this.emblemImg.setSrc(this.emblemColor[color], img => {
+            img.scaleToHeight(75);
+            img.scaleToWidth(75);
+            this.canvas.renderAll();
+          })
+      },
+      changeRarity: function(color) {
+          this.cardRarityArt.setSrc(this.cardRarityEmblem[color], img => {
+            img.scaleToHeight(100);
+            img.scaleToWidth(250);
+            this.canvas.renderAll();
+          })
+      }
+    },
+    mounted: function() {
+        this.canvas = new fabric.Canvas("c", {
+          preserveObjectStacking: true
+        });
+        this.fileInput = this.$refs.fileInput;
+        this.bg = fabric.Image.fromURL('./card/bg2.jpg', img => {
+        img.selectable = false;
+        img.evented = false;
+        img.left = -300;
+        img.width = 1800;
+        img.height = 600;
+        img.opacity = .2;
+        this.canvas.setBackgroundImage(img);
+      })
+        var cardName = new fabric.Textbox(this.cardName, {
+        left: 475,
+        top: 60,
+        width: 400,
+        height: 200,
+        fontSize: 48,
+        fontFamily: 'Arial',
+        fill: '#ffffff',
+        hasControls: false,
+        lockMovementX: true,
+        fontWeight: 'bold'
+      })
+        var textbox = new fabric.Textbox('＜Rush＞ When played: Deal damage split among enemy units equal to the amount of action cards used this battle. When on the field: Deal 2 damage to the enemy Hero whenever the player who controls this unit destroys another unit with effect damage. (Excluding damage through ＜Spillover＞.) Count: 0', {
+        left: 475,
+        top: 250,
+        width: 400,
+        height: 800,
+        fontSize: 18,
+        fontFamily: 'Arial',
+        fill: '#ffffff',
+        hasControls: false,
+        lockMovementX: true
+      })
+        this.cardRename = cardName;
+        this.canvas.add(cardName)
+        this.canvas.add(textbox)
+        this.canvas.backgroundColor = 'black';
+        this.cardArt =  fabric.Image.fromURL('./card/hbm011.png', img => {
+          img.top = 50;
+          img.left = 50;
+          this.cardArtImg = img;
+          this.canvas.add(this.cardArtImg);
+          this.canvas.bringToFront(this.cardArtImg);
+      })
+       // LINE
+        this.line = new fabric.Line([425, 45, 425, 125], {
+          stroke: '#B12719',
+          strokeWidth: 6,
+          selectable: false,
+          evented: false,
+        })
+        this.canvas.add(this.line);
+
+        this.emblem = fabric.Image.fromURL('./card/icon-attribute-red.png', img => {
+          img.selectable = false;
+          img.evented = false;
+          img.left = 475;
+          img.top = 150;
+          img.scaleToHeight(75);
+          img.scaleToWidth(75);
+          this.emblemImg = img;
+          this.canvas.add(img)
+      })
+
+       this.cardRarityArt = fabric.Image.fromURL('./card/legendaryRarity.png', img => {
+        img.selectable = false;
+        img.evented = false;
+        img.left = 525;
+        img.top = -125;
+        img.scaleToHeight(100);
+        img.scaleToWidth(250);
+        this.cardRarityArt = img;
+        this.canvas.add(img)
+      })
+
+        this.canvas.renderAll();
+        // Color
+
+        window.addEventListener('keypress', e => {
+        if (e.keyCode === 2) {
+          let obj = this.canvas.getActiveObject();
+          obj.setSelectionStyles({ fill: '#B9BB72' })
+          this.canvas.renderAll();
+        }
+        if (e.keyCode === 26) {
+          let obj = this.canvas.getActiveObject();
+          obj.setSelectionStyles({ fill: '#588599' })
+          this.canvas.renderAll();
+        }
+      })
+    }
+  })
+</script>
+
+</body>
+</html>
