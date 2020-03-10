@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+#header {
+  background: #fff;
+  height: 85px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  padding: 20px 0;
+  z-index: 1030;
+  -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.logo-container {
+  width: 150px;
+}
+
+.brand-name {
+  margin-top: 10px;
+  color: #005b96 !important;
+  font-variant: small-caps;
+  position: relative;
+  line-height: 1.2;
+}
+
+.brand-name::after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 2px;
+  bottom: 0;
+  background-color: #005b96;
+  position: absolute;
+}
+
+.brand-name::before {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 2px;
+  right: 0;
+  top: 3px;
+  background-color: #005b96;
+  position: absolute;
+}
+
+.logo {
+  height: 100%;
+  width: 55px;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.float-left {
+  float: left !important;
+}
+
+.d-lg-block {
+  display: block !important;
+}
+
+.active a {
+  color: #005b96 !important;
+}
+
+.btn-get-started {
+  padding: 10px 32px;
+  border: 2px solid white;
+  border-radius: 50px;
+  margin: 0 20px 20px 0;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.btn-get-started__active {
+  background-color: white !important;
+  color: #005b96;
+}
+
+.btn-get-started__active:hover {
+  color: white !important;
+  background-color: #005b96 !important;
+}
+
+.btn-get-started:hover {
+  color: #005b96;
+  background-color: white;
+  text-decoration: none;
+}
+
+#intro {
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  padding: 200px 0 120px 0;
+  background-color: #005b96;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#intro .intro-info {
+  width: 50%;
+  float: left;
+}
+
+#intro .intro-img {
+  width: 50%;
+  float: right;
+}
+
+#intro h2 {
+  color: #fff;
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+#intro span {
+  color: #b3cde0;
+  text-decoration: underline;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="card.css" />
+
+		<title>TEPPEN Card Maker</title>
+	</head>
+	<body class="bg-gray-900 text-white tracking-tight">
+		<div @paste="pasteImage" id="app">
+			<div class="uppercase font-bold text-center py-8"
+				><p class="text-4xl">TEPPEN Card Maker</p>
+				<p class="text-xl text-gray-700">By Effy</p>
+			</div>
+			<div class="sm:flex justify-around items-center">
+				<div class="w-full md:w-1/3 bg-gray-900 p-10">
+					<label
+						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+						for=""
+					>
+						Card Name
+					</label>
+					<input
+						v-model="cardName"
+						class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none mb-8 "
+						id=""
+						type="text"
+					/>
+					<label
+						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+						for=""
+					>
+						Cost
+					</label>
+					<input
+						@change="changeCost(cardCost)"
+						class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none  mb-8"
+						id=""
+						type="number"
+						min="0"
+						max="99"
+						v-model="cardCost"
+					/>
+<!-- 					<label
+						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+						for=""
+					>
+						Attack
+					</label>
+					<input
+						@change="changeAttack(cardAttack)"
+						v-model="cardAttack"
+						class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none  mb-8"
+						id=""
+						type="number"
+						min="0"
+						max="99"
+					/>
+					<label
+						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+						for=""
+					>
+						Health
+					</label>
+					<input
+						@change="changeHealth(cardHealth)"
+						v-model="cardHealth"
+						class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none  mb-8"
+						id=""
+						type="number"
+						min="0"
+						max="99"
+					/> -->
+
+					<label
+						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+						for="grid-state"
+					>
+						Color
+					</label>
+					<div class="relative">
+						<select
+							@change="changeEmblem(cardColor);changeInner(cardColor)"
+							v-model="cardColor"
+							class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none mb-8"
+							id="grid-state"
+						>
+							<option disabled value="">Please Select Color</option>
+							<option>Red</option>
+							<option>Green</option>
+							<option>Purple</option>
+							<option>Black</option>
+						</select>
+						<div
+							class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+						>
+							<svg
+								class="fill-current h-4 w-4"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 20 20"
+							>
+								<path
+									d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+								/>
+							</svg>
+						</div>
+					</div>
+					<label
+						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+						for="grid-state"
+					>
+						Rarity
+					</label>
+					<div class="relative">
+						<select
+							v-model="cardRarity"
+							@change="changeRarity(cardRarity)"
+							class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none mb-8"
+							id="grid-state"
+						>
+							<option disabled value="">Please Select Rarity</option>
+							<option>Common</option>
+							<option>Rare</option>
+							<option>Epic</option>
+							<option>Legendary</option>
+						</select>
+						<div
+							class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+						>
+							<svg
+								class="fill-current h-4 w-4"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 20 20"
+							>
+								<path
+									d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+								/>
+							</svg>
+						</div>
+					</div>
+					<label
+						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+						for="grid-state"
+					>
+						Artwork
+					</label>
+					<div>
+						<label class="w-64 flex flex-col items-center px-2 py-3 bg-gray-800 text-white rounded-lg shadow-lg tracking-wide text-xs font-bold uppercase border border-gray-900 cursor-pointer">
+											<svg class="w-8 h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+												<path
+													d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+											</svg>
+						<span>Select A File</span>
+						<input class="hidden" @change="handleImage(fileInput)" ref="fileInput" type="file" id="imageLoader" name="imageLoader" />
+						</label>
+					</div>
+									
+				</div>
+
+				<div class="flex flex-col items-center justify-center"
+					><canvas width="361" height="495" id="c"></canvas>
+					<div class="flex">
+					<button @click="saveImage" class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded my-8 mr-4">
+						Download
+					</button>
+					<button @click="newTab" class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded my-8">
+						New Tab
+					</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.4.0/fabric.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+		<script>
+			new Vue({
+				el: "#app",
+				data: {
+					canvas: {
+						width: 361,
+						height: 495
+					},
+					card: "Card Example",
+					cardName: "Card Example",
+					cardHealth: 0,
+					cardCost: 0,
+					cardAttack: 0,
+					cardColor: "Red",
+					cardRarity: "Legendary",
+					border: null,
+					borderImg: null,
+					borderColor: null,
+					borderColorImg: null,
+					mask: null,
+					maskImg: null,
+					artworkImg: null,
+					artwork: null,
+					rarity: null,
+					rarityImg: null,
+					emblem: null,
+					emblemImg: null,
+					stats: null,
+					statsImg: null,
+					canvas: null,
+					fileInput: null,
+					cost: null,
+					costImg: null,
+					attack: null,
+					attackImg: null,
+					health: null,
+					healthImg: null,
+					imageGroup: null
+				},
+				mounted: function() {
+/* 					function sortLayout(canvas) {
+						canvas.sendToBack(this.maskImg);
+						canvas.bringForward(this.artworkImg)
+						canvas.bringForward(this.borderColorImg);
+						canvas.bringForward(this.borderImg);
+						canvas.bringForward(this.emblemImg);
+						canvas.bringToFront(this.statsImg);
+						canvas.bringToFront(this.attackImg);
+						canvas.bringToFront(this.healthImg);
+						return canvas.renderAll()
+					} */
+					let canvas = new fabric.Canvas("c", {
+						preserveObjectStacking: true
+					});
+					this.canvas = canvas
+					this.fileInput = this.$refs.fileInput
+					function renderLayer2() {
+						this.emblem = fabric.Image.fromURL(
+							"./card/redEmblem.png",
+							function (oImg) {
+								this.emblemImg = oImg;
+								this.emblemImg.selectable = false;
+								this.emblemImg.evented = false;                        
+								canvas.add(this.emblemImg);
+								canvas.bringToFront(this.emblemImg);
+							}
+						);
+						this.rarity = fabric.Image.fromURL(
+							"./card/legendaryRarity.png",
+							oImg => {
+								this.rarityImg = oImg;
+								this.rarityImg.selectable = false;
+								this.rarityImg.evented = false;
+                                this.rarityImg.left = 5;
+								canvas.add(this.rarityImg);
+								canvas.bringToFront(this.rarityImg);
+							}
+						);
+/* 						this.stats = fabric.Image.fromURL(
+							"./card/cardStats.png",
+							function (oImg) {
+								this.statsImg = oImg;
+								this.statsImg.selectable = false;
+								this.statsImg.evented = false;
+								canvas.add(this.statsImg);
+								canvas.bringToFront(this.statsImg);
+							}
+						); */
+						return setTimeout(renderLayer3, 500);
+					}
+
+					function renderLayer3() {
+						this.cost = fabric.Image.fromURL('./card/0.png', oImg => {
+							this.costImg = oImg;
+							this.costImg.selectable = false;
+							this.costImg.evented = false;
+							//20, 22, 48, 65
+							this.costImg.top = 22;
+							this.costImg.left = 20;
+							this.costImg.scaleToHeight(65);
+							this.costImg.scaleToWidth(48);
+							canvas.add(this.costImg)
+							canvas.bringToFront(this.costImg);
+						})
+/* 						this.attack = fabric.Image.fromURL('./card/0.png', oImg => {
+							this.attackImg = oImg;
+							this.attackImg.selectable = false;
+							this.attackImg.evented = false;
+							//295, 268, 36, 58
+							this.attackImg.top = 268;
+							this.attackImg.left = 295;
+							this.attackImg.scaleToHeight(58);
+							this.attackImg.scaleToWidth(36);
+							canvas.add(this.attackImg);
+							canvas.bringToFront(this.attackImg);
+						})
+
+						this.health = fabric.Image.fromURL('./card/0.png', oImg => {
+							this.healthImg = oImg;
+							this.healthImg.selectable = false;
+							this.healthImg.evented = false;
+							//295, 350, 36, 58
+							this.healthImg.top = 350;
+							this.healthImg.left = 295;
+							this.healthImg.scaleToHeight(58);
+							this.healthImg.scaleToWidth(36);
+							canvas.add(this.healthImg);
+							canvas.bringToFront(this.healthImg);
+						}) */
+						return this.canvas = canvas;
+						// return sortLayout(canvas);
+					}
+
+					function renderLayer1() {
+
+						// interface
+						this.border = fabric.Image.fromURL(
+							"./card/spellborder.png",
+							function (oImg) {
+								this.borderImg = oImg;
+								this.borderImg.selectable = false;
+								this.borderImg.evented = false;							
+								canvas.add(this.borderImg);
+							}
+						);
+						this.borderColor = fabric.Image.fromURL(
+							"./card/spellRed.png",
+							function (oImg) {
+								this.borderColorImg = oImg;
+								this.borderColorImg.selectable = false;
+								this.borderColorImg.evented = false;
+								canvas.add(this.borderColorImg);
+							}
+						);
+						return setTimeout(renderLayer2, 500);
+					}
+
+					this.mask = new fabric.Image.fromURL(
+						"./card/spellmask.png",
+						function (oImg) {
+							this.maskImg = oImg;
+							this.maskImg.selectable = false;
+                            this.maskImg.left = 20;
+							this.artwork = new fabric.Image.fromURL(
+								"./card/artwork.png",
+								function (oImg) {
+									this.artworkImg = oImg;
+									this.artworkImg.selectable = true;
+									this.artworkImg.left = 0;
+									this.artworkImg.top = 0;
+									this.artwork.originX = "center";
+									this.artwork.originY = "center";
+									this.artworkImg.globalCompositeOperation = "source-atop";
+									canvas.add(this.maskImg);
+									canvas.add(this.artworkImg);
+									return setTimeout(renderLayer1, 500);
+								}
+							);
+						}
+					);
+				},
+				methods: {
+					handleImage: (image) => {
+						const input = image
+						const files = input.files
+						if (files && files[0]) {
+							const reader = new FileReader
+							reader.onload = e => {
+								  this.artworkImg.setSrc(e.target.result, (img) => {
+									img.scaleToWidth(361);
+									img.scaleToHeight(495);
+									this.canvas.centerObject(img);
+									this.canvas.renderAll();
+								})
+							}
+							reader.readAsDataURL(files[0]);
+						}  
+					},
+					pasteImage: (e) => {
+						var items = e.clipboardData.items;
+						e.preventDefault();
+						e.stopPropagation();
+						for (var i = 0; i < items.length; i++) {
+							if (items[i].type.indexOf('image') == -1) continue;
+							var file = items[i],
+								type = items[i].type;
+							var imageData = file.getAsFile();
+							var URLobj = window.URL || window.webkitURL;
+							this.artworkImg.setSrc(URLobj.createObjectURL(imageData), (img) => {
+								img.scaleToWidth(361);
+								img.scaleToHeight(495);
+								this.canvas.centerObject(img);
+								this.canvas.renderAll();
+							})
+
+						}
+					},
+					newTab: function() {
+						function debugBase64(base64URL) {
+							var win = window.open();
+							win.document.write('<iframe src="' + base64URL + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%" allowfullscreen></iframe>');
+						}
+						var dataUrl = this.canvas.toDataURL();	
+						return debugBase64(dataUrl)		
+					},
+					saveImage: function() {
+						function downloadURI(uri, name) {
+							var link = document.createElement("a");
+							link.download = name;
+							link.href = uri;
+							document.body.appendChild(link);
+							link.click();
+							document.body.removeChild(link);
+							delete link;
+						}
+						var dataUrl = this.canvas.toDataURL();					
+						return downloadURI(dataUrl, `${this.cardName}.png`);
+					},
+					changeEmblem: (color) => {
+						let cardEmblem = {
+							Red: "./card/redEmblem.png",
+							Green: "./card/greenEmblem.png", 
+							Purple: "./card/purpleEmblem.png", 
+							Black: "./card/blackEmblem.png",
+						}
+						return this.emblemImg.setSrc(cardEmblem[color], (img) => {
+							this.canvas.renderAll();
+						})
+						
+					},
+					changeInner: (color) => {
+						let cardEmblem = {
+							Red: "./card/spellRed.png",
+							Green: "./card/spellGreen.png",
+							Purple: "./card/spellPurple.png",
+							Black: "./card/spellBlack.png"
+						}
+						return this.borderColorImg.setSrc(cardEmblem[color], (img) => {
+							this.canvas.renderAll()
+						})
+						
+					},
+					changeRarity: (color) => {
+						let cardEmblemRarity = {
+							Legendary: "card/legendaryRarity.png",
+							Epic: "card/epicRarity.png",
+							Rare: "card/rareRarity.png",
+							Common: "card/commonRarity.png"
+						}
+						return this.rarityImg.setSrc(cardEmblemRarity[color], (img) => {
+							this.canvas.renderAll();
+						});
+					},
+					changeCost: (cost) => {
+						let number = {
+							0: "card/0.png",
+							1: "card/1.png",
+							2: "card/2.png",
+							3: "card/3.png",
+							4: "card/4.png",
+							5: "card/5.png",
+							6: "card/6.png",
+							7: "card/7.png",
+							8: "card/8.png",
+							9: "card/9.png"
+						}
+						return this.costImg.setSrc(number[cost], (img) => {
+							this.canvas.renderAll();
+						});
+					
+					},
+					changeHealth: (cost) => {
+						let number = {
+							0: "card/0.png",
+							1: "card/1.png",
+							2: "card/2.png",
+							3: "card/3.png",
+							4: "card/4.png",
+							5: "card/5.png",
+							6: "card/6.png",
+							7: "card/7.png",
+							8: "card/8.png",
+							9: "card/9.png"
+						}
+						return this.healthImg.setSrc(number[cost], (img) => {
+							this.canvas.renderAll();
+						})
+						
+					},
+					changeAttack: (cost) => {
+						let number = {
+							0: "card/0.png",
+							1: "card/1.png",
+							2: "card/2.png",
+							3: "card/3.png",
+							4: "card/4.png",
+							5: "card/5.png",
+							6: "card/6.png",
+							7: "card/7.png",
+							8: "card/8.png",
+							9: "card/9.png"
+						}
+						return this.attackImg.setSrc(number[cost], (img) => {
+							this.canvas.renderAll();
+						})
+						
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
