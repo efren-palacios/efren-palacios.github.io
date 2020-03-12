@@ -213,6 +213,8 @@
 					fileInput: null,
 					cost: null,
 					costImg: null,
+					cost2: null,
+					costImg2: null,
 					attack: null,
 					attackImg: null,
 					health: null,
@@ -283,6 +285,18 @@
 							this.costImg.scaleToWidth(48);
 							canvas.add(this.costImg)
 							canvas.bringToFront(this.costImg);
+						})
+						this.cost2 = fabric.Image.fromURL('./card/0.png', oImg => {
+							this.costImg2 = oImg;
+							this.costImg2.selectable = false;
+							this.costImg2.evented = false;
+							//20, 22, 48, 65
+							this.costImg2.top = 22;
+							this.costImg2.left = 20;
+							this.costImg2.scaleToHeight(65);
+							this.costImg2.scaleToWidth(48);
+							canvas.add(this.costImg2)
+							canvas.bringToFront(this.costImg2);
 						})
 /* 						this.attack = fabric.Image.fromURL('./card/0.png', oImg => {
 							this.attackImg = oImg;
@@ -466,9 +480,24 @@
 							8: "card/8.png",
 							9: "card/9.png"
 						}
-						return this.costImg.setSrc(number[cost], (img) => {
+						if (cost > 9) {
+							let n = [...cost + ''].map(n => +n)
+							this.costImg.setSrc(number[n[1]], (img) => {
+								this.canvas.renderAll();
+							})
+							this.costImg.left = n[0] == 1 ? 35 : 40;
+							this.costImg2.setSrc(number[n[0]], (img) => {
+								this.canvas.renderAll();
+							})
+							return this.costImg2.left = -5;
+						}
+						this.costImg.setSrc(number[cost], (img) => {
 							this.canvas.renderAll();
 						});
+						this.costImg2.setSrc('', (img) => {
+							this.canvas.renderAll();
+						});
+						return this.costImg.left = 20;
 					
 					},
 					changeHealth: (cost) => {

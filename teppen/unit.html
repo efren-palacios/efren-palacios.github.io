@@ -213,10 +213,16 @@
 					fileInput: null,
 					cost: null,
 					costImg: null,
+					cost2: null,
+					costImg2: null,
 					attack: null,
 					attackImg: null,
+					attack2: null,
+					attackImg2: null,
 					health: null,
 					healthImg: null,
+					health2: null,
+					healthImg2: null,
 					imageGroup: null
 				},
 				mounted: function() {
@@ -283,6 +289,18 @@
 							canvas.add(this.costImg)
 							canvas.bringToFront(this.costImg);
 						})
+						this.cost2 = fabric.Image.fromURL('./card/0.png', oImg => {
+							this.costImg2 = oImg;
+							this.costImg2.selectable = false;
+							this.costImg2.evented = false;
+							//20, 22, 48, 65
+							this.costImg2.top = 22;
+							this.costImg2.left = 20;
+							this.costImg2.scaleToHeight(65);
+							this.costImg2.scaleToWidth(48);
+							canvas.add(this.costImg2)
+							canvas.bringToFront(this.costImg2);
+						})
 						this.attack = fabric.Image.fromURL('./card/0.png', oImg => {
 							this.attackImg = oImg;
 							this.attackImg.selectable = false;
@@ -294,6 +312,18 @@
 							this.attackImg.scaleToWidth(36);
 							canvas.add(this.attackImg);
 							canvas.bringToFront(this.attackImg);
+						})
+						this.attack2 = fabric.Image.fromURL('./card/0.png', oImg => {
+							this.attackImg2 = oImg;
+							this.attackImg2.selectable = false;
+							this.attackImg2.evented = false;
+							//295, 268, 36, 58
+							this.attackImg2.top = 268;
+							this.attackImg2.left = 295;
+							this.attackImg2.scaleToHeight(58);
+							this.attackImg2.scaleToWidth(36);
+							canvas.add(this.attackImg2);
+							canvas.bringToFront(this.attackImg2);
 						})
 
 						this.health = fabric.Image.fromURL('./card/0.png', oImg => {
@@ -307,6 +337,18 @@
 							this.healthImg.scaleToWidth(36);
 							canvas.add(this.healthImg);
 							canvas.bringToFront(this.healthImg);
+						})
+						this.health2 = fabric.Image.fromURL('./card/0.png', oImg => {
+							this.healthImg2 = oImg;
+							this.healthImg2.selectable = false;
+							this.healthImg2.evented = false;
+							//295, 350, 36, 58
+							this.healthImg2.top = 350;
+							this.healthImg2.left = 295;
+							this.healthImg2.scaleToHeight(58);
+							this.healthImg2.scaleToWidth(36);
+							canvas.add(this.healthImg2);
+							canvas.bringToFront(this.healthImg2);
 						})
 						return this.canvas = canvas;
 						// return sortLayout(canvas);
@@ -464,10 +506,24 @@
 							8: "card/8.png",
 							9: "card/9.png"
 						}
-						return this.costImg.setSrc(number[cost], (img) => {
+						if (cost > 9) {
+							let n = [...cost+''].map(n=>+n)
+							this.costImg.setSrc(number[n[1]], (img) => {							
+								this.canvas.renderAll();
+							})
+							this.costImg.left = n[0] == 1 ? 35 : 40;
+						  this.costImg2.setSrc(number[n[0]], (img) => {						
+								this.canvas.renderAll();
+							})
+							return this.costImg2.left = -5;
+						}
+						this.costImg.setSrc(number[cost], (img) => {
 							this.canvas.renderAll();
 						});
-					
+						this.costImg2.setSrc('', (img) => {
+							this.canvas.renderAll();
+						});					
+						return this.costImg.left = 20;
 					},
 					changeHealth: (cost) => {
 						let number = {
@@ -482,9 +538,24 @@
 							8: "card/8.png",
 							9: "card/9.png"
 						}
-						return this.healthImg.setSrc(number[cost], (img) => {
+						if (cost > 9) {
+							let n = [...cost + ''].map(n => +n)
+							this.healthImg.setSrc(number[n[1]], (img) => {
+								this.canvas.renderAll();
+							})
+							this.healthImg.left = n[0] == 1 ? 305 : 315;
+							this.healthImg2.setSrc(number[n[0]], (img) => {
+								this.canvas.renderAll();
+							})
+							return this.healthImg2.left = 280;
+						}
+						this.healthImg.setSrc(number[cost], (img) => {
 							this.canvas.renderAll();
-						})
+						});
+						this.healthImg2.setSrc('', (img) => {
+							this.canvas.renderAll();
+						});
+						return this.healthImg.left = 295;
 						
 					},
 					changeAttack: (cost) => {
@@ -500,10 +571,24 @@
 							8: "card/8.png",
 							9: "card/9.png"
 						}
-						return this.attackImg.setSrc(number[cost], (img) => {
+						if (cost > 9) {
+							let n = [...cost + ''].map(n => +n)
+							this.attackImg.setSrc(number[n[1]], (img) => {
+								this.canvas.renderAll();
+							})
+							this.attackImg.left = n[0] == 1 ? 305 : 315;
+							this.attackImg2.setSrc(number[n[0]], (img) => {
+								this.canvas.renderAll();
+							})
+							return this.attackImg2.left = 280;
+						}
+						this.attackImg.setSrc(number[cost], (img) => {
 							this.canvas.renderAll();
-						})
-						
+						});
+						this.attackImg2.setSrc('', (img) => {
+							this.canvas.renderAll();
+						});
+						return this.attackImg.left = 295;
 					}
 				}
 			});
