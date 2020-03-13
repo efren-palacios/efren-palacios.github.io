@@ -280,6 +280,14 @@
         this.canvas.renderAll();
         // Color
 
+        this.canvas.on('text:changed', (e) => {
+          obj = this.canvas.getActiveObject();
+          let fontSize = obj.fontSize;
+          if (fontSize == 48) {
+            this.cardName = obj.text;
+          }
+        })
+
         window.addEventListener('keypress', e => {
         if (e.keyCode === 2) {
           let obj = this.canvas.getActiveObject();
