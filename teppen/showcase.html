@@ -62,6 +62,10 @@
                 <option>Legendary</option>
               </select>
             </div>
+            <div @click="changetextColor('#B9BB72')" class="block w-12 h-12 rounded-lg cursor-pointer mx-4" style="background-color: #B9BB72"></div>
+            <div @click="changetextColor('#588599')" class="block w-12 h-12 rounded-lg cursor-pointer mx-4" style="background-color: #588599"></div>
+            <div @click="changetextColor('#FFFFFF')" class="block w-12 h-12 rounded-lg cursor-pointer mx-4" style="background-color: #FFFFFF"></div>
+            <div><label class="block w-12 h-12 rounded-lg cursor-pointer mx-4 border border-solid border-white" ><span class="text-3xl block text-center">?</span><input class="hidden" type="color"></input></label></div>
             <div class="block uppercase tracking-wide text-gray-700 mx-5 text-xs font-bold mb-2">Select text and use (Ctrl+B) for <span style="color: #B9BB72">Gold</span> and (Ctrl+Z) for <span style="color: #588599">Blue</span></div>
         </div>
         
@@ -122,6 +126,12 @@
       emblemImg: null
     },
     methods: {
+        changetextColor: function(color) {
+        console.log('here', color)
+        let obj = this.canvas.getActiveObject();
+        obj.setSelectionStyles({ fill: color })
+        this.canvas.renderAll();
+        },
         handleImage: function(image) {
         const input = image
         const files = input.files
@@ -290,6 +300,10 @@
             this.cardName = obj.text;
           }
         })
+
+        window.addEventListener('change', e => {
+          this.changetextColor(e.target.value);
+        });
 
         window.addEventListener('keypress', e => {
         if (e.keyCode === 2) {
