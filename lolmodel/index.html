@@ -58,6 +58,7 @@
 
 
         var loader = new THREE.SKNLoader();
+        loader.crossOrigin = "";
         loader.load('./ahri/skin14/ahri_skin14.skn', function ({geometry, materials}) {
           console.log(geometry, materials)
           var textures = [
