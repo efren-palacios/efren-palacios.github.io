@@ -29,6 +29,7 @@
 
     function init() {
 
+
       // renderer
       renderer = new THREE.WebGLRenderer({ antialias: true });
       renderer.setSize(window.innerWidth, window.innerHeight);
@@ -38,36 +39,31 @@
 
       scene = new THREE.Scene();
 
+      // camera
+      camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, .1, 10000);
+      camera.position.z = 300;
+      camera.lookAt(scene.position);
+
+
       //lights
 
 
-      light1 = new THREE.PointLight(0xff0040, 5, 100);
-      light1.position.set(0, 0, 2);
-      light1.target = camera;
-      scene.add(light1);
+      light1 = new THREE.DirectionalLight(0xff0040, .5);
+      light1.position.set(250, 250, 1);
+      camera.add(light1);
 
-      light2 = new THREE.PointLight(0x0040ff, 5, 100);
-      light2.position.set(50, 50, 2);
-      light2.target = camera;
-      scene.add(light2);
+      light2 = new THREE.DirectionalLight(0x0040ff, .5);
+      light2.position.set(500, 500, 1);
+      camera.add(light2);
 
-      light3 = new THREE.PointLight(0x80ff80, 5, 100);
-      light3.position.set(-25, -25, 2);
-      light3.target = camera;
-      scene.add(light3);
+      light3 = new THREE.DirectionalLight(0x80ff80, .5);
+      light3.position.set(-500, -500, 1);
+      camera.add(light3);
 
-      light4 = new THREE.PointLight(0xffaa00, 5, 100);
-      light4.position.set(-25, 25, 2);
+      light4 = new THREE.DirectionalLight(0xffaa00, .5);
+      light4.position.set(-250, 250, 1);
       scene.add(light4);
 
-      let ambientLight = new THREE.AmbientLight(0xffffff)
-      ambientLight.intensity = .2;
-      scene.add(ambientLight)
-
-      // camera
-      camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 10000);
-      camera.position.z = 300;
-      camera.lookAt(scene.position);
 
       // geometry
       var geometry1 = new THREE.PlaneGeometry(100, 140, 1, 1);
@@ -116,7 +112,7 @@
       // controls 
 
       controls = new THREE.OrbitControls(camera, renderer.domElement);
-
+      scene.add(camera);
     }
 
 
