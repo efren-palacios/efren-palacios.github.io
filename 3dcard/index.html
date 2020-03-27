@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Yugioh 3D Card Effect</title>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="https://threejs.org/build/three.min.js"></script>
+  <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+  <script>
+    var renderer, scene, camera, card, controls, composer;
+
+    var clock = new THREE.Clock();
+
+    init();
+    animate();
+
+    function init() {
+
+      // renderer
+      renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
+
+      // scene
+
+      scene = new THREE.Scene();
+
+      //lights
+
+
+      light1 = new THREE.PointLight(0xff0040, 5, 100);
+      light1.position.set(0, 0, 2);
+      light1.target = camera;
+      scene.add(light1);
+
+      light2 = new THREE.PointLight(0x0040ff, 5, 100);
+      light2.position.set(50, 50, 2);
+      light2.target = camera;
+      scene.add(light2);
+
+      light3 = new THREE.PointLight(0x80ff80, 5, 100);
+      light3.position.set(-25, -25, 2);
+      light3.target = camera;
+      scene.add(light3);
+
+      light4 = new THREE.PointLight(0xffaa00, 5, 100);
+      light4.position.set(-25, 25, 2);
+      scene.add(light4);
+
+      let ambientLight = new THREE.AmbientLight(0xffffff)
+      ambientLight.intensity = .2;
+      scene.add(ambientLight)
+
+      // camera
+      camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 10000);
+      camera.position.z = 300;
+      camera.lookAt(scene.position);
+
+      // geometry
+      var geometry1 = new THREE.PlaneGeometry(100, 140, 1, 1);
+      var geometry2 = new THREE.PlaneGeometry(100, 140, 1, 1);
+      geometry2.applyMatrix4(new THREE.Matrix4().makeRotationY(Math.PI));
+
+      // textures
+      var textureFront = new THREE.TextureLoader().load('./bewd.jpg');
+
+      var textureBack = new THREE.TextureLoader().load('./back.png');
+
+      var foil = new THREE.TextureLoader().load('./foil.jpg');
+
+
+      // shader 
+
+      let uniforms = {
+        colorB: { type: 'vec3', value: new THREE.Color(0xACB6E5) },
+        colorA: { type: 'vec3', value: new THREE.Color(0x74ebd5) }
+      }
+
+      // material
+      var material1 = new THREE.MeshPhongMaterial({ map: textureFront });
+      var material2 = new THREE.MeshBasicMaterial({ map: textureBack });
+
+
+      // card
+      card = new THREE.Object3D();
+      scene.add(card);
+
+      var directionalLight = new THREE.DirectionalLight(0xffffff);
+      directionalLight.target = card;
+      directionalLight.position.x = 1;
+      directionalLight.position.y = 1;
+      directionalLight.position.z = 2;
+      scene.add(directionalLight);
+
+      //0x0040ff
+
+      // mesh
+      var mesh1 = new THREE.Mesh(geometry1, material1);
+      card.add(mesh1);
+      var mesh2 = new THREE.Mesh(geometry2, material2);
+      card.add(mesh2);
+
+      // controls 
+
+      controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+    }
+
+
+    function animate() {
+
+      requestAnimationFrame(animate);
+      //card.rotation.y += 0.01;
+      controls.update();
+      renderer.render(scene, camera);
+
+    }
+
+  </script>
+</body>
+
+</html>
