@@ -15,7 +15,7 @@ class Scene {
     this.grid.position.z = 500;
     this.scene.add(this.grid);
     this.scene.background = new THREE.Color(0x392759);
-    this.animate();
+
     // SUN
     this.sunGeom = new THREE.CircleBufferGeometry(200, 64);
     this.sunMat = new THREE.LineBasicMaterial({color: 0xff8800, fog:false, transparent: true});
@@ -40,6 +40,8 @@ class Scene {
         `gl_FragColor = vec4( outgoingLight, diffuseColor.a * smoothstep(0.5, 0.75, vUv.y));`
       );
     }
+
+
     this.wireSun = new THREE.EdgesGeometry(new THREE.SphereGeometry(Math.PI * 100, Math.PI * 64, Math.PI));
     this.lines = new THREE.LineSegments(this.wireSun, this.sunMat);
     this.lines.rotateZ(Math.PI / 2);
@@ -48,12 +50,19 @@ class Scene {
     this.sun = new THREE.Mesh(this.sunGeom, this.sunMat);
     this.sun.position.set(0, 0, -550);
     this.scene.add(this.sun);
-    
 
+    window.addEventListener('resize', ()=> this.onWindowResize(), false);
+
+    this.animate();
   }
   animate() {
     requestAnimationFrame(() => this.animate());
     this.grid.position.z += .25;
     this.renderer.render(this.scene, this.camera);
+  }
+  onWindowResize() {
+    this.camera.aspect = window.innerWidth / window.innerHeight;
+    this.camera.updateProjectionMatrix();
+    this.renderer.setSize(window.innerWidth, window.innerHeight);
   }
 }
