@@ -18,7 +18,8 @@ class Scene {
     this.animate();
     // SUN
     this.sunGeom = new THREE.CircleBufferGeometry(200, 64);
-    this.sunMat = new THREE.MeshBasicMaterial({ color: 0xff8800, fog: false, transparent: true });
+    this.sunMat = new THREE.LineBasicMaterial({color: 0xff8800, fog:false, transparent: true});
+    //this.sunMat = new THREE.MeshBasicMaterial({ color: 0xff8800, fog: false, transparent: true });
     this.sunMat.onBeforeCompile = shader => {
       shader.uniforms.time = { value: 0 };
       shader.vertexShader =
@@ -39,9 +40,15 @@ class Scene {
         `gl_FragColor = vec4( outgoingLight, diffuseColor.a * smoothstep(0.5, 0.75, vUv.y));`
       );
     }
+    this.wireSun = new THREE.EdgesGeometry(new THREE.SphereGeometry(Math.PI * 100, Math.PI * 64, Math.PI));
+    this.lines = new THREE.LineSegments(this.wireSun, this.sunMat);
+    this.lines.rotateZ(Math.PI / 2);
+    this.lines.position.set(0,0,-550);
+    this.scene.add(this.lines);
     this.sun = new THREE.Mesh(this.sunGeom, this.sunMat);
     this.sun.position.set(0, 0, -550);
     this.scene.add(this.sun);
+    
 
   }
   animate() {
