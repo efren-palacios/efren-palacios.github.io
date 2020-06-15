@@ -128,7 +128,8 @@
       </div>
       <!-- Cards -->
       <div class="w-full h-full relative flex flex-wrap items-center justify-center mt-10 flex-wrap">
-        <div v-for="project of projects" class="max-w-md bg-black rounded overflow-hidden shadow-lg m-5">
+        <div v-for="project of projects" style="min-height: 400px;"
+          class="max-w-md bg-black rounded overflow-hidden shadow-lg m-5">
           <a :href="project.url" target="_blank"><img class="w-full" :src="project.img" alt="Teppen"></a>
           <div class="px-6 py-4">
             <a :href="project.github || project.url" target="_blank">
@@ -171,7 +172,7 @@
       el: '#app',
       data: {
         scroll: false,
-        languages: ['JavaScript', 'Vue', 'Node', 'Socket-IO', 'PHP', 'Ruby', 'Jekyll', 'Python', 'CSS3', 'HTML5'],
+        languages: ['JavaScript', 'Vue', 'Node', 'Socket-IO', 'React', 'Ruby', 'Jekyll', 'Python', 'CSS3', 'HTML5'],
         tools: ['VSCode', 'GitHub', 'BitBucket', 'GitLab', 'Bulma', 'Semantic-UI', 'TailwindCSS', 'PowerShell', 'ConEmu', 'Hyper'],
         projects: [
           {
