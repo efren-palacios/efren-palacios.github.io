@@ -121,6 +121,78 @@
 						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
 						for="grid-state"
 					>
+						Tribe 1
+					</label>
+					<div class="relative">
+						<select
+							v-model="cardTribe"
+							@change="changeTribe(cardTribe)"
+							class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none mb-8"
+							id="grid-state"
+						>
+							<option disabled value="">Please Select A Tribe</option>
+							<option>Human</option>
+							<option>None</option>
+							<option>Beast</option>
+							<option>Creature</option>
+							<option>Demon</option>
+							<option>Monster</option>
+							<option>Machine</option>
+						</select>
+						<div
+							class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+						>
+							<svg
+								class="fill-current h-4 w-4"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 20 20"
+							>
+								<path
+									d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+								/>
+							</svg>
+						</div>
+					</div>
+					<label
+						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+						for="grid-state"
+					>
+						Tribe 2
+					</label>
+					<div class="relative">
+						<select
+							v-model="cardTribe2"
+							@change="changeTribe2(cardTribe2)"
+							class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none mb-8"
+							id="grid-state"
+						>
+							<option disabled value="">Please Select A Tribe</option>
+							<option>None</option>
+							<option>Human</option>
+							<option>Beast</option>
+							<option>Creature</option>
+							<option>Demon</option>
+							<option>Monster</option>
+							<option>Machine</option>
+						</select>
+						<div
+							class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+						>
+							<svg
+								class="fill-current h-4 w-4"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 20 20"
+							>
+								<path
+									d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+								/>
+							</svg>
+						</div>
+					</div>
+					<label
+						class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+						for="grid-state"
+					>
 						Rarity
 					</label>
 					<div class="relative">
@@ -201,6 +273,8 @@
 					cardAttack: 0,
 					cardColor: "Red",
 					cardRarity: "Legendary",
+					cardTribe: "Human",
+					cardTribe2: "None",
 					border: null,
 					borderImg: null,
 					borderColor: null,
@@ -229,7 +303,11 @@
 					healthImg: null,
 					health2: null,
 					healthImg2: null,
-					imageGroup: null
+					imageGroup: null,
+					tribe: null,
+					tribeImg: null,
+					tribe2: null,
+					tribeImg2: null
 				},
 				mounted: function() {
 /* 					function sortLayout(canvas) {
@@ -257,6 +335,30 @@
 								this.emblemImg.evented = false;
 								canvas.add(this.emblemImg);
 								canvas.bringToFront(this.emblemImg);
+							}
+						);
+						this.tribe = fabric.Image.fromURL(
+							"./card/Human.png",
+							function (oImg) {
+								this.tribeImg = oImg;
+								this.tribeImg.selectable = false;
+								this.tribeImg.evented = false;
+								this.tribeImg.top = 145;
+								this.tribeImg.left = 7;
+								canvas.add(this.tribeImg);
+								canvas.bringToFront(this.tribeImg);
+							}
+						);
+						this.tribe2 = fabric.Image.fromURL(
+							"./card/None.png",
+							function (oImg) {
+								this.tribeImg2 = oImg;
+								this.tribeImg2.selectable = false;
+								this.tribeImg2.evented = false;
+								this.tribeImg2.top = 145*1.50;
+								this.tribeImg2.left = 7;
+								canvas.add(this.tribeImg2);
+								canvas.bringToFront(this.tribeImg2);
 							}
 						);
 						this.rarity = fabric.Image.fromURL(
@@ -475,6 +577,35 @@
 							this.canvas.renderAll();
 						})
 						
+					},
+					changeTribe: (color) => {
+						let cardEmblem = {
+							Human: "./card/Human.png",
+							None: "", 
+							Beast: "./card/Beast.png", 
+							Creature: "./card/Creature.png",
+							Demon: "./card/Demon.png",
+							Monster: "./card/Monster.png",
+							Machine: "./card/Machine.png"
+						}
+						return this.tribeImg.setSrc(cardEmblem[color], (img) => {
+							this.canvas.renderAll();
+						})
+						
+					},
+					changeTribe2: (color) => {
+						let cardEmblem = {
+							Human: "./card/Human.png",
+							None: "", 
+							Beast: "./card/Beast.png", 
+							Creature: "./card/Creature.png",
+							Demon: "./card/Demon.png",
+							Monster: "./card/Monster.png",
+							Machine: "./card/Machine.png"
+						}
+						return this.tribeImg2.setSrc(cardEmblem[color], (img) => {
+							this.canvas.renderAll();
+						})						
 					},
 					changeInner: (color) => {
 						let cardEmblem = {

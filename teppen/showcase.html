@@ -24,7 +24,7 @@
           </label>
           <div>
             <label
-              class="w-64 flex flex-col items-center px-2 py-3 mx-5 bg-gray-800 text-white rounded-lg shadow-lg tracking-wide text-xs font-bold uppercase border border-gray-900 cursor-pointer">
+              class="w-32 flex flex-col items-center px-2 py-3 mx-5 bg-gray-800 text-white rounded-lg shadow-lg tracking-wide text-xs font-bold uppercase border border-gray-900 cursor-pointer">
               <svg class="w-8 h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                 <path
                   d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
@@ -48,8 +48,23 @@
                 <option>Black</option>
               </select>
             </div>
+            <label class="block uppercase tracking-wide text-gray-700 mx-5 text-xs font-bold mb-2">
+              BG
+            </label>
+            <div class="relative">
+              <select v-model="bgName" @change="changeBG(bgName)"
+                class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none mb-8"
+                id="grid-state">
+                <option disabled value="">Please Select A BG</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
             <label class="block uppercase tracking-wide text-gray-700 text-xs mx-5 font-bold mb-2" for="grid-state">
-              Rarity
+              Info
             </label>
             <div class="relative">
               <select v-model="cardRarity" @change="changeRarity(cardRarity)"
@@ -62,6 +77,34 @@
                 <option>Legendary</option>
               </select>
             </div>
+          <div class="relative">
+            <select v-model="cardTribe" @change="changeTribe(cardTribe)"
+              class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none mb-8"
+              id="grid-state">
+              <option disabled value="">Please Select A Tribe</option>
+              <option>Human</option>
+              <option>None</option>
+              <option>Beast</option>
+              <option>Creature</option>
+              <option>Demon</option>
+              <option>Monster</option>
+              <option>Machine</option>
+            </select>
+          </div>
+          <div class="relative">
+            <select v-model="cardTribe2" @change="changeTribe2(cardTribe2)"
+              class="appearance-none block w-full bg-gray-800 text-white border border-gray-900 rounded py-3 px-4 leading-tight focus:outline-none mb-8"
+              id="grid-state">
+              <option disabled value="">Please Select A Tribe</option>
+              <option>None</option>
+              <option>Human</option>
+              <option>Beast</option>
+              <option>Creature</option>
+              <option>Demon</option>
+              <option>Monster</option>
+              <option>Machine</option>
+            </select>
+          </div>
             <div @click="changetextColor('#B9BB72')" class="block w-12 h-12 rounded-lg cursor-pointer mx-4" style="background-color: #B9BB72"></div>
             <div @click="changetextColor('#588599')" class="block w-12 h-12 rounded-lg cursor-pointer mx-4" style="background-color: #588599"></div>
             <div @click="changetextColor('#FFFFFF')" class="block w-12 h-12 rounded-lg cursor-pointer mx-4" style="background-color: #FFFFFF"></div>
@@ -101,6 +144,9 @@
       fileInput: null,
       cardColor: 'Red',
       cardRarity: "Legendary",
+      cardTribe: "Human",
+      cardTribe2: "None",
+      bgName: "1",
       cardRarityImg: null,
       cardRarityArt: null,
       cardRarityEmblem: {
@@ -116,6 +162,13 @@
         "Purple": "#8c50a0",
         "Black": "#323c55"
       },
+      backgrounds: {
+        1: "./card/bg1.jpg",
+        2: "./card/bg2.jpg",
+        3: "./card/bg3.jpg",
+        4: "./card/bg4.jpg",
+        5: "./card/bg5.jpg"
+      },
       emblem: null,
       emblemColor: {
         "Red": "./card/icon-attribute-red.png",
@@ -123,7 +176,20 @@
         "Purple": "./card/icon-attribute-purple.png",
         "Black": "./card/icon-attribute-black.png"
       },
-      emblemImg: null
+      tribes: {
+        Human: "./card/Human.png",
+        None: "",
+        Beast: "./card/Beast.png",
+        Creature: "./card/Creature.png",
+        Demon: "./card/Demon.png",
+        Monster: "./card/Monster.png",
+        Machine: "./card/Machine.png"
+      },
+      emblemImg: null,
+      tribe: null,
+      tribeImg: null,
+      tribe2: null,
+      tribeImg2: null
     },
     methods: {
         changetextColor: function(color) {
@@ -203,6 +269,28 @@
             this.canvas.renderAll();
           })
       },
+      changeBG: function (color) {
+        this.bg = fabric.Image.fromURL(this.backgrounds[color], img => {
+          img.selectable = false;
+          img.evented = false;
+          img.left = -300;
+          img.width = 1800;
+          img.height = 600;
+          img.opacity = .2;
+          this.canvas.setBackgroundImage(img);
+          this.canvas.renderAll();
+        })
+      },      
+      changeTribe: function(color) {
+          this.tribeImg.setSrc(this.tribes[color], img => {
+            this.canvas.renderAll();
+          })
+      },
+      changeTribe2: function(color) {
+          this.tribeImg2.setSrc(this.tribes[color], img => {
+            this.canvas.renderAll();
+          })
+      },
       changeRarity: function(color) {
           this.cardRarityArt.setSrc(this.cardRarityEmblem[color], img => {
             img.scaleToHeight(100);
@@ -216,7 +304,7 @@
           preserveObjectStacking: true
         });
         this.fileInput = this.$refs.fileInput;
-        this.bg = fabric.Image.fromURL('./card/bg2.jpg', img => {
+        this.bg = fabric.Image.fromURL('./card/bg1.jpg', img => {
         img.selectable = false;
         img.evented = false;
         img.left = -300;
@@ -278,6 +366,31 @@
           this.emblemImg = img;
           this.canvas.add(img)
       })
+
+      this.tribe = fabric.Image.fromURL(
+        "./card/Human.png",
+        img => {
+          img.selectable = false;
+          img.evented = false;
+          img.left = 735;
+          img.top = 150;
+          this.tribeImg = img;
+          this.canvas.add(img);
+          //canvas.bringToFront(tribeImg);
+        }
+      );
+      this.tribe2 = fabric.Image.fromURL(
+        "./card/Creature.png",
+        img => {
+          img.selectable = false;
+          img.evented = false;
+          img.left = 835;
+          img.top = 150;
+          this.tribeImg2 = img;
+          this.canvas.add(img);
+          //canvas.bringToFront(tribeImg);
+        }
+      );
 
        this.cardRarityArt = fabric.Image.fromURL('./card/legendaryRarity.png', img => {
         img.selectable = false;
