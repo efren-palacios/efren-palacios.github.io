@@ -32,8 +32,8 @@ class Card {
 
     this.loader = new THREE.TextureLoader();
 
-    this.textureFront = this.loader.load('./bewd.jpg');
-    this.textureBack = this.loader.load('./back.png')
+    this.textureFront = this.loader.load("./Locke_Dungeon_Heiress.png");
+    this.textureBack = this.loader.load('./CardBack3.jpg')
     this.foil = new this.loader.load('./foil.jpg');
 
     this.material1 = new THREE.MeshPhongMaterial({map: this.textureFront});
