@@ -3146,21 +3146,177 @@ const fighters = {
 
 
 
+function InsultTwo(props) {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("p", null, "I've never met a ", /*#__PURE__*/
+  React.createElement("span", { class: "capitalize" }, props.character), " player with a concept of neutral, fundamentals, or spacing. They brainlessly mash unpunishable kill moves and it works because ", /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), " is a glitch and an abomination and a mistake"), /*#__PURE__*/
+  React.createElement("br", null), /*#__PURE__*/React.createElement("p", null, "People willingly choose ", /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character)), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("p", null, "..That's so embarrassing LMAO"));
+
+}
+
+
+function InsultOne(props) {
+
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/
+  React.createElement("p", null, "Just fought a",
+  " ", /*#__PURE__*/
+  React.createElement("span", { class: "capitalize" },
+  props.character),
+  " ", "on Elite."), /*#__PURE__*/
+
+
+  React.createElement("br", null), /*#__PURE__*/
+  React.createElement("p", null, "If you play",
+  " ", /*#__PURE__*/
+  React.createElement("span", { class: "capitalize" },
+  props.character), ", you literally deserve no right to speak. You cannot open your mouth. When people talk about \"problems\" with Ultimate, you are one of those problems. It's depressing."), /*#__PURE__*/
+
+
+
+
+
+  React.createElement("br", null), /*#__PURE__*/
+  React.createElement("p", null, /*#__PURE__*/
+  React.createElement("span", { class: "capitalize" }, "\"",
+
+  props.character),
+  " ", "main\" and \"chimpanzee\" are the same word."));
+
+
+}
+
+function InsultThree(props) {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/
+  React.createElement("p", null, /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), "is broken and any ", /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), " main who tries to tell you otherwise is a charlatan and a hack and a conman. "), " ", /*#__PURE__*/React.createElement("br", null), " ", /*#__PURE__*/React.createElement("p", null, "And they also smell like shit."), " ", /*#__PURE__*/React.createElement("br", null), " ", /*#__PURE__*/React.createElement("p", null, "Easy neutral, easy juggling, and easy bake cupcake nair confirms. ", /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), " will do a shorthop tomahawk and think they're slick."), " ", /*#__PURE__*/React.createElement("br", null), " ", /*#__PURE__*/React.createElement("p", null, "They're not."));
+
+}
+
+function InsultFour(props) {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/
+  React.createElement("p", null, /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), " players will claim to be your friend yet camp you full screen, since they lack brain cells. And skill. And IQ."), /*#__PURE__*/
+  React.createElement("br", null), /*#__PURE__*/
+  React.createElement("p", null, "But at least Ultimate ", /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), " isn't the level of degenerate filth Smash 4 ", /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), " was, but they still degenerate filth. And they always will be."));
+
+}
+
+function InsultFive(props) {
+  return /*#__PURE__*/(
+    React.createElement(React.Fragment, null, /*#__PURE__*/
+    React.createElement("p", null, "Dude, if you play ", /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), " you must have 0 self-awareness. It's a caveman's character. They are designed for people with no consciousness or sense of right and wrong."), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/
+    React.createElement("p", null, "You'll remain a confused soul but you'll never find yourself."), /*#__PURE__*/
+    React.createElement("br", null), /*#__PURE__*/
+    React.createElement("p", null, /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), " mains are simpletons and need Jesus")));
+
+
+}
+
+function InsultSix(props) {
+  return /*#__PURE__*/(
+    React.createElement(React.Fragment, null, /*#__PURE__*/
+    React.createElement("p", null, /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), " is the character everyone thinks is cool until you realize all they do is fish for their 2 basic and boring combo starters and setups."), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/
+    React.createElement("p", null, "The inside of a ", /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), " main's brain is a mcdonalds happy meal")));
+
+
+}
+
+function InsultSeven(props) {
+  return /*#__PURE__*/(
+    React.createElement(React.Fragment, null, /*#__PURE__*/
+    React.createElement("p", null, /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), " mains practice all their tech only to be universally unliked and unappeciated by all."), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/
+    React.createElement("p", null, "I see nothing wrong here")));
+
+
+}
+
+function InsultEight(props) {
+  return /*#__PURE__*/(
+    React.createElement(React.Fragment, null, /*#__PURE__*/
+    React.createElement("p", null, /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), " is a pseudo skill-based character. Break the game down and you'll realize that every single \"good\" ", /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), " is actually just simply mashing buttons."), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/
+    React.createElement("p", null, "But in different order.")));
+
+
+}
+
+function InsultNine(props) {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/
+  React.createElement("p", null, "Hi ", /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), " mains,"), /*#__PURE__*/
+  React.createElement("br", null), /*#__PURE__*/
+  React.createElement("p", null, "You are a mistake ."), /*#__PURE__*/
+  React.createElement("br", null), /*#__PURE__*/
+  React.createElement("p", null, "Your existence makes other people not wanna exist."));
+
+}
+
+function InsultTen(props) {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/
+  React.createElement("p", null, /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), " is by far the most FAKE-HYPE character in Smash history, in every Smash game. That cornball has been doing the same bnb for 22 years, and it's only impressive if you're 5 or don't know what you're looking at"), /*#__PURE__*/
+  React.createElement("br", null), /*#__PURE__*/
+  React.createElement("p", null, "Can't expect much from a guy with \"", /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), "\" in his name"));
+
+}
+
+function InsultEleven(props) {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/
+  React.createElement("p", null, /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), " mains are criminals. Their favorite hobby is robbing people"));
+
+}
+
+function InsultTwelve(props) {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/
+  React.createElement("p", null, "If every ", /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), " main disappeared from the face of the earth no one would notice."), " ", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/
+  React.createElement("p", null, "Or care"));
+
+}
+
+function InsultThirteen(props) {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/
+  React.createElement("p", null, /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), " was designed so that people with an IQ with 75 can pretend they're good"));
+
+}
+
+function InsultFourteen(props) {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/
+  React.createElement("p", null, "Let's play charades. Who am I?"), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/
+  React.createElement("p", null, "\"Neutral? MASH NAIR\""), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/
+  React.createElement("p", null, "\"Looking for my kill confirm? MASH NAIR\""), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/
+  React.createElement("p", null, "\"Don't know what the fuck is going on? MASH NAIR\""), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/
+  React.createElement("p", null, "\"Feeling hopeless and braindead? Hurr durr here's a nair\""), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/
+  React.createElement("p", null, "Who am I?"), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/
+  React.createElement("p", null, "You guessed it! Your local ", /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), " main!"), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/
+  React.createElement("p", null, "Pinhead ass character"));
+
+}
+
+function InsultFifteen(props) {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("p", null, "\"", /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), " takes skill\" is a logical fallacy."), /*#__PURE__*/
+  React.createElement("br", null), /*#__PURE__*/
+  React.createElement("p", null, "They may be the only character that requires negative skill"));
+
+}
+
+function InsultSixteen(props) {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/
+  React.createElement("p", null, "Requirements for a typical ", /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), " main:"), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/
+  React.createElement("p", null, "- Lack of self-respect"), /*#__PURE__*/
+  React.createElement("p", null, "- No empathy"), /*#__PURE__*/
+  React.createElement("p", null, "- ", /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character)), /*#__PURE__*/
+  React.createElement("p", null, "- Profound and exaggerated lack of Smash skill"), /*#__PURE__*/
+  React.createElement("p", null, "- Mashy"), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/
+  React.createElement("p", null, "If all of these apply to you the chances are you main ", /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), ". If you are suffering from ", /*#__PURE__*/React.createElement("span", { class: "capitalize" }, props.character), "isms, seek the guidance of friends and family."));
+
+}
+
 let list = fighters.fighters;
 let seed = Math.floor(Math.random() * list.length);
 const { useState } = React;
 
 const Tweet = () => {
   const [count, setCount] = useState(Math.floor(Math.random() * list.length));
-  let random;
-  if (list[count].displayNameEnSecondary) {
-    random = list[count].displayNameEnSecondary.toLowerCase();
-  } else {
-    random = list[count].displayNameEn.toLowerCase();
-  }
+  let random = list[count].displayNameEnSecondary ? list[count].displayNameEnSecondary.toLowerCase() : list[count].displayNameEn.toLowerCase();
+  let insults = [/*#__PURE__*/React.createElement(InsultOne, { character: random }), /*#__PURE__*/React.createElement(InsultTwo, { character: random }), /*#__PURE__*/React.createElement(InsultThree, { character: random }), /*#__PURE__*/React.createElement(InsultFour, { character: random }), /*#__PURE__*/React.createElement(InsultFive, { character: random }), /*#__PURE__*/React.createElement(InsultSix, { character: random }), /*#__PURE__*/React.createElement(InsultSeven, { character: random }), /*#__PURE__*/React.createElement(InsultEight, { character: random }), /*#__PURE__*/React.createElement(InsultNine, { character: random }), /*#__PURE__*/React.createElement(InsultTen, { character: random }), /*#__PURE__*/React.createElement(InsultEleven, { character: random }), /*#__PURE__*/React.createElement(InsultTwelve, { character: random }), /*#__PURE__*/React.createElement(InsultThirteen, { character: random }), /*#__PURE__*/React.createElement(InsultFourteen, { character: random }), /*#__PURE__*/React.createElement(InsultFifteen, { character: random }), /*#__PURE__*/React.createElement(InsultSixteen, { character: random })];
+  let randomInsult = insults[Math.floor(Math.random() * insults.length)];
   return /*#__PURE__*/(
     React.createElement("div", { class: "min-h-screen bg-gray-800 text-white flex flex-col justify-center" }, /*#__PURE__*/
-    React.createElement("div", { class: "border bg-gray-800 w-2/6 mx-auto  border-gray-700 grid grid-cols-12 p-4 relative" }, /*#__PURE__*/
+    React.createElement("div", { class: "border bg-gray-800 lg:w-2/6 w-full mx-auto  border-gray-700 grid grid-cols-12 p-4 relative" }, /*#__PURE__*/
     React.createElement("div", { class: "absolute top-4 right-4 text-gray-400 fill-current w-6" }, /*#__PURE__*/
     React.createElement("svg", {
       viewBox: "0 0 24 24",
@@ -3180,33 +3336,10 @@ const Tweet = () => {
     React.createElement("div", { class: "mr-auto col-span-11\tml-4" }, /*#__PURE__*/
     React.createElement("p", { class: "font-bold" }, "GH I Zenyou",
     " ", /*#__PURE__*/
-    React.createElement("span", { class: "font-normal text-gray-400" }, "@ZenyouX \xB7 8h"), " "), /*#__PURE__*/
-
-    React.createElement("p", null, "Just fought a",
-    " ", /*#__PURE__*/
-    React.createElement("span", { class: "capitalize" },
-    random),
-    " ", "on Elite."), /*#__PURE__*/
+    React.createElement("span", { class: "font-normal text-gray-400" }, "@ZenyouX \xB7 8h"), " "),
 
 
-    React.createElement("br", null), /*#__PURE__*/
-    React.createElement("p", null, "If you play",
-    " ", /*#__PURE__*/
-    React.createElement("span", { class: "capitalize" },
-    random), ", you literally deserve no right to speak. You cannot open your mouth. When people talk about \"problems\" with Ultimate, you are one of those problems. It's depressing."), /*#__PURE__*/
-
-
-
-
-
-    React.createElement("br", null), /*#__PURE__*/
-    React.createElement("p", null, /*#__PURE__*/
-    React.createElement("span", { class: "capitalize" }, "\"",
-
-    random),
-    " ", "main\" and \"chimpanzee\" are the same word."), /*#__PURE__*/
-
-
+    randomInsult, /*#__PURE__*/
 
     React.createElement("div", { class: "flex justify-between" }, /*#__PURE__*/
     React.createElement("div", { class: "flex mt-5 justify-center space-x-2 items-center" },
@@ -3261,9 +3394,9 @@ const Tweet = () => {
 
 
 
-    React.createElement("button", {
+    React.createElement("button", { style: { position: 'absolute', bottom: '15%', left: '50%', transform: 'translate(-50%, -50%)' },
       onClick: () => setCount(Math.floor(Math.random() * list.length)),
-      class: "w-48 mx-auto bg-red-500 mt-5 hover:bg-red-600 text-white font-bold py-2 px-4 rounded" }, "Diss A Character")));
+      class: "w-48 bg-red-500 mt-5 hover:bg-red-600 text-white font-bold py-2 px-4 rounded" }, "Diss A Character")));
 
 
 
