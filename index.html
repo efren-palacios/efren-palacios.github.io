@@ -1,272 +1,402 @@
 <!DOCTYPE html>
-<html lang="en" style="scroll-behavior: smooth;">
+<html lang="en" style="scroll-behavior: smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" sizes="192x192" href="/img/logo.png" />
+    <meta name="theme-color" content="#0d1017" />
+    <link rel="stylesheet" href="reset.css" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <title>Efren Palacios</title>
+    <!-- Main color #ecc94b -->
+    <style>
+      ::-moz-selection {
+        background: rgba(0, 0, 0, 0.5);
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" sizes="192x192" href="/img/logo.png">
-  <meta name="theme-color" content="#0d1017">
-  <link rel="stylesheet" href="reset.css">
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://unpkg.com/vue"></script>
-  <title>Efren Palacios</title>
-  <!-- Main color #ecc94b -->
-  <style>
-    ::-moz-selection {
-      background: rgba(0, 0, 0, .5);
-    }
+      ::selection {
+        background: rgba(0, 0, 0, 0.5);
+      }
 
-    ::selection {
-      background: rgba(0, 0, 0, .5);
-    }
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
 
-    ::-webkit-scrollbar {
-      width: 5px;
-    }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(236, 201, 75, 1);
+        border-radius: 10px;
+      }
 
-    ::-webkit-scrollbar-thumb {
-      background: rgba(236, 201, 75, 1);
-      border-radius: 10px;
-    }
+      .fade-enter-active,
+      .fade-leave-active {
+        transition: opacity 0.5s;
+      }
 
-    .fade-enter-active,
-    .fade-leave-active {
-      transition: opacity .5s;
-    }
-
-    .fade-enter,
+      .fade-enter,
     .fade-leave-to
 
-    /* .fade-leave-active below version 2.1.8 */
-      {
-      opacity: 0;
-    }
-  </style>
-</head>
+    /* .fade-leave-active below version 2.1.8 */ {
+        opacity: 0;
+      }
+    </style>
+  </head>
 
-<body class="bg-gray-900 absolute text-gray-100 anchor h-full w-full w-screen h-screen overflow-x-hidden">
-  <div id="app">
-    <!-- Header -->
-    <section class="w-screen h-screen overflow-hidden relative flex flex-col items-center justify-center">
-      <div class="mx-auto text-center flex flex-col items-center">
-        <div class="flex sm:flex-row flex-col justify-center items-center">
-          <img class="border-4 border-solid border-yellow-500 w-32" src="/img/logo.png" alt="" srcset="">
-          <div class="flex flex-col text-center mt-5 sm:text-left sm:ml-5">
-            <p class="font-semibold text-5xl text-yellow-500">Efren Palacios</p>
-            <p class="uppercase font-semibold text-sm">&nbsp;Web Designer &amp; Programmer</p>
-          </div>
-        </div>
-        <div class="sm:flex justify-center items-center">
-          <a href="#profile"><button style="min-width: 200px;"
-              class="mt-8 bg-yellow-500 hover:bg-yellow-300 text-gray-900 font-bold py-2 px-4 rounded outline-none flex justify-center items-center">
-              View Portfolio <img width="25px" class="ml-4" src="/img/icons/chevron.svg" alt="">
-            </button></a>
-          <a target="_blank" href="./Efren_Palacios_Resume.pdf"><button style="min-width: 200px;" class="mt-8 sm:ml-2 bg-yellow-500 hover:bg-yellow-300
-              text-gray-900 font-bold py-2 px-4 rounded outline-none flex justify-center items-center">
-              View Resume <img width="25px" class="ml-4" src="/img/icons/resume.svg" alt="">
-            </button></a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="relative">
-      <div class="flex flex-col justify-center items-center">
-        <div id="profile" class="sm:w-3/5 mt-32 h-full">
-          <img class="mx-auto w-32 my-10" src="/img/avatar.png" alt="" srcset="">
-          <h1 class="uppercase font-semibold text-4xl text-yellow-500 my-5 text-center">About Me</h1>
-          <p class="text-xl text-center p-4">I'm a Programmer living in Orange County, California. Currently developing
-            software using
-            NodeJS, Rest APIs, WebSockets, and Electron. I'm passionate towards Web & UI Design, Data Manipulation,
-            Video Games and eSports. </p>
-          <div class="flex justify-center mx-4 sm:mx-0 my-10">
-            <img class="sm:w-1/2" src="/img/icons/design.svg" alt="">
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Development -->
-    <section>
-      <div class="relative sm:mt-0 mt-32">
-        <div class="my-8 border-2 border-solid border-yellow-500 sm:w-1/3 w-5/6 p-6 mx-auto">
-          <h1 class="uppercase font-semibold text-2xl text-yellow-500 text-center mx-auto">Technologies</h1>
-        </div>
-        <div class="flex justify-center  sm:justify-around sm:w-1/3 w-full flex-wrap mx-auto">
-          <div v-for="item of languages" class="flex flex-col justify-center items-center">
-            <div class="mx-10">
-              <img class="sm:w-10 w-8" :src="'/img/icons/'+item.toLowerCase()+'.svg'" alt="">
-            </div>
-            <div>
-              <p class="py-5">{{item}}</p>
+  <body
+    class="bg-gray-900 absolute text-gray-100 anchor h-full w-full w-screen h-screen overflow-x-hidden"
+  >
+    <div id="app">
+      <!-- Header -->
+      <section
+        class="w-screen h-screen overflow-hidden relative flex flex-col items-center justify-center"
+      >
+        <div class="mx-auto text-center flex flex-col items-center">
+          <div class="flex sm:flex-row flex-col justify-center items-center">
+            <img
+              class="border-4 border-solid border-yellow-500 w-32"
+              src="/img/logo.png"
+              alt=""
+              srcset=""
+            />
+            <div class="flex flex-col text-center mt-5 sm:text-left sm:ml-5">
+              <p class="font-semibold text-5xl text-yellow-500">
+                Efren Palacios
+              </p>
+              <p class="uppercase font-semibold text-sm">
+                &nbsp;Web Designer &amp; Programmer
+              </p>
             </div>
           </div>
-        </div>
-        <div class="my-8 border-2 border-solid border-yellow-500 sm:w-1/3 w-5/6 p-6 mx-auto">
-          <h1 class="uppercase font-semibold text-2xl text-yellow-500 text-center">Development Tools</h1>
-        </div>
-        <div class="flex justify-center sm:justify-around sm:w-1/3 w-full flex-wrap mx-auto">
-          <div v-for="item of tools" class="flex flex-col justify-center items-center">
-            <div class="mx-10">
-              <img class="sm:w-10 w-8" :src="'/img/icons/'+item.toLowerCase()+'.svg'" alt="">
-            </div>
-            <div>
-              <p class="py-5">{{item}}</p>
-            </div>
+          <div class="sm:flex justify-center items-center">
+            <a href="#profile"
+              ><button
+                style="min-width: 200px"
+                class="mt-8 bg-yellow-500 hover:bg-yellow-300 text-gray-900 font-bold py-2 px-4 rounded outline-none flex justify-center items-center"
+              >
+                View Portfolio
+                <img
+                  width="25px"
+                  class="ml-4"
+                  src="/img/icons/chevron.svg"
+                  alt=""
+                /></button
+            ></a>
+            <a target="_blank" href="./Efren_Palacios_Resume.pdf"
+              ><button
+                style="min-width: 200px"
+                class="mt-8 sm:ml-2 bg-yellow-500 hover:bg-yellow-300 text-gray-900 font-bold py-2 px-4 rounded outline-none flex justify-center items-center"
+              >
+                View Resume
+                <img
+                  width="25px"
+                  class="ml-4"
+                  src="/img/icons/resume.svg"
+                  alt=""
+                /></button
+            ></a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-
-    <!-- Portfolio -->
-    <section class="relative shadow-lg mb-8">
-      <div class="my-8 border-2 border-solid border-yellow-500 sm:w-1/3 w-5/6 p-6 mx-auto">
-        <h1 class="uppercase font-semibold text-2xl text-yellow-500 text-center">Projects</h1>
-      </div>
-      <!-- Cards -->
-      <div class="w-full h-full relative flex flex-wrap items-center justify-center mt-10 flex-wrap">
-        <div v-for="project of projects" style="min-height: 400px;"
-          class="max-w-md bg-black rounded overflow-hidden shadow-lg m-5">
-          <a :href="project.url" target="_blank"><img class="w-full" :src="project.img" alt="Teppen"></a>
-          <div class="px-6 py-4">
-            <a :href="project.github || project.url" target="_blank">
-              <div class="font-bold text-xl text-gray-200 flex items-center mb-2"> <img
-                  class="fill-current text-teal-500 inline-block h-8 w-8" src="/img/icons/github.svg" alt=""
-                  srcset=""><span class="ml-2">{{project.title}}</span></div>
-            </a>
-            <p class="text-gray-400 text-base">
-              {{project.desc}}
+      <!-- About -->
+      <section class="relative">
+        <div class="flex flex-col justify-center items-center">
+          <div id="profile" class="sm:w-3/5 mt-32 h-full">
+            <img
+              class="mx-auto w-32 my-10"
+              src="/img/avatar.png"
+              alt=""
+              srcset=""
+            />
+            <h1
+              class="uppercase font-semibold text-4xl text-yellow-500 my-5 text-center"
+            >
+              About Me
+            </h1>
+            <p class="text-xl text-center p-4">
+              I'm a Programmer living in Orange County, California. Currently
+              developing software using NodeJS, Rest APIs, WebSockets, and
+              Electron. I'm passionate towards Web & UI Design, Data
+              Manipulation, Video Games and eSports.
             </p>
-            <div class="flex">
-              <div v-for="img of project.tech">
-                <img class="mt-4 mr-2 w-6" :src="'/img/icons/'+img.toLowerCase()+'.svg'" alt="">
+            <div class="flex justify-center mx-4 sm:mx-0 my-10">
+              <img class="sm:w-1/2" src="/img/icons/design.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Development -->
+      <section>
+        <div class="relative sm:mt-0 mt-32">
+          <div
+            class="my-8 border-2 border-solid border-yellow-500 sm:w-1/3 w-5/6 p-6 mx-auto"
+          >
+            <h1
+              class="uppercase font-semibold text-2xl text-yellow-500 text-center mx-auto"
+            >
+              Technologies
+            </h1>
+          </div>
+          <div
+            class="flex justify-center sm:justify-around sm:w-1/3 w-full flex-wrap mx-auto"
+          >
+            <div
+              v-for="item of languages"
+              class="flex flex-col justify-center items-center"
+            >
+              <div class="mx-10">
+                <img
+                  class="sm:w-10 w-8"
+                  :src="'/img/icons/'+item.toLowerCase()+'.svg'"
+                  alt=""
+                />
+              </div>
+              <div>
+                <p class="py-5">{{item}}</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="my-8 border-2 border-solid border-yellow-500 sm:w-1/3 w-5/6 p-6 mx-auto"
+          >
+            <h1
+              class="uppercase font-semibold text-2xl text-yellow-500 text-center"
+            >
+              Development Tools
+            </h1>
+          </div>
+          <div
+            class="flex justify-center sm:justify-around sm:w-1/3 w-full flex-wrap mx-auto"
+          >
+            <div
+              v-for="item of tools"
+              class="flex flex-col justify-center items-center"
+            >
+              <div class="mx-10">
+                <img
+                  class="sm:w-10 w-8"
+                  :src="'/img/icons/'+item.toLowerCase()+'.svg'"
+                  alt=""
+                />
+              </div>
+              <div>
+                <p class="py-5">{{item}}</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <footer class="relative text-center w-screen">
-      <p class="pb-6">
-        Site designed by Me © Efren Palacios <a class="text-yellow-400 hover:text-yellow-200"
-          href="mailto:contact@efrenpalacios.dev">contact@efrenpalacios.dev</a>
-      </p>
-    </footer>
-    <!-- Scroll Button -->
-    <transition name="fade">
-      <a v-show="scroll" class="inline-block" href="#"><button
-          class="fixed inline-block bottom-0 right-0 m-5 bg-yellow-500 hover:bg-yellow-300 text-black font-bold py-2 px-4 rounded">
-          <img class=" w-6 fill-current text-black" src="./img/icons/caret.svg" alt="" srcset="">
-        </button></a>
-    </transition>
-  </div>
+      <!-- Portfolio -->
+      <section class="relative shadow-lg mb-8">
+        <div
+          class="my-8 border-2 border-solid border-yellow-500 sm:w-1/3 w-5/6 p-6 mx-auto"
+        >
+          <h1
+            class="uppercase font-semibold text-2xl text-yellow-500 text-center"
+          >
+            Projects
+          </h1>
+        </div>
+        <!-- Cards -->
+        <div
+          class="w-full h-full relative flex flex-wrap items-center justify-center mt-10 flex-wrap"
+        >
+          <div
+            v-for="project of projects"
+            style="min-height: 400px"
+            class="max-w-md bg-black rounded overflow-hidden shadow-lg m-5"
+          >
+            <a :href="project.url" target="_blank"
+              ><img class="w-full" :src="project.img" alt="Teppen"
+            /></a>
+            <div class="px-6 py-4">
+              <a :href="project.github || project.url" target="_blank">
+                <div
+                  class="font-bold text-xl text-gray-200 flex items-center mb-2"
+                >
+                  <img
+                    class="fill-current text-teal-500 inline-block h-8 w-8"
+                    src="/img/icons/github.svg"
+                    alt=""
+                    srcset=""
+                  /><span class="ml-2">{{project.title}}</span>
+                </div>
+              </a>
+              <p class="text-gray-400 text-base">{{project.desc}}</p>
+              <div class="flex">
+                <div v-for="img of project.tech">
+                  <img
+                    class="mt-4 mr-2 w-6"
+                    :src="'/img/icons/'+img.toLowerCase()+'.svg'"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <!-- JS -->
+      <footer class="relative text-center w-screen">
+        <p class="pb-6">
+          Site designed by Me © Efren Palacios
+          <a
+            class="text-yellow-400 hover:text-yellow-200"
+            href="mailto:contact@efrenpalacios.dev"
+            >contact@efrenpalacios.dev</a
+          >
+        </p>
+      </footer>
+      <!-- Scroll Button -->
+      <transition name="fade">
+        <a v-show="scroll" class="inline-block" href="#"
+          ><button
+            class="fixed inline-block bottom-0 right-0 m-5 bg-yellow-500 hover:bg-yellow-300 text-black font-bold py-2 px-4 rounded"
+          >
+            <img
+              class="w-6 fill-current text-black"
+              src="./img/icons/caret.svg"
+              alt=""
+              srcset=""
+            /></button
+        ></a>
+      </transition>
+    </div>
 
-  <script>
-    var app = new Vue({
-      el: '#app',
-      data: {
-        scroll: false,
-        languages: ['JavaScript', 'Vue', 'Node', 'Socket-IO', 'React', 'Ruby', 'Jekyll', 'Python', 'CSS3', 'HTML5'],
-        tools: ['VSCode', 'GitHub', 'BitBucket', 'GitLab', 'Bulma', 'Semantic-UI', 'TailwindCSS', 'PowerShell', 'ConEmu', 'Hyper'],
-        projects: [
-          {
-            title: "Smash Bros. Arenas",
-            img: '/img/smashbrosarenas.png',
-            desc: "An express server project that lets users create arenas for viewers to play, powered by MongoDB & Sockets.io",
-            url: "https://www.smasharena.xyz/",
-            github: "https://github.com/orctamer/smasharenas",
-            tech: ['HTML5', 'CSS3', 'JavaScript', 'Vue', 'Socket-IO']
-          },
-          {
-            title: 'League of Legends Champion UI',
-            img: '/img/lol.png',
-            desc: 'A vue, vue-router, vue-component project of League of Legends',
-            url: 'https://efrenpalacios.dev/lol',
-            github: 'https://github.com/orctamer/orctamer.github.io/tree/master/lol',
-            tech: ['HTML5', 'CSS3', 'Vue', 'JavaScript']
-          },
-          {
-            title: 'Team Liquid Fanpage',
-            img: '/img/tl.png',
-            desc: 'Redesigned Team Liquid frontpage design with a more semantic design approach.',
-            url: "https://efrenpalacios.dev/tl",
-            github: 'https://github.com/orctamer/orctamer.github.io/tree/master/tl',
-            tech: ['HTML5', 'CSS3', 'TailWindCSS', 'Vue', 'JavaScript']
-          },
-          {
-            title: 'TEPPEN Deck Builder',
-            img: '/img/teppen.png',
-            desc: 'Online application created with Vue.js to allow users to customize and create decks for the game TEPPEN.',
-            url: "https://efrenpalacios.dev/teppen",
-            github: 'https://github.com/orctamer/orctamer.github.io/tree/master/teppen',
-            tech: ['HTML5', 'CSS3', 'Semantic-UI', 'Vue', 'JavaScript']
-          },
-          {
-            title: "MobaMe",
-            img: '/img/mobame.png',
-            desc: 'Online application created with Express.js and Vue.js using Riot Game\'s official API. Using the NUXT framework.',
-            url: 'https://effy.moe/',
-            github: 'https://github.com/orctamer/mobame',
-            tech: ['HTML5', 'CSS3', 'TailWindCSS', 'Vue', 'JavaScript']
-          },
-          {
-            title: "LetsPlayer",
-            img: '/img/letsplayer.png',
-            desc: 'Web application created using Sockets.io and Express.js, allows multiple people to control a game using Robot.js commands via mouse clicks or keyboard commands.',
-            url: 'https://github.com/orctamer/LetsPlayer/',
-            tech: ['HTML5', 'CSS3', 'JavaScript', 'Socket-IO', 'Node']
-          },
-          {
-            title: "Duel Links Meta",
-            img: '/img/dlm.png',
-            desc: 'Website created using Jekyll.rb, responsible for creating deck playtester, and various components like article layouts and overall site design.',
-            url: 'https://duellinksmeta.com/',
-            github: 'https://github.com/orctamer/duellinks',
-            tech: ['HTML5', 'CSS3', 'JavaScript', 'Jekyll', 'Ruby']
-          },
-          {
-            title: "EchoFox Fanpage",
-            img: '/img/echofox.png',
-            desc: 'Redesigned EchoFox frontpage design with a more semantic design approach. Native JavaScript & CSS usage.',
-            url: 'https://efrenpalacios.dev/echofox/',
-            github: 'https://github.com/orctamer/orctamer.github.io/tree/master/echofox',
-            tech: ['HTML5', 'CSS3', 'JavaScript']
-          },
-          {
-            title: "Duel Links Player",
-            img: '/img/dlp.png',
-            desc: 'Project designed in Electron.js that uses MITM to stimulate a game with endless options of cards inside the game. E-mail me personally for more information.',
-            url: '',
-            tech: ['JavaScript', 'Node', "Socket-IO", 'Semantic-UI']
-          }
-        ]
-      },
-      mounted: function () {
+    <!-- JS -->
 
-      },
-      methods: {
-        scrollTop: function () {
-          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            this.scroll = true
-          } else {
-            this.scroll = false
-          }
-        }
-      },
-      created() {
-        window.addEventListener('scroll', this.scrollTop)
-      },
-      destroyed() {
-        window.removeEventListener('scroll', this.scrollTop)
-      }
-    })
-  </script>
-</body>
-
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          scroll: false,
+          languages: [
+            "JavaScript",
+            "Vue",
+            "Node",
+            "Socket-IO",
+            "React",
+            "Ruby",
+            "Jekyll",
+            "Python",
+            "CSS3",
+            "HTML5",
+          ],
+          tools: [
+            "VSCode",
+            "GitHub",
+            "BitBucket",
+            "GitLab",
+            "Bulma",
+            "Semantic-UI",
+            "TailwindCSS",
+            "PowerShell",
+            "ConEmu",
+            "Hyper",
+          ],
+          projects: [
+            {
+              title: "Smash Bros. Arenas",
+              img: "/img/smashbrosarenas.png",
+              desc: "An express server project that lets users create arenas for viewers to play, powered by MongoDB & Sockets.io",
+              url: "https://www.smasharena.xyz/",
+              github: "https://github.com/orctamer/smasharenas",
+              tech: ["HTML5", "CSS3", "JavaScript", "Vue", "Socket-IO"],
+            },
+            {
+              title: "League of Legends Champion UI",
+              img: "/img/lol.png",
+              desc: "A vue, vue-router, vue-component project of League of Legends",
+              url: "https://efrenpalacios.dev/lol",
+              github:
+                "https://github.com/orctamer/orctamer.github.io/tree/master/lol",
+              tech: ["HTML5", "CSS3", "Vue", "JavaScript"],
+            },
+            {
+              title: "Team Liquid Fanpage",
+              img: "/img/tl.png",
+              desc: "Redesigned Team Liquid frontpage design with a more semantic design approach.",
+              url: "https://efrenpalacios.dev/tl",
+              github:
+                "https://github.com/orctamer/orctamer.github.io/tree/master/tl",
+              tech: ["HTML5", "CSS3", "TailWindCSS", "Vue", "JavaScript"],
+            },
+            {
+              title: "TEPPEN Deck Builder",
+              img: "/img/teppen.png",
+              desc: "Online application created with Vue.js to allow users to customize and create decks for the game TEPPEN.",
+              url: "https://efrenpalacios.dev/teppen",
+              github:
+                "https://github.com/orctamer/orctamer.github.io/tree/master/teppen",
+              tech: ["HTML5", "CSS3", "Semantic-UI", "Vue", "JavaScript"],
+            },
+            {
+              title: "MobaMe",
+              img: "/img/mobame.png",
+              desc: "Online application created with Express.js and Vue.js using Riot Game's official API. Using the NUXT framework.",
+              url: "https://effy.moe/",
+              github: "https://github.com/orctamer/mobame",
+              tech: ["HTML5", "CSS3", "TailWindCSS", "Vue", "JavaScript"],
+            },
+            {
+              title: "LetsPlayer",
+              img: "/img/letsplayer.png",
+              desc: "Web application created using Sockets.io and Express.js, allows multiple people to control a game using Robot.js commands via mouse clicks or keyboard commands.",
+              url: "https://github.com/orctamer/LetsPlayer/",
+              tech: ["HTML5", "CSS3", "JavaScript", "Socket-IO", "Node"],
+            },
+            {
+              title: "Duel Links Meta",
+              img: "/img/dlm.png",
+              desc: "Website created using Jekyll.rb, responsible for creating deck playtester, and various components like article layouts and overall site design.",
+              url: "https://duellinksmeta.com/",
+              github: "https://github.com/orctamer/duellinks",
+              tech: ["HTML5", "CSS3", "JavaScript", "Jekyll", "Ruby"],
+            },
+            {
+              title: "EchoFox Fanpage",
+              img: "/img/echofox.png",
+              desc: "Redesigned EchoFox frontpage design with a more semantic design approach. Native JavaScript & CSS usage.",
+              url: "https://efrenpalacios.dev/echofox/",
+              github:
+                "https://github.com/orctamer/orctamer.github.io/tree/master/echofox",
+              tech: ["HTML5", "CSS3", "JavaScript"],
+            },
+            {
+              title: "Duel Links Player",
+              img: "/img/dlp.png",
+              desc: "Project designed in Electron.js that uses MITM to stimulate a game with endless options of cards inside the game. E-mail me personally for more information.",
+              url: "",
+              tech: ["JavaScript", "Node", "Socket-IO", "Semantic-UI"],
+            },
+          ],
+        },
+        mounted: function () {},
+        methods: {
+          scrollTop: function () {
+            if (
+              document.body.scrollTop > 20 ||
+              document.documentElement.scrollTop > 20
+            ) {
+              this.scroll = true;
+            } else {
+              this.scroll = false;
+            }
+          },
+        },
+        created() {
+          window.addEventListener("scroll", this.scrollTop);
+        },
+        destroyed() {
+          window.removeEventListener("scroll", this.scrollTop);
+        },
+      });
+    </script>
+  </body>
 </html>
